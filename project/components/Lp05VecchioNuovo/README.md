@@ -10,9 +10,9 @@ Il vecchio modo / il nuovo modo. Due card a confronto, con trattamento opposto.
 
 **Misure indicative.** Contenitore 1120 px. Colonne 1fr 1fr. Gap colonne 20/36 px. Gap righe 14 px. Bordo 2 px. Voci 15 px.
 
-**Da personalizzare per Alterego.**
+**Da personalizzare per Sosia.**
 
 - Vecchio modo: fondo `surface`, bordo `line`. Nuovo modo: `surface-raised` con `shadow-soft`.
 - Le voci confrontano come lavora oggi una piccola attività e come lavora con un agente. Senza cifre non dimostrabili.
 
-Fonte: intestazione del file template dell'utente. Le indicazioni per Alterego sono proposte non verificate.
+Fonte: intestazione del file template dell'utente. Le indicazioni per Sosia sono proposte non verificate.

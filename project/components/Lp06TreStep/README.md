@@ -10,9 +10,9 @@ Tre step orizzontali con linea di connessione. Fa sembrare semplice il processo:
 
 **Misure indicative.** Contenitore 1120 px. Colonne 1fr 1fr 1fr. Gap 36 px. Cerchio 68 px. Linea 1 px. Titolo step 18/23 px.
 
-**Da personalizzare per Alterego.**
+**Da personalizzare per Sosia.**
 
 - Cerchi `brand` con `on-brand`, numeri in `data-lg`.
 - I tre passi possono riprendere quelli già nello SlideCard: una call per capire le esigenze, una prova su un solo compito, l'avvio con te al comando.
 
-Fonte: intestazione del file template dell'utente. Le indicazioni per Alterego sono proposte non verificate.
+Fonte: intestazione del file template dell'utente. Le indicazioni per Sosia sono proposte non verificate.

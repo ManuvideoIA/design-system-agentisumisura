@@ -1,6 +1,6 @@
 # Loghi
 
-Il logo di Alterego è stato creato in Claude Design e importato qui dall'esportazione zip del progetto. Le versioni del logotipo erano due, 5a e 5b. **La versione scelta è la 5b** (fonte: scelta dell'utente del 12 ottobre 2026). I file della 5a restano in `assets/Logos/` come archivio, non si usano. I file sono in `assets/Logos/`.
+Il logo è stato creato in Claude Design e importato qui dall'esportazione zip del progetto. Le versioni del logotipo erano due, 5a e 5b. **La versione scelta è la 5b** (fonte: scelta dell'utente del 12 ottobre 2026). I file della 5a restano in `assets/Logos/` come archivio, non si usano. I file sono in `assets/Logos/`.
 
 ## Il simbolo
 
@@ -38,6 +38,7 @@ Nelle anteprime Cover, LandingHero, SlideCard, SocialPost e VerticalVideo il nom
 ## Da fare
 
 - Chiedere gli SVG con il testo convertito in tracciati, e gli SVG `-fondo-petrolio`.
-- Verificare dominio, marchio e profili social del nome Alterego. Non è ancora stato fatto.
+- **Rifare la scritta con il nome Sosia.** I file attuali dicono «Alterego». Il simbolo (persona e agente) resta. La scritta va rigenerata in Claude Design, finché non è pronta le anteprime mostrano ancora il logo con il nome precedente.
+- Verificare dominio, marchio e profili social del nome Sosia. Non è ancora stato fatto.
 
 Fonte: file `README.md` dell'esportazione zip di Claude Design (sezione LOGHI). I contrasti citati sono quelli indicati lì, non ricalcolati.

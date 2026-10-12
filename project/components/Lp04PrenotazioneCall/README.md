@@ -10,11 +10,11 @@ Prenotazione call con calendario e slot. Chiusura della pagina: l'azione è fiss
 
 **Misure indicative.** Contenitore 1120 px. Colonne 1.15fr .85fr. Gap 44 px. Celle del calendario quadrate su 7 colonne. Foto 1:1.
 
-**Da personalizzare per Alterego.**
+**Da personalizzare per Sosia.**
 
 - È una dimostrazione: giorni, orari e conferma sono segnaposto. Vanno collegati a uno strumento di prenotazione vero. Non ne ho scelto uno e non ho dati per consigliarlo.
 - Pulsante `brand`. Giorno e orario scelti con bordo `brand`.
 - La foto di chi conduce è una foto vera. Immagini generate con IA vanno dichiarate.
 - Il file contiene uno script. Rileggilo prima di pubblicare la pagina.
 
-Fonte: intestazione del file template dell'utente. Le indicazioni per Alterego sono proposte non verificate.
+Fonte: intestazione del file template dell'utente. Le indicazioni per Sosia sono proposte non verificate.

@@ -10,10 +10,10 @@ Domande sempre aperte su due colonne. Risposte corte, tutte visibili.
 
 **Misure indicative.** Contenitore 1120 px. Colonne 1fr 1fr. Gap colonne 40/80 px. Gap righe 34/44 px. Domanda 17/20 px. Risposta massimo 46 caratteri per riga.
 
-**Da personalizzare per Alterego.**
+**Da personalizzare per Sosia.**
 
 - Domande vere dai titolari e dalle call. Non le ho ancora.
 - Una domanda da prevedere è la sicurezza dei dati, con la riga già nel sistema.
 - Risposte brevi, con il punto finale, senza promesse non dimostrabili.
 
-Fonte: intestazione del file template dell'utente. Le indicazioni per Alterego sono proposte non verificate.
+Fonte: intestazione del file template dell'utente. Le indicazioni per Sosia sono proposte non verificate.

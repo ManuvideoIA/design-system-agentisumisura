@@ -10,9 +10,9 @@ Banda CTA centrata a tutta larghezza. Stacco di conversione fra due sezioni dens
 
 **Misure indicative.** Colonna 720 px. Padding verticale 64/132 px. Titolo 30/56 px. Gap pulsanti 14 px.
 
-**Da personalizzare per Alterego.**
+**Da personalizzare per Sosia.**
 
 - Fondo `brand` con testo `on-brand`: il pulsante primario va in `surface-raised` (come nella variante petrolio di SocialPost). Oppure fondo `ink` con testo `surface` e pulsante `accent`.
 - Se la ripeti, ricorda la regola: un solo pulsante petrolio per vista.
 
-Fonte: intestazione del file template dell'utente. Le indicazioni per Alterego sono proposte non verificate.
+Fonte: intestazione del file template dell'utente. Le indicazioni per Sosia sono proposte non verificate.

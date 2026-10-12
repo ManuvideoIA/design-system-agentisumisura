@@ -1,6 +1,6 @@
-# Alterego — Design System
+# Sosia — Design System
 
-Design system di Alterego (nome di lavoro, provvisorio). Il servizio crea agenti IA e automazioni su misura per piccole attività. Il nome del repository è ancora quello precedente, `design-system-agentisumisura`.
+Design system di Sosia (nome di lavoro, provvisorio). Il servizio crea agenti IA e automazioni su misura per piccole attività. Il nome del repository è ancora quello precedente, `design-system-agentisumisura`.
 
 ## Contenuto
 
@@ -24,7 +24,8 @@ Design system di Alterego (nome di lavoro, provvisorio). Il servizio crea agenti
 
 ## Da verificare
 
-- Disponibilità di dominio, marchio e profili social del nome. Esiste già un'azienda IA con lo stesso nome (interfaccia neurale, San Francisco).
+- Disponibilità di dominio, marchio e profili social di Sosia. Nella ricerca web non ho trovato aziende di IA con questo nome, ma su sosia.com c'è un sito attivo che non ho potuto leggere. Alterego è stato scartato (esiste già un'agenzia con servizi di IA).
+- La scritta del logo dice ancora «Alterego»: va rifatta con il nome Sosia. Il simbolo resta.
 - Licenze dei file dei font: non verificate. Controlla che la licenza permetta l'uso commerciale e la ridistribuzione.
 - Mancano gli SVG dei loghi con il testo convertito in tracciati e gli SVG su fondo petrolio.
 - Anteprime mai visualizzate in un browser.

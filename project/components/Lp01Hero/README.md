@@ -10,10 +10,10 @@ Hero tipografico con parola evidenziata. Prima schermata della landing page, sen
 
 **Misure indicative.** Titolo 28/72 px, interlinea 1.05, larghezza massima 760 px. Sottotitolo massimo 42 caratteri per riga. Blocco pieno con padding .04em/.2em. Pulsanti con gap 12 px.
 
-**Da personalizzare per Alterego.**
+**Da personalizzare per Sosia.**
 
 - Il blocco pieno nero del file diventa `accent` con testo `on-accent` (lo dice il file stesso).
 - Titolo in `display-xl`. Pulsante principale `brand` con `on-brand`, secondario a contorno.
 - Il copy è da scrivere. Usa l'offerta in una frase e le regole di scrittura del README.
 
-Fonte: intestazione del file template dell'utente. Le indicazioni per Alterego sono proposte non verificate.
+Fonte: intestazione del file template dell'utente. Le indicazioni per Sosia sono proposte non verificate.

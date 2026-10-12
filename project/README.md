@@ -1,4 +1,4 @@
-Alterego è il nome di lavoro, provvisorio. Dominio, marchio e nomi social non sono ancora verificati. Il servizio crea agenti IA e automazioni su misura per piccole attività. L'agente è un'estensione della mente di chi lo usa. Il petrolio è il colore guida. La salvia è il colore dell'enfasi.
+Sosia è il nome di lavoro, provvisorio. Dominio, marchio e nomi social non sono ancora verificati. Il servizio crea agenti IA e automazioni su misura per piccole attività. L'agente è un'estensione della mente di chi lo usa. Il petrolio è il colore guida. La salvia è il colore dell'enfasi.
 
 ## Regole in breve
 

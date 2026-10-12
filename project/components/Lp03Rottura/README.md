@@ -10,9 +10,9 @@ Rottura "non è X, è Y". Cerniera tra il blocco problema e il blocco soluzione.
 
 **Misure indicative.** Contenitore 1120 px. Padding verticale 64/140 px. Righe 30/68 px. Interlinea 1.02. Riga barrata a spessore .05em.
 
-**Da personalizzare per Alterego.**
+**Da personalizzare per Sosia.**
 
 - Fondo `ink`, testo `surface` (contrasto circa 15:1 nel tema chiaro, secondo un mio calcolo). Per la riga attenuata e barrata non usare `ink-muted`: su `ink` dà circa 2,4:1 nel tema chiaro, sotto il minimo di 4.5:1. Attenua `surface` con l'opacità e controlla il contrasto.
-- Il contenuto è da scrivere. La categoria vera di Alterego non è ancora decisa.
+- Il contenuto è da scrivere. La categoria vera di Sosia non è ancora decisa.
 
-Fonte: intestazione del file template dell'utente. Le indicazioni per Alterego sono proposte non verificate.
+Fonte: intestazione del file template dell'utente. Le indicazioni per Sosia sono proposte non verificate.

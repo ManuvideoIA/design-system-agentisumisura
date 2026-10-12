@@ -1,8 +1,13 @@
 # Nome e voce
 
-Il nome è **Alterego**. È provvisorio: dominio, marchio e nomi social non sono verificati (fonte: decisione dell'utente). L'alternativa tenuta da parte è Tuum. Le due proposte sono in NameOptions.
+Il nome è **Sosia** (fonte: scelta dell'utente, 12 ottobre 2026). È provvisorio: dominio, marchio e nomi social non sono verificati. Le alternative scartate sono in NameOptions.
 
-Esiste già un'azienda con lo stesso nome nel campo dell'IA. Sviluppa un'interfaccia neurale, ha sede a San Francisco ed è nata nel 2025 (fonte: [Fast AI Jobs](https://www.fastaijobs.com/companies/alterego)). Il prodotto è diverso. Non ho dati per dire se ci sia un conflitto di marchio. Va chiesto a un professionista.
+## Verifiche sul nome
+
+- **Sosia.** Nella ricerca web non ho trovato aziende di IA con questo nome. Su sosia.com c'è un sito attivo che non ho potuto leggere, e su sosia.it non ho un esito chiaro. Marchi (UIBM, EUIPO) e profili social non sono stati controllati. Va chiesto a un professionista.
+- **Alterego, scartato.** Esiste un'agenzia digitale con servizi di agenti IA e automazione, attiva dal 2008 (fonte: [alterego.net](https://alterego.net/en)). Esistono anche una startup di interfaccia neurale a San Francisco (fonte: [Fast AI Jobs](https://www.fastaijobs.com/companies/alterego)) e una domanda di marchio ALTEREGO per software di IA negli Stati Uniti (fonte: [Justia](https://trademarks.justia.com/978/29/alterego-97829425.html)).
+- **Tuum, scartato.** È un'azienda di software bancario con sede a Tallinn (fonte: [Silicon Canals](https://siliconcanals.com/tallinns-tuum-bags-25m/)).
+- **Altri nomi guardati e scartati.** Mentis (esiste Mentis AI, fonte: [Built In NYC](https://www.builtinnyc.com/company/mentis-ai)), Delegia (azienda italiana di automazione, fonte: [delegia.it](https://delegia.it)), Vicem (fornitore di hosting, fonte: [vicem.com](https://vicem.com)).
 
 Il nome da solo non richiama gli agenti. Una dicitura da abbinare, per esempio «agenti IA», è ancora da decidere.
 
