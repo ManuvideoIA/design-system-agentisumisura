@@ -1,0 +1,21 @@
+<!-- @dsCard group="Base" height=210 subtitle="Icone lineari a tratto di 2 px" -->
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baskervville&family=Figtree:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+<style>
+  body { margin: 0; padding: var(--space-5); background: var(--surface); color: var(--ink); }
+  .row { display: grid; grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: var(--space-4); }
+  .c { background: var(--surface-raised); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: var(--space-4) var(--space-2); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); }
+  svg { width: 48px; height: 48px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .c span { font: 400 11px/16px var(--font-mono); color: var(--ink-muted); }
+</style></head>
+<body>
+  <div class="row">
+    <div class="c" style="color:var(--ink)"><svg viewBox="0 0 48 48"><rect x="5" y="9" width="38" height="30" rx="6"/><path d="M7 13l17 14 17-14"/></svg><span>email</span></div>
+    <div class="c" style="color:var(--accent-text)"><svg viewBox="0 0 48 48"><path d="M8 11h32a4 4 0 0 1 4 4v15a4 4 0 0 1-4 4H23l-9 7v-7H8a4 4 0 0 1-4-4V15a4 4 0 0 1 4-4z"/></svg><span>chat</span></div>
+    <div class="c" style="color:var(--brand-text)"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="8"/><circle cx="8" cy="9" r="3"/><circle cx="40" cy="9" r="3"/><circle cx="24" cy="42" r="3"/><path d="M17.800 18.200L10.200 11.200M30.200 18.200L37.800 11.200M24 32v7"/></svg><span>agente</span></div>
+    <div class="c" style="color:var(--ink)"><svg viewBox="0 0 48 48"><rect x="5" y="8" width="38" height="32" rx="6"/><path d="M5 18h38M13 26h14M13 32h20"/></svg><span>pagina</span></div>
+    <div class="c" style="color:var(--accent-text)"><svg viewBox="0 0 48 48"><rect x="6" y="10" width="36" height="32" rx="6"/><path d="M6 21h36M16 6v8M32 6v8"/></svg><span>calendario</span></div>
+    <div class="c" style="color:var(--brand-text)"><svg viewBox="0 0 48 48"><path d="M10 16h28l3 25H7z"/><path d="M17 16v-3a7 7 0 0 1 14 0v3"/></svg><span>ordine</span></div>
+  </div>
+</body></html>

@@ -1,0 +1,43 @@
+<!-- @dsCard group="Slide e pagine" height=470 subtitle="Hero di una landing page (testo segnaposto)" -->
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baskervville&family=Figtree:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+<style>
+  body { margin: 0; padding: var(--space-5); background: var(--surface); color: var(--ink); font-family: var(--font-sans); }
+  .browser { max-width: 760px; background: var(--surface-raised); border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-soft); }
+  .top { display: flex; gap: 6px; padding: 12px var(--space-4); border-bottom: 1px solid var(--line); }
+  .top i { width: 10px; height: 10px; border-radius: 50%; background: var(--line-strong); }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: var(--space-4) var(--space-5); }
+  .wm { font: 700 18px/1 var(--font-display); letter-spacing: -0.02em; }
+  .nav a { font: 700 13px/1 var(--font-sans); color: var(--brand-text); letter-spacing: .06em; text-transform: uppercase; }
+  .hero { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: var(--space-5); align-items: center; padding: var(--space-4) var(--space-5) var(--space-6); }
+  @media (max-width: 560px) { .hero { grid-template-columns: 1fr; } }
+  h1 { margin: 0; font: 400 38px/40px var(--font-editorial, 'Baskervville', Georgia, serif); letter-spacing: -0.01em; }
+  mark { background: var(--accent); color: var(--on-accent); padding: 0 var(--space-2); border-radius: var(--radius-sm); }
+  p { margin: var(--space-3) 0 var(--space-5); font: 400 16px/24px var(--font-sans); color: var(--ink-muted); }
+  .btn { font: 700 15px/1 var(--font-sans); min-height: 48px; padding: 0 var(--space-5); border-radius: var(--radius-pill); border: 0; background: var(--brand); color: var(--on-brand); cursor: pointer; }
+  .chat { display: flex; flex-direction: column; gap: var(--space-3); }
+  .b { max-width: 90%; padding: var(--space-3) var(--space-4); border-radius: var(--radius-lg); font: 400 14px/20px var(--font-sans); color: var(--ink); }
+  .cust { background: var(--accent-soft); align-self: flex-start; border-bottom-left-radius: 6px; }
+  .agt { background: var(--brand-soft); align-self: flex-end; border-bottom-right-radius: 6px; }
+  .agt small { display: block; margin-bottom: 2px; font: 700 11px/16px var(--font-sans); letter-spacing: .06em; text-transform: uppercase; color: var(--brand-text); }
+  .ex { font: 400 11px/16px var(--font-mono); color: var(--ink-muted); text-align: center; }
+</style></head>
+<body>
+  <div class="browser">
+    <div class="top"><i></i><i></i><i></i></div>
+    <div class="nav"><span class="wm">Agenti su Misura</span><a>Come funziona</a></div>
+    <div class="hero">
+      <div>
+        <h1>Meno lavori ripetitivi. Più <mark>tempo</mark> per te.</h1>
+        <p>Un agente IA su misura legge, ordina e prepara le risposte. Tu decidi.</p>
+        <button class="btn">Prenota una call conoscitiva</button>
+      </div>
+      <div class="chat">
+        <div class="b cust">Siete aperti domenica?</div>
+        <div class="b agt"><small>Agente IA</small>Sì, dalle 18. Vuoi prenotare un tavolo?</div>
+        <div class="ex">esempio</div>
+      </div>
+    </div>
+  </div>
+</body></html>

@@ -1,0 +1,50 @@
+<!-- @dsCard height=320 -->
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baskervville&family=Figtree:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+<style>
+  html, body { margin: 0; background: var(--surface); }
+  .cover { position: relative; width: 960px; height: 320px; overflow: hidden; background: var(--surface); }
+  .text { position: absolute; left: var(--space-7); bottom: var(--space-6); width: 400px; }
+  h1 { margin: 0; font: 400 76px/0.95 var(--font-editorial, 'Baskervville', Georgia, serif); letter-spacing: -0.01em; color: var(--ink); }
+  p { margin: var(--space-4) 0 0; font: 400 14px/20px var(--font-sans); color: var(--ink-muted); }
+  svg { position: absolute; left: 480px; top: 0; }
+  .brand { fill: var(--brand); }
+  .accent { fill: var(--accent); }
+  .ink { fill: var(--ink); }
+  .ground { fill: var(--surface); }
+  .lg { rx: var(--radius-lg); }
+</style></head>
+<body>
+  <div class="cover">
+    <div class="text">
+      <h1>Agenti<br>su Misura</h1>
+      <p>Agenti IA che lavorano al posto tuo.</p>
+    </div>
+    <svg width="480" height="320" viewBox="0 0 480 320" role="img" aria-label="Blocchi petrolio, inchiostro e salvia con righe di chat e punti di scrittura">
+      <!--
+        Blocchi: brand 256x208 (lastra con taglio in alto), ink 208x160 (taglio a destra), accent pillola 160x64, accent 80x120 (taglio in basso), brand pillola 176x64.
+        Disposizione: lastra petrolio a sinistra con satelliti a scalare, margine e distanze di 16 (space-4).
+        Pattern: pillole e dischi dalla scala dei raggi (radius-lg, pillola). Righe di chat sul petrolio e tre puntini di scrittura sull'inchiostro, perché il lavoro dell'agente sono i messaggi tra attività e clienti.
+        Passi e raggi usati: space-4 (16), space-5 (24), space-6 (32), space-7 (48), space-8 (64); radius-lg (20), pillola a metà altezza.
+      -->
+      <rect class="brand lg" x="16" y="-20" width="256" height="228"/>
+      <rect class="ink lg" x="288" y="48" width="208" height="160"/>
+      <rect class="accent" x="16" y="224" width="160" height="64" rx="32"/>
+      <rect class="accent lg" x="192" y="224" width="80" height="120"/>
+      <rect class="brand" x="288" y="224" width="176" height="64" rx="32"/>
+
+      <rect class="ground" x="40" y="32" width="112" height="20" rx="10"/>
+      <rect class="ground" x="40" y="64" width="176" height="20" rx="10"/>
+      <rect class="ground" x="40" y="96" width="72" height="20" rx="10"/>
+      <rect class="ground" x="40" y="128" width="144" height="20" rx="10"/>
+      <rect class="ground" x="40" y="160" width="96" height="20" rx="10"/>
+
+      <circle class="ground" cx="336" cy="128" r="20"/>
+      <circle class="ground" cx="384" cy="128" r="20"/>
+      <circle class="accent" cx="432" cy="128" r="20"/>
+
+      <circle class="ground" cx="232" cy="272" r="16"/>
+    </svg>
+  </div>
+</body></html>

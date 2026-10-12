@@ -1,0 +1,23 @@
+<!-- @dsCard group="Base" height=150 subtitle="Petrolio, salvia, contorno, con focus, disattivato" -->
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baskervville&family=Figtree:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+<style>
+  body { margin: 0; padding: var(--space-5); background: var(--surface); color: var(--ink); font-family: var(--font-sans); }
+  .row { display: flex; gap: var(--space-4); flex-wrap: wrap; align-items: center; }
+  .btn { font: 700 16px/1 var(--font-sans); min-height: 48px; padding: 0 var(--space-5); border-radius: var(--radius-pill); border: 2px solid transparent; cursor: pointer; }
+  .primary { background: var(--brand); color: var(--on-brand); }
+  .accent { background: var(--accent); color: var(--on-accent); }
+  .outline { background: transparent; color: var(--ink); border-color: var(--line-strong); }
+  .btn:disabled { background: var(--line); color: var(--ink-muted); cursor: not-allowed; }
+  .btn:focus-visible, .focus { outline: 3px solid var(--focus); outline-offset: 3px; }
+</style></head>
+<body>
+  <div class="row">
+    <button class="btn primary">Prenota una call conoscitiva</button>
+    <button class="btn accent">Approva la risposta</button>
+    <button class="btn outline">Vedi un esempio</button>
+    <button class="btn primary focus">Con focus</button>
+    <button class="btn" disabled>Non disponibile</button>
+  </div>
+</body></html>

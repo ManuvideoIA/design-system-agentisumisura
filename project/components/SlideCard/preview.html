@@ -1,0 +1,31 @@
+<!-- @dsCard group="Slide e pagine" height=330 subtitle="Slide 16:9: titolo e tre passi (testo segnaposto)" -->
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baskervville&family=Figtree:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+<style>
+  body { margin: 0; padding: var(--space-5); background: var(--surface); color: var(--ink); display: flex; gap: var(--space-5); flex-wrap: wrap; }
+  .slide { position: relative; width: 480px; height: 270px; box-sizing: border-box; padding: var(--space-6); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); overflow: hidden; }
+  .title { background: var(--ink); color: var(--surface); display: flex; flex-direction: column; justify-content: center; }
+  .title h2 { margin: 0; font: 400 44px/46px var(--font-editorial, 'Baskervville', Georgia, serif); letter-spacing: -0.01em; }
+  .title p { margin: var(--space-3) 0 0; font: 400 16px/24px var(--font-sans); }
+  .title mark { background: var(--accent); color: var(--on-accent); padding: 0 var(--space-2); border-radius: var(--radius-sm); }
+  .steps { background: var(--surface-raised); border: 1px solid var(--line); color: var(--ink); }
+  .steps h2 { margin: 0 0 var(--space-4); font: 700 28px/32px var(--font-display); letter-spacing: -0.02em; }
+  .step { display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-3); font: 400 16px/24px var(--font-sans); }
+  .num { flex: none; width: 32px; height: 32px; border-radius: var(--radius-pill); background: var(--brand); color: var(--on-brand); display: grid; place-items: center; font: 500 12px/1 var(--font-mono); }
+  .mark { position: absolute; left: var(--space-6); bottom: var(--space-4); font: 700 13px/1 var(--font-display); letter-spacing: -0.02em; }
+</style></head>
+<body>
+  <section class="slide title">
+    <h2>Come si <mark>parte</mark>.</h2>
+    <p>Una frase di apertura che spiega il servizio.</p>
+    <span class="mark">Agenti su Misura</span>
+  </section>
+  <section class="slide steps">
+    <h2>Tre passi.</h2>
+    <div class="step"><span class="num">01</span>Una call per capire le tue esigenze.</div>
+    <div class="step"><span class="num">02</span>Una prova su un solo compito.</div>
+    <div class="step"><span class="num">03</span>L'avvio, con te al comando.</div>
+    <span class="mark">Agenti su Misura</span>
+  </section>
+</body></html>

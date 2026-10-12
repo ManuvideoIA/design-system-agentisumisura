@@ -1,0 +1,37 @@
+<!-- @dsCard group="Fondamenta" height=420 subtitle="Proporzioni e coppie testo/fondo (cambia tema per vedere l'altra versione)" -->
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baskervville&family=Figtree:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+<style>
+  body { margin: 0; padding: var(--space-5); background: var(--surface); color: var(--ink); font-family: var(--font-sans); }
+  .bar { display: flex; height: 104px; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--line); }
+  .labels { display: flex; margin-top: var(--space-2); font: 400 11px/16px var(--font-mono); color: var(--ink-muted); }
+  .labels span { overflow: hidden; white-space: nowrap; }
+  .pairs { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: var(--space-3); margin-top: var(--space-5); }
+  .pair { border-radius: var(--radius-md); padding: var(--space-3) var(--space-4); display: flex; flex-direction: column; gap: var(--space-1); border: 1px solid var(--line); }
+  .pair b { font: 700 34px/38px var(--font-display); letter-spacing: -0.02em; }
+  .pair span { font: 400 11px/16px var(--font-mono); }
+</style></head>
+<body>
+  <div class="bar">
+    <div style="flex:42;background:var(--surface-raised)"></div>
+    <div style="flex:24;background:var(--ink)"></div>
+    <div style="flex:26;background:var(--brand)"></div>
+    <div style="flex:8;background:var(--accent)"></div>
+  </div>
+  <div class="labels">
+    <span style="flex:42">carta</span><span style="flex:24">inchiostro</span><span style="flex:26">petrolio</span><span style="flex:8">salvia</span>
+  </div>
+  <div class="pairs">
+    <div class="pair" style="background:var(--surface-raised);color:var(--ink)"><b>Aa</b><span>ink · surface-raised</span></div>
+    <div class="pair" style="background:var(--surface-raised);color:var(--ink-muted)"><b>Aa</b><span>ink-muted · surface-raised</span></div>
+    <div class="pair" style="background:var(--surface-raised);color:var(--brand-text)"><b>Aa</b><span>brand-text · surface-raised</span></div>
+    <div class="pair" style="background:var(--surface-raised);color:var(--accent-text)"><b>Aa</b><span>accent-text · surface-raised</span></div>
+    <div class="pair" style="background:var(--brand);color:var(--on-brand)"><b>Aa</b><span>on-brand · brand</span></div>
+    <div class="pair" style="background:var(--accent);color:var(--on-accent)"><b>Aa</b><span>on-accent · accent</span></div>
+    <div class="pair" style="background:var(--ink);color:var(--surface)"><b>Aa</b><span>surface · ink</span></div>
+    <div class="pair" style="background:var(--brand-soft);color:var(--brand-text)"><b>Aa</b><span>brand-text · brand-soft</span></div>
+    <div class="pair" style="background:var(--accent-soft);color:var(--accent-text)"><b>Aa</b><span>accent-text · accent-soft</span></div>
+    <div class="pair" style="background:var(--brand-soft);color:var(--ink)"><b>Aa</b><span>ink · brand-soft</span></div>
+  </div>
+</body></html>
