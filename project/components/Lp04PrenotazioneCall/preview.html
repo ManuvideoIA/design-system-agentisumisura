@@ -1,0 +1,237 @@
+<!-- @dsCard group="Template landing" height=1250 subtitle="Sezione 108: prenotazione call con calendario (wireframe)" -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SEZIONE 108 · CTA e moduli di conversione — Prenotazione call con calendario e slot</title>
+<!--
+  SEZIONE 108 · CTA e moduli di conversione · Prenotazione call con calendario e slot
+  QUANDO USARLA: chiusura dei funnel ad alto prezzo, dove l'azione da fare e' fissare l'appuntamento, non compilare un modulo.
+  STRUTTURA: due pannelli affiancati da 880px, calendario del mese a sinistra (griglia 7 colonne) e colonna verticale di orari a destra che si riempie solo dopo aver scelto il giorno; sotto 880px i due pannelli si impilano, prima il calendario poi gli orari.
+  SLOT: 1 titolo, 1 sottotitolo, 2 titoli di pannello, 1 nota fuso orario, 1 stato vuoto, 1 CTA, 1 riga sotto il bottone, 1 blocco "con chi parli" con foto 1:1, nome, ruolo e riga di contesto.
+  INTERAZIONE: selezione data + slot. I giorni liberi sono bottoni: al click si evidenziano, scrivono il giorno scelto nel pannello destro e cambiano l'insieme di orari mostrato; scegliendo un orario si sblocca la conferma. Circa 20 righe di JS.
+  MISURE INDICATIVE: contenitore 1120px - colonne 1.15fr .85fr - gap 44px - celle calendario quadrate su 7 colonne - riga orario 13/15px - foto 1:1.
+  WIREFRAME: nessun colore di brand, nessuna immagine reale, nessun font definitivo.
+-->
+<style>
+/*BASE*/
+:root{
+  --ink:#191919;--muted:#6d6d6d;--bg:#f4f4f2;--card:#fbfbfa;
+  --line:#dcdcd8;--dash:#9a9a9a;--slot:#fff6c8;--slot-ink:#6a5b1f;--solid:#1a1a1a;
+  --wrap:1120px;--pad:clamp(20px,5vw,56px);--vpad:clamp(48px,8vw,104px);
+  --gap:clamp(20px,3vw,36px);--r:10px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+img,svg,video{max-width:100%;display:block}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:#2b2b28;color:var(--ink);-webkit-text-size-adjust:100%}
+.legend{max-width:var(--wrap);margin:14px auto;padding:0 16px;color:#e4e4e0;font-size:13px;line-height:1.5}
+.legend b{color:#fff}
+.legend code{color:#ffd479;font-size:12px}
+.stage{background:var(--bg);overflow-x:clip}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:var(--vpad) var(--pad)}
+h1,h2,h3,h4{font-weight:800;letter-spacing:-.02em;line-height:1.12}
+.t-xl{font-size:clamp(30px,5.2vw,56px)}
+.t-lg{font-size:clamp(24px,3.6vw,38px)}
+.t-md{font-size:clamp(18px,2.1vw,23px)}
+p{line-height:1.55;color:var(--muted);font-size:clamp(15px,1.5vw,17px)}
+.lead{font-size:clamp(16px,1.9vw,20px)}
+.f{background:var(--slot);border-bottom:1px dashed #8a8a8a;padding:0 .18em;color:var(--slot-ink);font-style:italic;font-weight:500;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.ph{border:2px dashed var(--dash);border-radius:var(--r);background:repeating-linear-gradient(-45deg,#ececea,#ececea 10px,#e3e3e0 10px,#e3e3e0 20px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#5f5f5f;font-size:13px;font-weight:700;line-height:1.35;padding:14px;min-height:84px}
+.ph small{display:block;font-weight:500;color:#7e7e7e;margin-top:.35em}
+.r169{aspect-ratio:16/9}.r43{aspect-ratio:4/3}.r11{aspect-ratio:1}.r34{aspect-ratio:3/4}.r219{aspect-ratio:21/9}
+a{color:inherit;text-decoration:none}
+.btn{display:inline-block;background:var(--solid);color:#fff;border:0;border-radius:999px;padding:14px 26px;font:700 15px/1.2 inherit;cursor:pointer;text-align:center;text-decoration:none}
+.btn .f{background:transparent;border-bottom:0;color:inherit;font-style:normal;padding:0}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn.full{display:block;width:100%}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:clamp(18px,2.4vw,28px)}
+.dot{width:44px;height:44px;border-radius:999px;border:2px dashed var(--dash);display:grid;place-items:center;font-size:10px;color:#7e7e7e;font-weight:700;flex:none;text-align:center;line-height:1.1}
+.dot.sq{border-radius:8px}
+.grid{display:grid;gap:var(--gap)}
+.auto{grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+.stack{display:flex;flex-direction:column}
+.field{border:1.5px dashed var(--dash);border-radius:8px;background:#fff;padding:13px 14px;color:#8a8a8a;font-size:14px;font-style:italic}
+.hr{height:1px;background:var(--line);border:0}
+/*/BASE*/
+.top{max-width:62ch}
+.duo{display:grid;gap:clamp(20px,3vw,32px);margin-top:clamp(28px,4vw,44px);align-items:start}
+@media (min-width:880px){.duo{grid-template-columns:1.15fr .85fr}}
+.pane{display:flex;flex-direction:column}
+.panehd{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;justify-content:space-between}
+.tz{font-size:13px;margin-top:6px}
+.cal{margin-top:16px}
+.dows{display:grid;grid-template-columns:repeat(7,1fr);gap:clamp(3px,1vw,6px);margin-bottom:6px}
+.dows span{text-align:center;font-size:12px;font-weight:800;color:var(--muted);letter-spacing:.04em}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:clamp(3px,1vw,6px)}
+.day{min-width:0;aspect-ratio:1;display:grid;place-items:center;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink);font:700 14px/1 inherit;cursor:pointer}
+.day.off{border-style:dashed;background:transparent;color:#b2b2ae;font-weight:500;cursor:default}
+.day.blank{border:0;background:transparent}
+.day.on:hover{border-color:var(--ink)}
+.day.sel{background:var(--solid);border-color:var(--solid);color:#fff}
+.key{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:14px;font-size:12.5px;color:var(--muted)}
+.key span{display:flex;gap:7px;align-items:center}
+.sw{flex:none;width:15px;height:15px;border-radius:5px;border:1px solid var(--line);background:#fff}
+.sw.no{border-style:dashed;background:transparent}
+.pick{font-size:13px;margin-top:6px}
+.pick b{color:var(--ink)}
+.slots{display:flex;flex-direction:column;gap:9px;margin-top:16px;min-height:clamp(130px,26vw,268px)}
+.slot{display:none;align-items:center;justify-content:space-between;gap:10px;width:100%;text-align:left;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);padding:12px 14px;font:700 15px/1.2 inherit;cursor:pointer}
+.slot em{font-style:normal;font-weight:500;font-size:13px;color:var(--muted)}
+.slot:hover{border-color:var(--ink)}
+.slot.sel{box-shadow:inset 0 0 0 2px var(--ink)}
+.slots[data-set="1"] .slot[data-g~="1"],
+.slots[data-set="2"] .slot[data-g~="2"],
+.slots[data-set="3"] .slot[data-g~="3"]{display:flex}
+.vuoto{display:none;border:1.5px dashed var(--dash);border-radius:8px;padding:18px 14px;text-align:center;font-size:14px}
+.slots[data-set="0"] .vuoto{display:block}
+.panefoot{margin-top:auto;padding-top:18px;display:flex;flex-direction:column;gap:9px}
+.panefoot small{font-size:13px;color:var(--muted);line-height:1.4;text-align:center}
+#conferma[aria-disabled="true"]{opacity:.4;pointer-events:none}
+.who{margin-top:clamp(20px,3vw,30px);display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.who .ph{flex:none;width:clamp(104px,24vw,124px);min-height:0;padding:10px 8px;font-size:12px;gap:2px}
+.who .ph small{margin-top:0}
+.who .txt{flex:1 1 220px;min-width:0}
+.who strong{display:block;font-size:15px;margin-bottom:3px}
+</style>
+</head>
+<body>
+
+<p class="legend"><b>SEZIONE 108 · CTA e moduli di conversione — Prenotazione call con calendario e slot.</b>
+Campi <code>gialli</code> = testo da scrivere (fra parentesi quadre trovi quanto testo ci sta).
+Riquadri tratteggiati = immagini o media. Nessun brand applicato: colori, font e spaziature sono segnaposto.
+<b>La barra che stai leggendo non fa parte della sezione</b> — va rimossa.</p>
+
+<div class="stage">
+  <section class="wrap">
+
+    <div class="top">
+      <h2 class="t-lg"><span class="f">[Titolo · 4-8 parole · nomina l&#39;appuntamento e il suo esito]</span></h2>
+      <p class="lead" style="margin-top:14px"><span class="f">[Sottotitolo · 15-25 parole · durata, con chi parla e cosa si porta a casa anche se non compra]</span></p>
+    </div>
+
+    <div class="duo">
+
+      <div class="card pane">
+        <div class="panehd">
+          <h3 class="t-md"><span class="f">[Titolo colonna calendario · 2-4 parole]</span></h3>
+        </div>
+        <p class="tz"><span class="f">[Nota fuso orario · 4-8 parole]</span></p>
+
+        <div class="cal">
+          <div class="dows"><span>LUN</span><span>MAR</span><span>MER</span><span>GIO</span><span>VEN</span><span>SAB</span><span>DOM</span></div>
+          <div class="days">
+          <span class="day blank" aria-hidden="true"></span>
+          <span class="day blank" aria-hidden="true"></span>
+          <span class="day off">1</span>
+          <span class="day off">2</span>
+          <span class="day off">3</span>
+          <span class="day off">4</span>
+          <span class="day off">5</span>
+          <button type="button" class="day on" aria-pressed="false" data-n="6" data-set="1">6</button>
+          <button type="button" class="day on" aria-pressed="false" data-n="7" data-set="2">7</button>
+          <button type="button" class="day on" aria-pressed="false" data-n="8" data-set="3">8</button>
+          <button type="button" class="day on" aria-pressed="false" data-n="9" data-set="1">9</button>
+          <button type="button" class="day on" aria-pressed="false" data-n="10" data-set="2">10</button>
+          <span class="day off">11</span>
+          <span class="day off">12</span>
+          <button type="button" class="day on" aria-pressed="false" data-n="13" data-set="2">13</button>
+          <button type="button" class="day on" aria-pressed="false" data-n="14" data-set="3">14</button>
+          <button type="button" class="day on" aria-pressed="false" data-n="15" data-set="1">15</button>
+          <button type="button" class="day on" aria-pressed="false" data-n="16" data-set="2">16</button>
+          <button type="button" class="day on" aria-pressed="false" data-n="17" data-set="3">17</button>
+          <span class="day off">18</span>
+          <span class="day off">19</span>
+          <button type="button" class="day on" aria-pressed="false" data-n="20" data-set="3">20</button>
+          <button type="button" class="day on" aria-pressed="false" data-n="21" data-set="1">21</button>
+          <button type="button" class="day on" aria-pressed="false" data-n="22" data-set="2">22</button>
+          <button type="button" class="day on" aria-pressed="false" data-n="23" data-set="3">23</button>
+          <button type="button" class="day on" aria-pressed="false" data-n="24" data-set="1">24</button>
+          <span class="day off">25</span>
+          <span class="day off">26</span>
+          <button type="button" class="day on" aria-pressed="false" data-n="27" data-set="1">27</button>
+          <button type="button" class="day on" aria-pressed="false" data-n="28" data-set="2">28</button>
+          <button type="button" class="day on" aria-pressed="false" data-n="29" data-set="3">29</button>
+          <button type="button" class="day on" aria-pressed="false" data-n="30" data-set="1">30</button>
+          <span class="day blank" aria-hidden="true"></span>
+          <span class="day blank" aria-hidden="true"></span>
+          <span class="day blank" aria-hidden="true"></span>
+          </div>
+        </div>
+
+        <div class="key">
+          <span><i class="sw"></i>giorni prenotabili</span>
+          <span><i class="sw no"></i>giorni non disponibili</span>
+        </div>
+      </div>
+
+      <div class="card pane">
+        <div class="panehd">
+          <h3 class="t-md"><span class="f">[Titolo colonna orari · 2-4 parole]</span></h3>
+        </div>
+        <p class="pick">Giorno scelto: <b id="giorno-scelto">nessuno</b></p>
+
+        <div class="slots" id="orari" data-set="0">
+          <p class="vuoto"><span class="f">[Stato vuoto · 5-9 parole · invita a scegliere prima il giorno]</span></p>
+          <button type="button" class="slot" data-g="1"><span class="ora">09:00</span><em>45 min</em></button>
+          <button type="button" class="slot" data-g="1 2"><span class="ora">09:45</span><em>45 min</em></button>
+          <button type="button" class="slot" data-g="1 2"><span class="ora">10:30</span><em>45 min</em></button>
+          <button type="button" class="slot" data-g="1"><span class="ora">11:15</span><em>45 min</em></button>
+          <button type="button" class="slot" data-g="1 3"><span class="ora">12:00</span><em>45 min</em></button>
+          <button type="button" class="slot" data-g="2 3"><span class="ora">14:00</span><em>45 min</em></button>
+          <button type="button" class="slot" data-g="2"><span class="ora">15:30</span><em>45 min</em></button>
+          <button type="button" class="slot" data-g="2 3"><span class="ora">16:15</span><em>45 min</em></button>
+          <button type="button" class="slot" data-g="3"><span class="ora">17:30</span><em>45 min</em></button>
+        </div>
+
+        <div class="panefoot">
+          <a class="btn full" href="#" id="conferma" aria-disabled="true"><span class="f">[CTA · 2-4 parole · conferma l&#39;appuntamento, non &quot;invia&quot;]</span></a>
+          <small><span class="f">[Riga sotto il bottone · 8-14 parole · cosa arriva via email e come si disdice]</span></small>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="who">
+      <div class="ph r11">FOTO · 1:1<small>chi conduce</small></div>
+      <div class="txt">
+        <strong><span class="f">[Nome di chi conduce la call · 2-3 parole]</span></strong>
+        <p style="margin:0"><span class="f">[Ruolo e riga di contesto · 12-20 parole · perche&#39; parlare con lui vale il tuo tempo]</span></p>
+      </div>
+    </div>
+
+  </section>
+</div>
+
+<script>
+/* giorno scelto -> mostra gli orari di quel giorno; orario scelto -> sblocca la conferma */
+var orari = document.getElementById('orari');
+var etichetta = document.getElementById('giorno-scelto');
+var conferma = document.getElementById('conferma');
+var giorni = document.querySelectorAll('.day.on');
+var slot = orari.querySelectorAll('.slot');
+function azzera(){
+  slot.forEach(function(s){ s.classList.remove('sel'); });
+  conferma.setAttribute('aria-disabled', 'true');
+}
+giorni.forEach(function(g){
+  g.addEventListener('click', function(){
+    giorni.forEach(function(o){ o.classList.remove('sel'); o.setAttribute('aria-pressed', 'false'); });
+    g.classList.add('sel');
+    g.setAttribute('aria-pressed', 'true');
+    etichetta.textContent = 'giorno ' + g.dataset.n;
+    orari.dataset.set = g.dataset.set;
+    azzera();
+  });
+});
+slot.forEach(function(s){
+  s.addEventListener('click', function(){
+    azzera();
+    s.classList.add('sel');
+    conferma.setAttribute('aria-disabled', 'false');
+  });
+});
+</script>
+
+</body>
+</html>

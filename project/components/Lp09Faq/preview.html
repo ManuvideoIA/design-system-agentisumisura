@@ -1,0 +1,130 @@
+<!-- @dsCard group="Template landing" height=1000 subtitle="Sezione 084: domande sempre aperte su due colonne (wireframe)" -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SEZIONE 084 · Obiezioni e FAQ — Domande sempre aperte su due colonne</title>
+<!--
+  SEZIONE 084 · Obiezioni e FAQ · Domande sempre aperte su due colonne
+  QUANDO USARLA: quando le risposte sono corte e ti interessa che vengano lette davvero, non solo che esistano da qualche parte.
+  STRUTTURA: intestazione a tutta larghezza, poi una griglia di coppie domanda/risposta a due colonne da 780px in su, una sola colonna sotto. Nessun riquadro, nessun bordo attorno alle voci: le separa solo lo spazio.
+  SLOT: 1 titolo, 1 sottotitolo, 8 coppie domanda/risposta corte, 1 riga finale con due CTA.
+  INTERAZIONE: statica. Tutte le risposte sono gia' visibili, niente da cliccare e niente da aprire.
+  MISURE INDICATIVE: contenitore 1120px - due colonne 1fr 1fr - gap colonne 40/80px - gap righe 34/44px - domanda 17/20px - risposta max 46ch.
+  WIREFRAME: nessun colore di brand, nessuna immagine reale, nessun font definitivo.
+-->
+<style>
+/*BASE*/
+:root{
+  --ink:#191919;--muted:#6d6d6d;--bg:#f4f4f2;--card:#fbfbfa;
+  --line:#dcdcd8;--dash:#9a9a9a;--slot:#fff6c8;--slot-ink:#6a5b1f;--solid:#1a1a1a;
+  --wrap:1120px;--pad:clamp(20px,5vw,56px);--vpad:clamp(48px,8vw,104px);
+  --gap:clamp(20px,3vw,36px);--r:10px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+img,svg,video{max-width:100%;display:block}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:#2b2b28;color:var(--ink);-webkit-text-size-adjust:100%}
+.legend{max-width:var(--wrap);margin:14px auto;padding:0 16px;color:#e4e4e0;font-size:13px;line-height:1.5}
+.legend b{color:#fff}
+.legend code{color:#ffd479;font-size:12px}
+.stage{background:var(--bg);overflow-x:clip}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:var(--vpad) var(--pad)}
+h1,h2,h3,h4{font-weight:800;letter-spacing:-.02em;line-height:1.12}
+.t-xl{font-size:clamp(30px,5.2vw,56px)}
+.t-lg{font-size:clamp(24px,3.6vw,38px)}
+.t-md{font-size:clamp(18px,2.1vw,23px)}
+p{line-height:1.55;color:var(--muted);font-size:clamp(15px,1.5vw,17px)}
+.lead{font-size:clamp(16px,1.9vw,20px)}
+.f{background:var(--slot);border-bottom:1px dashed #8a8a8a;padding:0 .18em;color:var(--slot-ink);font-style:italic;font-weight:500;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.ph{border:2px dashed var(--dash);border-radius:var(--r);background:repeating-linear-gradient(-45deg,#ececea,#ececea 10px,#e3e3e0 10px,#e3e3e0 20px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#5f5f5f;font-size:13px;font-weight:700;line-height:1.35;padding:14px;min-height:84px}
+.ph small{display:block;font-weight:500;color:#7e7e7e;margin-top:.35em}
+.r169{aspect-ratio:16/9}.r43{aspect-ratio:4/3}.r11{aspect-ratio:1}.r34{aspect-ratio:3/4}.r219{aspect-ratio:21/9}
+a{color:inherit;text-decoration:none}
+.btn{display:inline-block;background:var(--solid);color:#fff;border:0;border-radius:999px;padding:14px 26px;font:700 15px/1.2 inherit;cursor:pointer;text-align:center;text-decoration:none}
+.btn .f{background:transparent;border-bottom:0;color:inherit;font-style:normal;padding:0}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn.full{display:block;width:100%}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:clamp(18px,2.4vw,28px)}
+.dot{width:44px;height:44px;border-radius:999px;border:2px dashed var(--dash);display:grid;place-items:center;font-size:10px;color:#7e7e7e;font-weight:700;flex:none;text-align:center;line-height:1.1}
+.dot.sq{border-radius:8px}
+.grid{display:grid;gap:var(--gap)}
+.auto{grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+.stack{display:flex;flex-direction:column}
+.field{border:1.5px dashed var(--dash);border-radius:8px;background:#fff;padding:13px 14px;color:#8a8a8a;font-size:14px;font-style:italic}
+.hr{height:1px;background:var(--line);border:0}
+/*/BASE*/
+.head84{max-width:640px}
+.qas{display:grid;gap:clamp(30px,4vw,44px);margin-top:clamp(30px,4.5vw,52px)}
+@media (min-width:780px){.qas{grid-template-columns:1fr 1fr;column-gap:clamp(40px,6vw,80px)}}
+.qa84 .q{font-size:clamp(17px,1.9vw,20px);font-weight:800;letter-spacing:-.01em;line-height:1.3}
+.qa84 .q .f{font-weight:800}
+.qa84 .a{margin-top:9px;max-width:46ch}
+.end84{margin-top:clamp(34px,5vw,56px);border-top:1px solid var(--line);padding-top:clamp(20px,3vw,28px);display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+.end84 p{margin:0;flex:1 1 min(100%,260px);max-width:52ch}
+.end84 .cta{display:flex;flex-wrap:wrap;gap:12px}
+</style>
+</head>
+<body>
+
+<p class="legend"><b>SEZIONE 084 · Obiezioni e FAQ — Domande sempre aperte su due colonne.</b>
+Campi <code>gialli</code> = testo da scrivere (fra parentesi quadre trovi quanto testo ci sta).
+Riquadri tratteggiati = immagini o media. Nessun brand applicato: colori, font e spaziature sono segnaposto.
+<b>La barra che stai leggendo non fa parte della sezione</b> &mdash; va rimossa.</p>
+
+<div class="stage">
+  <section class="wrap">
+
+    <div class="head84">
+      <h2 class="t-lg"><span class="f">[Titolo · 4-8 parole · anticipa che qui rispondi senza giri di parole]</span></h2>
+      <p class="lead" style="margin-top:12px"><span class="f">[Sottotitolo · 14-24 parole · spiega perche' non hai nascosto le risposte dietro un click]</span></p>
+    </div>
+
+    <div class="qas">
+      <div class="qa84">
+        <h3 class="q"><span class="f">[Domanda 1 · 5-10 parole · il dubbio piu' frequente in assoluto]</span></h3>
+        <p class="a"><span class="f">[Risposta 1 · 20-35 parole · una frase secca che chiude il dubbio, senza rilanci]</span></p>
+      </div>
+      <div class="qa84">
+        <h3 class="q"><span class="f">[Domanda 2 · 5-10 parole · quanto costa davvero]</span></h3>
+        <p class="a"><span class="f">[Risposta 2 · 20-35 parole · numero, cosa include, cosa no]</span></p>
+      </div>
+      <div class="qa84">
+        <h3 class="q"><span class="f">[Domanda 3 · 5-10 parole · quanto tempo mi porta via]</span></h3>
+        <p class="a"><span class="f">[Risposta 3 · 20-35 parole · ore a settimana, dette come cifra]</span></p>
+      </div>
+      <div class="qa84">
+        <h3 class="q"><span class="f">[Domanda 4 · 5-10 parole · serve esperienza per partire]</span></h3>
+        <p class="a"><span class="f">[Risposta 4 · 20-35 parole · livello minimo richiesto, senza addolcire]</span></p>
+      </div>
+      <div class="qa84">
+        <h3 class="q"><span class="f">[Domanda 5 · 5-10 parole · e se non fa per me]</span></h3>
+        <p class="a"><span class="f">[Risposta 5 · 20-35 parole · condizione di uscita in una riga]</span></p>
+      </div>
+      <div class="qa84">
+        <h3 class="q"><span class="f">[Domanda 6 · 5-10 parole · come ricevo l'accesso]</span></h3>
+        <p class="a"><span class="f">[Risposta 6 · 20-35 parole · canale e tempi di consegna]</span></p>
+      </div>
+      <div class="qa84">
+        <h3 class="q"><span class="f">[Domanda 7 · 5-10 parole · per quanto resta disponibile]</span></h3>
+        <p class="a"><span class="f">[Risposta 7 · 20-35 parole · durata dell'accesso o degli aggiornamenti]</span></p>
+      </div>
+      <div class="qa84">
+        <h3 class="q"><span class="f">[Domanda 8 · 5-10 parole · posso pagare in un altro modo]</span></h3>
+        <p class="a"><span class="f">[Risposta 8 · 20-35 parole · metodi accettati e a chi scrivere]</span></p>
+      </div>
+    </div>
+
+    <div class="end84">
+      <p><span class="f">[Riga finale · 12-20 parole · manca la tua domanda? di' dove chiederla e in quanto tempo rispondi]</span></p>
+      <div class="cta">
+        <a class="btn" href="#"><span class="f">[CTA principale · 2-4 parole]</span></a>
+        <a class="btn ghost" href="#"><span class="f">[CTA secondaria · 2-4 parole]</span></a>
+      </div>
+    </div>
+
+  </section>
+</div>
+
+</body>
+</html>

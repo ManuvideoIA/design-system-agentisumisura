@@ -1,0 +1,127 @@
+<!-- @dsCard group="Template landing" height=1100 subtitle="Sezione 088: le tre obiezioni pesanti (wireframe)" -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SEZIONE 088 · Obiezioni e FAQ — Le tre obiezioni pesanti in blocchi larghi</title>
+<!--
+  SEZIONE 088 · Obiezioni e FAQ · Le tre obiezioni pesanti in blocchi larghi
+  QUANDO USARLA: quando le obiezioni sono poche ma pesanti (prezzo, tempo, &quot;per me non funziona&quot;) e vanno demolite per esteso.
+  STRUTTURA: tre blocchi a piena larghezza impilati uno sotto l&#39;altro, uguali a ogni misura: niente griglia, niente colonne, nessun accordion. Dentro ogni blocco l&#39;obiezione fa da titolo e la risposta e&#39; un paragrafo lungo tenuto entro 62ch, chiuso da una riga in evidenza.
+  SLOT: 1 titolo, 1 sottotitolo, 3 blocchi (etichetta di conteggio + obiezione-titolo + 2 paragrafi lunghi + riga in evidenza + riga di prova), 1 CTA con riga di rassicurazione.
+  INTERAZIONE: nessuna.
+  MISURE INDICATIVE: contenitore 1120px - blocchi a piena larghezza - gap 20/32px - obiezione 21/30px - corpo entro 62ch - riga in evidenza con filetto a sinistra 2px.
+  WIREFRAME: nessun colore di brand, nessuna immagine reale, nessun font definitivo.
+-->
+<style>
+/*BASE*/
+:root{
+  --ink:#191919;--muted:#6d6d6d;--bg:#f4f4f2;--card:#fbfbfa;
+  --line:#dcdcd8;--dash:#9a9a9a;--slot:#fff6c8;--slot-ink:#6a5b1f;--solid:#1a1a1a;
+  --wrap:1120px;--pad:clamp(20px,5vw,56px);--vpad:clamp(48px,8vw,104px);
+  --gap:clamp(20px,3vw,36px);--r:10px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+img,svg,video{max-width:100%;display:block}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:#2b2b28;color:var(--ink);-webkit-text-size-adjust:100%}
+.legend{max-width:var(--wrap);margin:14px auto;padding:0 16px;color:#e4e4e0;font-size:13px;line-height:1.5}
+.legend b{color:#fff}
+.legend code{color:#ffd479;font-size:12px}
+.stage{background:var(--bg);overflow-x:clip}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:var(--vpad) var(--pad)}
+h1,h2,h3,h4{font-weight:800;letter-spacing:-.02em;line-height:1.12}
+.t-xl{font-size:clamp(30px,5.2vw,56px)}
+.t-lg{font-size:clamp(24px,3.6vw,38px)}
+.t-md{font-size:clamp(18px,2.1vw,23px)}
+p{line-height:1.55;color:var(--muted);font-size:clamp(15px,1.5vw,17px)}
+.lead{font-size:clamp(16px,1.9vw,20px)}
+.f{background:var(--slot);border-bottom:1px dashed #8a8a8a;padding:0 .18em;color:var(--slot-ink);font-style:italic;font-weight:500;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.ph{border:2px dashed var(--dash);border-radius:var(--r);background:repeating-linear-gradient(-45deg,#ececea,#ececea 10px,#e3e3e0 10px,#e3e3e0 20px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#5f5f5f;font-size:13px;font-weight:700;line-height:1.35;padding:14px;min-height:84px}
+.ph small{display:block;font-weight:500;color:#7e7e7e;margin-top:.35em}
+.r169{aspect-ratio:16/9}.r43{aspect-ratio:4/3}.r11{aspect-ratio:1}.r34{aspect-ratio:3/4}.r219{aspect-ratio:21/9}
+a{color:inherit;text-decoration:none}
+.btn{display:inline-block;background:var(--solid);color:#fff;border:0;border-radius:999px;padding:14px 26px;font:700 15px/1.2 inherit;cursor:pointer;text-align:center;text-decoration:none}
+.btn .f{background:transparent;border-bottom:0;color:inherit;font-style:normal;padding:0}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn.full{display:block;width:100%}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:clamp(18px,2.4vw,28px)}
+.dot{width:44px;height:44px;border-radius:999px;border:2px dashed var(--dash);display:grid;place-items:center;font-size:10px;color:#7e7e7e;font-weight:700;flex:none;text-align:center;line-height:1.1}
+.dot.sq{border-radius:8px}
+.grid{display:grid;gap:var(--gap)}
+.auto{grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+.stack{display:flex;flex-direction:column}
+.field{border:1.5px dashed var(--dash);border-radius:8px;background:#fff;padding:13px 14px;color:#8a8a8a;font-size:14px;font-style:italic}
+.hr{height:1px;background:var(--line);border:0}
+/*/BASE*/
+.intro{max-width:700px}
+.blocks{display:flex;flex-direction:column;gap:clamp(18px,2.6vw,30px);margin-top:clamp(30px,4vw,48px)}
+.blk{padding:clamp(22px,3.6vw,44px)}
+.count{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.blk h3{font-size:clamp(21px,2.9vw,30px);margin-top:10px;max-width:34ch}
+.body{max-width:62ch;margin-top:16px;display:flex;flex-direction:column;gap:12px}
+.punch{margin-top:18px;border-left:2px solid var(--ink);padding-left:16px;max-width:58ch;color:var(--ink);font-weight:700;font-size:clamp(15px,1.7vw,18px);line-height:1.45}
+.proof{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);display:flex;gap:12px;align-items:flex-start;font-size:14px;line-height:1.45;color:var(--muted)}
+.close{margin-top:clamp(26px,3.5vw,40px);display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+</style>
+</head>
+<body>
+
+<p class="legend"><b>SEZIONE 088 · Obiezioni e FAQ — Le tre obiezioni pesanti in blocchi larghi.</b>
+Campi <code>gialli</code> = testo da scrivere (fra parentesi quadre trovi quanto testo ci sta).
+Riquadri tratteggiati = immagini o media. Nessun brand applicato: colori, font e spaziature sono segnaposto.
+<b>La barra che stai leggendo non fa parte della sezione</b> &mdash; va rimossa.</p>
+
+<div class="stage">
+  <section class="wrap">
+    <div class="intro">
+      <h2 class="t-lg"><span class="f">[Titolo · 4-8 parole · le tre cose che ti stanno fermando]</span></h2>
+      <p class="lead" style="margin-top:12px"><span class="f">[Sottotitolo · 15-25 parole · avvisa che qui rispondi per esteso, non con una riga]</span></p>
+    </div>
+
+    <div class="blocks">
+
+      <div class="card blk">
+        <span class="count"><span class="f">[Obiezione 1 di 3]</span></span>
+        <h3><span class="f">[Obiezione sul prezzo come titolo · 6-12 parole · la frase intera, non l&#39;etichetta &quot;costo&quot;]</span></h3>
+        <div class="body">
+          <p><span class="f">[Paragrafo 1 · 45-75 parole · dai ragione alla paura e spiega da dove nasce: chi la pensa cosi&#39; ha vissuto qualcosa di preciso]</span></p>
+          <p><span class="f">[Paragrafo 2 · 45-75 parole · smonta con numeri, confronto con il costo di non fare nulla, o come e&#39; strutturato il pagamento]</span></p>
+        </div>
+        <p class="punch"><span class="f">[Riga in evidenza · 10-18 parole · la conclusione che vuoi resti in testa]</span></p>
+        <p class="proof"><span class="dot sq">PROVA</span><span class="f">[Prova a supporto · 12-22 parole · dato, garanzia o frase di un cliente che aveva lo stesso dubbio]</span></p>
+      </div>
+
+      <div class="card blk">
+        <span class="count"><span class="f">[Obiezione 2 di 3]</span></span>
+        <h3><span class="f">[Obiezione sul tempo come titolo · 6-12 parole]</span></h3>
+        <div class="body">
+          <p><span class="f">[Paragrafo 1 · 45-75 parole · descrivi la sua settimana vera prima di rispondere]</span></p>
+          <p><span class="f">[Paragrafo 2 · 45-75 parole · quante ore servono davvero, quando, e cosa succede se salta una settimana]</span></p>
+        </div>
+        <p class="punch"><span class="f">[Riga in evidenza · 10-18 parole]</span></p>
+        <p class="proof"><span class="dot sq">PROVA</span><span class="f">[Prova a supporto · 12-22 parole]</span></p>
+      </div>
+
+      <div class="card blk">
+        <span class="count"><span class="f">[Obiezione 3 di 3]</span></span>
+        <h3><span class="f">[Obiezione &quot;per me non funziona&quot; come titolo · 6-12 parole]</span></h3>
+        <div class="body">
+          <p><span class="f">[Paragrafo 1 · 45-75 parole · nomina il caso specifico che lui crede sia un&#39;eccezione]</span></p>
+          <p><span class="f">[Paragrafo 2 · 45-75 parole · mostra perche&#39; il metodo regge anche li&#39;, oppure ammetti quando non regge]</span></p>
+        </div>
+        <p class="punch"><span class="f">[Riga in evidenza · 10-18 parole]</span></p>
+        <p class="proof"><span class="dot sq">PROVA</span><span class="f">[Prova a supporto · 12-22 parole]</span></p>
+      </div>
+
+    </div>
+
+    <div class="close">
+      <a class="btn" href="#"><span class="f">[CTA · 2-4 parole]</span></a>
+      <p style="margin:0;flex:1 1 240px"><span class="f">[Rassicurazione accanto alla CTA · 8-16 parole · garanzia, disdetta o cosa succede al clic]</span></p>
+    </div>
+  </section>
+</div>
+
+</body>
+</html>

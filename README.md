@@ -8,6 +8,7 @@ Design system di Alterego (nome di lavoro, provvisorio). Il servizio crea agenti
 - `project/README.md`: regole di marchio e di scrittura.
 - `project/01-…06-*.md`: nome e voce, luce, immagini IA, video IA, contenuti social, pagine e slide.
 - `project/components/*/`: un `README.md` e un `preview.html` per ogni componente.
+- `project/components/Lp01…Lp09*/`: nove template wireframe per la landing page, da personalizzare. Vedi `project/07-template-landing-page.md`.
 - `project/design-system.json`: indice del design system.
 
 ## Scelte attuali

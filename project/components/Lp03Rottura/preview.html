@@ -1,0 +1,85 @@
+<!-- @dsCard group="Template landing" height=520 subtitle="Sezione 033: cerniera "non è X, è Y" (wireframe)" -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SEZIONE 033 · Soluzione e meccanismo unico — Rottura "non e' X, e' Y"</title>
+<!--
+  SEZIONE 033 · Soluzione e meccanismo unico · Rottura "non e' X, e' Y"
+  QUANDO USARLA: come cerniera tra il blocco problema e il blocco soluzione, per riposizionare la categoria in una frase sola.
+  STRUTTURA: banda a fondo pieno scuro, invertita rispetto alle sezioni vicine. Due sole righe di testo enormi allineate a sinistra: la prima attenuata e barrata, la seconda piena. Nessun altro elemento, nessuna colonna: a mobile cambia solo la scala del testo.
+  SLOT: 4 campi in tutto, tutti corti. Riga negata: attacco della negazione (es. "Non e' un") + la categoria che rifiuti, cioe' come lo chiamerebbero tutti. Riga affermata: attacco dell'affermazione (es. "E' un") + la tua categoria vera, che e' il nome del meccanismo e non del prodotto. Se scrivi lungo il colpo non arriva. Nessuna immagine, nessuna lista, nessuna CTA.
+  INTERAZIONE: nessuna.
+  MISURE INDICATIVE: contenitore 1120px - padding verticale 64/140px - righe 30/68px - interlinea 1.02 - stacco fra le due righe 10/22px - riga barrata a spessore .05em.
+  WIREFRAME: nessun colore di brand, nessuna immagine reale, nessun font definitivo.
+-->
+<style>
+/*BASE*/
+:root{
+  --ink:#191919;--muted:#6d6d6d;--bg:#f4f4f2;--card:#fbfbfa;
+  --line:#dcdcd8;--dash:#9a9a9a;--slot:#fff6c8;--slot-ink:#6a5b1f;--solid:#1a1a1a;
+  --wrap:1120px;--pad:clamp(20px,5vw,56px);--vpad:clamp(48px,8vw,104px);
+  --gap:clamp(20px,3vw,36px);--r:10px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+img,svg,video{max-width:100%;display:block}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:#2b2b28;color:var(--ink);-webkit-text-size-adjust:100%}
+.legend{max-width:var(--wrap);margin:14px auto;padding:0 16px;color:#e4e4e0;font-size:13px;line-height:1.5}
+.legend b{color:#fff}
+.legend code{color:#ffd479;font-size:12px}
+.stage{background:var(--bg);overflow-x:clip}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:var(--vpad) var(--pad)}
+h1,h2,h3,h4{font-weight:800;letter-spacing:-.02em;line-height:1.12}
+.t-xl{font-size:clamp(30px,5.2vw,56px)}
+.t-lg{font-size:clamp(24px,3.6vw,38px)}
+.t-md{font-size:clamp(18px,2.1vw,23px)}
+p{line-height:1.55;color:var(--muted);font-size:clamp(15px,1.5vw,17px)}
+.lead{font-size:clamp(16px,1.9vw,20px)}
+.f{background:var(--slot);border-bottom:1px dashed #8a8a8a;padding:0 .18em;color:var(--slot-ink);font-style:italic;font-weight:500;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.ph{border:2px dashed var(--dash);border-radius:var(--r);background:repeating-linear-gradient(-45deg,#ececea,#ececea 10px,#e3e3e0 10px,#e3e3e0 20px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#5f5f5f;font-size:13px;font-weight:700;line-height:1.35;padding:14px;min-height:84px}
+.ph small{display:block;font-weight:500;color:#7e7e7e;margin-top:.35em}
+.r169{aspect-ratio:16/9}.r43{aspect-ratio:4/3}.r11{aspect-ratio:1}.r34{aspect-ratio:3/4}.r219{aspect-ratio:21/9}
+a{color:inherit;text-decoration:none}
+.btn{display:inline-block;background:var(--solid);color:#fff;border:0;border-radius:999px;padding:14px 26px;font:700 15px/1.2 inherit;cursor:pointer;text-align:center;text-decoration:none}
+.btn .f{background:transparent;border-bottom:0;color:inherit;font-style:normal;padding:0}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn.full{display:block;width:100%}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:clamp(18px,2.4vw,28px)}
+.dot{width:44px;height:44px;border-radius:999px;border:2px dashed var(--dash);display:grid;place-items:center;font-size:10px;color:#7e7e7e;font-weight:700;flex:none;text-align:center;line-height:1.1}
+.dot.sq{border-radius:8px}
+.grid{display:grid;gap:var(--gap)}
+.auto{grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+.stack{display:flex;flex-direction:column}
+.field{border:1.5px dashed var(--dash);border-radius:8px;background:#fff;padding:13px 14px;color:#8a8a8a;font-size:14px;font-style:italic}
+.hr{height:1px;background:var(--line);border:0}
+/*/BASE*/
+.hinge{background:var(--ink);color:#f2f2f0}
+.hinge .wrap{padding-top:clamp(64px,12vw,140px);padding-bottom:clamp(64px,12vw,140px)}
+.hinge .f{background:#4a441f;color:#ffe27a;border-bottom-color:#6d6d6d}
+.riga{font-weight:800;letter-spacing:-.03em;line-height:1.02;font-size:clamp(30px,6vw,68px);overflow-wrap:anywhere;max-width:20ch}
+.riga.giu{color:#7a7a76;text-decoration:line-through;text-decoration-thickness:.05em}
+.riga.su{color:#ffffff;margin-top:clamp(10px,2vw,22px)}
+</style>
+</head>
+<body>
+
+<p class="legend"><b>SEZIONE 033 · Soluzione e meccanismo unico — Rottura "non e' X, e' Y".</b>
+Campi <code>gialli</code> = testo da scrivere (fra parentesi quadre trovi quanto testo ci sta).
+Riquadri tratteggiati = immagini o media. Nessun brand applicato: colori, font e spaziature sono segnaposto.
+<b>La barra che stai leggendo non fa parte della sezione</b> — va rimossa.</p>
+
+<div class="stage">
+  <section class="hinge">
+    <div class="wrap">
+
+      <p class="riga giu"><span class="f">[Negazione · 1-3 parole]</span> <span class="f">[Categoria che rifiuti · 2-5 parole]</span></p>
+
+      <h2 class="riga su"><span class="f">[Affermazione · 1-3 parole]</span> <span class="f">[La tua categoria vera · 2-5 parole]</span></h2>
+
+    </div>
+  </section>
+</div>
+
+</body>
+</html>

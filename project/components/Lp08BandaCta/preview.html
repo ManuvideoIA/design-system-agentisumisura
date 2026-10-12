@@ -1,0 +1,106 @@
+<!-- @dsCard group="Template landing" height=560 subtitle="Sezione 099: banda CTA a tutta larghezza (wireframe)" -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SEZIONE 099 · CTA e moduli di conversione — Banda CTA centrata a tutta larghezza</title>
+<!--
+  SEZIONE 099 · CTA e moduli di conversione · Banda CTA centrata a tutta larghezza
+  QUANDO USARLA: come stacco di conversione fra due sezioni dense; puoi ripeterla due o tre volte nella pagina.
+  STRUTTURA: fascia full-bleed a colore pieno diverso dal resto della pagina; contenuto in una colonna sola
+  centrata (max 720px) a tutte le larghezze: titolo su due righe, riga di rassicurazione, due bottoni affiancati
+  che sotto i 520px si impilano a piena larghezza. Nessuna immagine: il peso lo fa l&#39;aria intorno.
+  SLOT: 2 righe di titolo, 1 riga di rassicurazione, 2 CTA (primaria piena + secondaria outline), 1 micro-riga sotto.
+  INTERAZIONE: nessuna (statica).
+  MISURE INDICATIVE: banda a tutta larghezza - colonna 720px - padding verticale 64/132px - titolo 30/56px - gap bottoni 14px.
+  WIREFRAME: nessun colore di brand, nessuna immagine reale, nessun font definitivo. Il fondo pieno è strutturale, non un colore di marca.
+-->
+<style>
+/*BASE*/
+:root{
+  --ink:#191919;--muted:#6d6d6d;--bg:#f4f4f2;--card:#fbfbfa;
+  --line:#dcdcd8;--dash:#9a9a9a;--slot:#fff6c8;--slot-ink:#6a5b1f;--solid:#1a1a1a;
+  --wrap:1120px;--pad:clamp(20px,5vw,56px);--vpad:clamp(48px,8vw,104px);
+  --gap:clamp(20px,3vw,36px);--r:10px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+img,svg,video{max-width:100%;display:block}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:#2b2b28;color:var(--ink);-webkit-text-size-adjust:100%}
+.legend{max-width:var(--wrap);margin:14px auto;padding:0 16px;color:#e4e4e0;font-size:13px;line-height:1.5}
+.legend b{color:#fff}
+.legend code{color:#ffd479;font-size:12px}
+.stage{background:var(--bg);overflow-x:clip}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:var(--vpad) var(--pad)}
+h1,h2,h3,h4{font-weight:800;letter-spacing:-.02em;line-height:1.12}
+.t-xl{font-size:clamp(30px,5.2vw,56px)}
+.t-lg{font-size:clamp(24px,3.6vw,38px)}
+.t-md{font-size:clamp(18px,2.1vw,23px)}
+p{line-height:1.55;color:var(--muted);font-size:clamp(15px,1.5vw,17px)}
+.lead{font-size:clamp(16px,1.9vw,20px)}
+.f{background:var(--slot);border-bottom:1px dashed #8a8a8a;padding:0 .18em;color:var(--slot-ink);font-style:italic;font-weight:500;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.ph{border:2px dashed var(--dash);border-radius:var(--r);background:repeating-linear-gradient(-45deg,#ececea,#ececea 10px,#e3e3e0 10px,#e3e3e0 20px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#5f5f5f;font-size:13px;font-weight:700;line-height:1.35;padding:14px;min-height:84px}
+.ph small{display:block;font-weight:500;color:#7e7e7e;margin-top:.35em}
+.r169{aspect-ratio:16/9}.r43{aspect-ratio:4/3}.r11{aspect-ratio:1}.r34{aspect-ratio:3/4}.r219{aspect-ratio:21/9}
+a{color:inherit;text-decoration:none}
+.btn{display:inline-block;background:var(--solid);color:#fff;border:0;border-radius:999px;padding:14px 26px;font:700 15px/1.2 inherit;cursor:pointer;text-align:center;text-decoration:none}
+.btn .f{background:transparent;border-bottom:0;color:inherit;font-style:normal;padding:0}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn.full{display:block;width:100%}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:clamp(18px,2.4vw,28px)}
+.dot{width:44px;height:44px;border-radius:999px;border:2px dashed var(--dash);display:grid;place-items:center;font-size:10px;color:#7e7e7e;font-weight:700;flex:none;text-align:center;line-height:1.1}
+.dot.sq{border-radius:8px}
+.grid{display:grid;gap:var(--gap)}
+.auto{grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+.stack{display:flex;flex-direction:column}
+.field{border:1.5px dashed var(--dash);border-radius:8px;background:#fff;padding:13px 14px;color:#8a8a8a;font-size:14px;font-style:italic}
+.hr{height:1px;background:var(--line);border:0}
+/*/BASE*/
+.band{background:var(--ink);color:#f2f2f0}
+.band .wrap{padding-block:clamp(64px,11vw,132px)}
+.band p{color:#b9b9b5}
+.band .f{background:#4a441f;color:#ffe27a;border-bottom-color:#6d6d6d}
+.band .btn{background:#f4f4f2;color:var(--ink)}
+.band .btn.ghost{background:transparent;color:#f2f2f0;border-color:#8d8d88}
+.band .btn .f{background:transparent;color:inherit;border-bottom:0}
+.mid{max-width:720px;margin:0 auto;text-align:center}
+.row2{display:block}
+.mid .lead{margin-top:clamp(18px,2.6vw,26px)}
+.acts{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:clamp(28px,4.4vw,44px)}
+.acts .btn{flex:1 1 min(100%,230px);max-width:340px}
+.foot{display:block;margin-top:18px;font-size:13px;line-height:1.4;color:#9a9a96}
+</style>
+</head>
+<body>
+
+<p class="legend"><b>SEZIONE 099 · CTA e moduli di conversione — Banda CTA centrata a tutta larghezza.</b>
+Campi <code>gialli</code> = testo da scrivere (fra parentesi quadre trovi quanto testo ci sta).
+Riquadri tratteggiati = immagini o media. Nessun brand applicato: colori, font e spaziature sono segnaposto.
+<b>La barra che stai leggendo non fa parte della sezione</b> — va rimossa.</p>
+
+<div class="stage">
+  <section class="band">
+    <div class="wrap">
+      <div class="mid">
+
+        <h2 class="t-xl">
+          <span class="row2 f">[Titolo · riga 1 · 3-6 parole · la promessa]</span>
+          <span class="row2 f">[Titolo · riga 2 · 3-6 parole · chiude la frase, va a capo qui apposta]</span>
+        </h2>
+
+        <p class="lead"><span class="f">[Rassicurazione · 10-18 parole · toglie il rischio: prezzo, tempo o disdetta]</span></p>
+
+        <div class="acts">
+          <a class="btn" href="#"><span class="f">[CTA primaria · 2-4 parole · il verbo dell&#39;azione]</span></a>
+          <a class="btn ghost" href="#"><span class="f">[CTA secondaria · 2-4 parole · per chi non è pronto]</span></a>
+        </div>
+
+        <small class="foot"><span class="f">[Micro-riga · 5-10 parole · dettaglio operativo: pagamento, tempi, posti]</span></small>
+
+      </div>
+    </div>
+  </section>
+</div>
+
+</body>
+</html>
