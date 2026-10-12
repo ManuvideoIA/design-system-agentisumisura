@@ -11,6 +11,8 @@ Una colonna. Una sola azione: prenotare una call conoscitiva. L'ordine è questo
 5. Rassicurazioni.
 6. Domande e contatto.
 
+Solo la sezione 4 porta casi specifici. Nelle altre si spiega il servizio in generale, senza settori né strumenti nominati.
+
 Un esempio è LandingHero. Non ho dati affidabili su quante sezioni convertano meglio. Parti semplice. Poi correggi.
 
 ## Prima presentazione

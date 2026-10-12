@@ -1,6 +1,6 @@
 Post 4:5 per il feed, in tre varianti. Chiara. Petrolio. Notte.
 
-**Chi lo usa fornisce** un kicker, un titolo con una parola da evidenziare e un'azione finale. Il marchio in basso è il nome in Space Grotesk 700.
+**Chi lo usa fornisce** un kicker, un titolo con una parola da evidenziare e un'azione finale. In basso va il logo (versione orizzontale 5a): quella senza suffisso su fondo chiaro, `-fondo-petrolio` su `brand`, `-fondo-scuro` su `ink`.
 
 - Una sola idea per post. Due idee sono due post.
 - Variante chiara: fondo `surface-raised`, testo `ink`, azione in pillola `brand`.

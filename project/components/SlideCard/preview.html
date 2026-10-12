@@ -12,19 +12,24 @@
   .steps h2 { margin: 0 0 var(--space-4); font: 700 28px/32px var(--font-display); letter-spacing: -0.02em; }
   .step { display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-3); font: 400 16px/24px var(--font-sans); }
   .num { flex: none; width: 32px; height: 32px; border-radius: var(--radius-pill); background: var(--brand); color: var(--on-brand); display: grid; place-items: center; font: 700 12px/1 var(--font-mono); }
-  .mark { position: absolute; left: var(--space-6); bottom: var(--space-4); font: 700 13px/1 var(--font-display); letter-spacing: -0.02em; }
+  .mark { position: absolute; left: var(--space-6); bottom: var(--space-4); --lg-h: 20px; }
+  .lg img { display: none; height: var(--lg-h, 24px); width: auto; }
+  .lg img.lg-fix { display: block; }
+  .gl .lg-light, .gk .lg-dark { display: block; }
+  :root[data-theme=dark] .gl .lg-light, :root[data-theme=dark] .gk .lg-dark { display: none; }
+  :root[data-theme=dark] .gl .lg-dark, :root[data-theme=dark] .gk .lg-light { display: block; }
 </style></head>
 <body>
   <section class="slide title">
     <h2>Come si <mark>parte</mark>.</h2>
     <p>Una frase di apertura che spiega il servizio.</p>
-    <span class="mark">Alterego</span>
+    <span class="mark lg gk"><img class="lg-light" src="/_blob/dfc8be1a99282914fb7e9080ce2989fc" alt="Alterego"><img class="lg-dark" src="/_blob/de654881f5eff50cc2c35ac486e68d88" alt="" aria-hidden="true"></span>
   </section>
   <section class="slide steps">
     <h2>Tre passi.</h2>
     <div class="step"><span class="num">01</span>Una call per capire le tue esigenze.</div>
     <div class="step"><span class="num">02</span>Una prova su un solo compito.</div>
     <div class="step"><span class="num">03</span>L'avvio, con te al comando.</div>
-    <span class="mark">Alterego</span>
+    <span class="mark lg gl"><img class="lg-light" src="/_blob/dfc8be1a99282914fb7e9080ce2989fc" alt="Alterego"><img class="lg-dark" src="/_blob/de654881f5eff50cc2c35ac486e68d88" alt="" aria-hidden="true"></span>
   </section>
 </body></html>

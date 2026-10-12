@@ -12,16 +12,20 @@
   .scene { background: var(--brand-soft); }
   .scene .label { position: absolute; left: 0; right: 0; top: 38%; text-align: center; font: 400 11px/16px var(--font-mono); color: var(--ink); }
   .cap { position: absolute; left: 12%; right: 12%; bottom: 24%; background: var(--ink); color: var(--surface); border-radius: var(--radius-md); padding: var(--space-2) var(--space-3); font: 700 17px/20px var(--font-sans); text-align: center; }
-  .bug { position: absolute; right: 8%; bottom: 6%; font: 700 11px/1 var(--font-display); letter-spacing: -0.02em; color: var(--ink); }
-  .open .bug { color: var(--on-brand); }
+  .bug { position: absolute; right: 8%; bottom: 6%; --lg-h: 16px; }
+  .lg img { display: none; height: var(--lg-h, 24px); width: auto; }
+  .lg img.lg-fix { display: block; }
+  .gl .lg-light, .gk .lg-dark { display: block; }
+  :root[data-theme=dark] .gl .lg-light, :root[data-theme=dark] .gk .lg-dark { display: none; }
+  :root[data-theme=dark] .gl .lg-dark, :root[data-theme=dark] .gk .lg-light { display: block; }
   .note { width: 216px; margin-top: var(--space-2); font: 400 11px/16px var(--font-mono); color: var(--ink-muted); }
 </style></head>
 <body>
   <div>
     <div class="frame open">
       <div class="safe"></div>
-      <div class="hook">Le email non <mark>aspettano</mark>.</div>
-      <div class="bug">Alterego</div>
+      <div class="hook">Meno lavori <mark>ripetitivi</mark>.</div>
+      <div class="bug lg"><img class="lg-fix" src="/_blob/8e02505dd2d0d6409c64da14ad762d4f" alt="Alterego"></div>
     </div>
     <div class="note">Apertura</div>
   </div>
@@ -30,7 +34,7 @@
       <div class="safe"></div>
       <div class="label">Inquadratura del titolare</div>
       <div class="cap">Rispondo la sera, quando chiudo.</div>
-      <div class="bug">Alterego</div>
+      <div class="bug lg gl"><img class="lg-light" src="/_blob/dfc8be1a99282914fb7e9080ce2989fc" alt="Alterego"><img class="lg-dark" src="/_blob/de654881f5eff50cc2c35ac486e68d88" alt="" aria-hidden="true"></div>
     </div>
     <div class="note">Fotogramma con sottotitolo</div>
   </div>

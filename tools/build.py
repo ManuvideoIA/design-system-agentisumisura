@@ -62,12 +62,15 @@ addEventListener('message',function(e){if(e.data&&e.data.theme)set(e.data.theme)
 (OUT / "previews").mkdir(parents=True, exist_ok=True)
 for old in (OUT / "previews").glob("*.html"):
     old.unlink()
+blob2name = {v["blob"]: k for g in index.get("assetGroups", {}).values() for k, v in g.get("files", {}).items()}
 components = []
 for d in sorted((SRC / "components").iterdir()):
     pv = d / "preview.html"
     if not pv.exists():
         continue
     text = pv.read_text(encoding="utf-8")
+    # i loghi nelle anteprime puntano a /_blob/<id> (artefatto): qui diventano file locali
+    text = re.sub(r"/_blob/([0-9a-f]{32})", lambda m: ("../logos/" + blob2name[m.group(1)]) if m.group(1) in blob2name else m.group(0), text)
     m = re.match(r"<!--\s*@dsCard\s*(.*?)-->", text)
     meta = dict(re.findall(r'(\w+)=(?:"([^"]*)"|(\d+))', m.group(1)) and
                 [(a, b or c) for a, b, c in re.findall(r'(\w+)=(?:"([^"]*)"|(\d+))', m.group(1))]) if m else {}

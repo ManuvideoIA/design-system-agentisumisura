@@ -26,7 +26,7 @@ I file sono numerati da 01 a 09 nella cartella dell'utente. Non ho trattato quel
 
 1. **Personalizzare i template con l'identità di Alterego.** Colori, font, raggi e ombre dai token. Il segnaposto nero diventa il colore guida o l'accento, secondo il componente. Contrasto minimo 4.5:1 per il testo, da controllare dopo aver applicato i colori.
 2. **Scrivere il copywriting.** È importante e non è ancora fatto. Ogni campo giallo ha un'indicazione di lunghezza. Usa le due versioni dell'offerta, la riga sulla sicurezza dei dati e le regole di scrittura: frasi brevi, punto finale, "tu", nessuna promessa che non puoi dimostrare.
-3. **Adattare le sezioni al servizio.** Togliere la barra di legenda, scegliere quali sezioni usare e in che ordine, riscrivere le voci dei confronti e dei passaggi per piccole attività.
+3. **Adattare le sezioni al servizio.** Togliere la barra di legenda, scegliere quali sezioni usare e in che ordine, riscrivere le voci dei confronti e dei passaggi per piccole attività, senza settori né strumenti nominati: i casi concreti vanno solo nelle dimostrazioni.
 4. **Collegare la prenotazione.** Il calendario di `Lp04PrenotazioneCall` è una dimostrazione con date e orari segnaposto.
 5. **Colmare le lacune.** Nessuno dei nove template è una sezione di prova sociale, che il template del problema prevede prima. Qui vale la regola del sistema: solo risposte registrate con consenso, mai testimonianze o volti inventati.
 

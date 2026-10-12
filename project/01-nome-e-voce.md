@@ -6,6 +6,12 @@ Esiste già un'azienda con lo stesso nome nel campo dell'IA. Sviluppa un'interfa
 
 Il nome da solo non richiama gli agenti. Una dicitura da abbinare, per esempio «agenti IA», è ancora da decidere.
 
+## A chi parla e che cosa si dice
+
+Il servizio è per piccole attività che hanno lavori ripetitivi da delegare (fonte: indicazioni dell'utente).
+
+Nelle frasi pubbliche (landing page, post, video, slide) si spiega il servizio **in generale**. Non si nominano settori né strumenti, per esempio email, ordini o chat. I casi specifici stanno solo nelle dimostrazioni (fonte: indicazione dell'utente del 12 ottobre 2026).
+
 ## Offerta in una frase
 
 Due versioni, entrambe da tenere (fonte: scelta dell'utente).
@@ -28,7 +34,7 @@ La riga è in salvia (`accent-text`), piccola e centrata. Le regole sono nel REA
 
 | Sì | No |
 | --- | --- |
-| Le email dei clienti vengono ordinate per te. Tu decidi. | Rivoluziona il tuo business con l'IA di nuova generazione. |
+| Un agente IA fa per te il lavoro ripetitivo. Tu decidi. | Rivoluziona il tuo business con l'IA di nuova generazione. |
 | Ti faccio tre domande. Poi ti mostro una prova. | Soluzioni innovative e scalabili. |
 | Non sostituisce nessuno. Fa i lavori che ripeti ogni giorno. | Zero fatica, risultati garantiti. |
 
@@ -36,8 +42,8 @@ Scrivi in prima persona singolare finché il servizio è portato avanti da una p
 
 ## Quattro temi
 
-- **Il problema.** Una difficoltà quotidiana vista dal titolare.
-- **Come funziona.** Cosa fa l'agente, con un esempio.
+- **Il problema.** Una difficoltà quotidiana di chi gestisce una piccola attività, detta in generale.
+- **Come funziona.** Cosa fa l'agente, in generale. L'esempio concreto va nella dimostrazione.
 - **La prova.** Un progetto dimostrativo.
 - **Cosa sto imparando.** Una novità dell'IA e cosa significa per una piccola attività.
 

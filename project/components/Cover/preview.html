@@ -5,7 +5,12 @@
   html, body { margin: 0; background: var(--surface); }
   .cover { position: relative; width: 960px; height: 320px; overflow: hidden; background: var(--surface); }
   .text { position: absolute; left: var(--space-7); bottom: var(--space-6); width: 400px; }
-  h1 { margin: 0; font: 400 76px/0.95 var(--font-editorial, 'Baskervville', Georgia, serif); letter-spacing: -0.01em; color: var(--ink); }
+  h1 { margin: 0; --lg-h: 106px; }
+  .lg img { display: none; height: var(--lg-h, 24px); width: auto; }
+  .lg img.lg-fix { display: block; }
+  .gl .lg-light, .gk .lg-dark { display: block; }
+  :root[data-theme=dark] .gl .lg-light, :root[data-theme=dark] .gk .lg-dark { display: none; }
+  :root[data-theme=dark] .gl .lg-dark, :root[data-theme=dark] .gk .lg-light { display: block; }
   p { margin: var(--space-4) 0 0; font: 400 14px/20px var(--font-sans); color: var(--ink-muted); }
   svg { position: absolute; left: 480px; top: 0; }
   .brand { fill: var(--brand); }
@@ -17,7 +22,7 @@
 <body>
   <div class="cover">
     <div class="text">
-      <h1>Alterego</h1>
+      <h1 class="lg gl"><img class="lg-light" src="/_blob/dfc8be1a99282914fb7e9080ce2989fc" alt="Alterego"><img class="lg-dark" src="/_blob/de654881f5eff50cc2c35ac486e68d88" alt="" aria-hidden="true"></h1>
       <p>Agenti IA che lavorano al posto tuo.</p>
     </div>
     <svg width="480" height="320" viewBox="0 0 480 320" role="img" aria-label="Blocchi petrolio, inchiostro e salvia con righe di chat e punti di scrittura">

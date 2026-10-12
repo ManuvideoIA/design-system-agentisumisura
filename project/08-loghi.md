@@ -23,6 +23,10 @@ Una persona vista da dietro, in inchiostro o in carta, con accanto l'agente in p
 | Inchiostro (`ink`) o foto scure | suffisso `-fondo-scuro` |
 | Petrolio (`brand`, `#497A84`) | suffisso `-fondo-petrolio` (solo PNG) |
 
+## Dove è usato nel design system
+
+Nelle anteprime Cover, LandingHero, SlideCard, SocialPost e VerticalVideo il nome scritto è stato sostituito dal logo orizzontale 5a. La versione cambia con il fondo e con il tema chiaro o scuro. Per passare alla 5b basta cambiare il file nelle anteprime.
+
 ## Regole
 
 - Non ricolorare e non ridisegnare il logo.

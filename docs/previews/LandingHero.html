@@ -7,7 +7,12 @@
   .top { display: flex; gap: 6px; padding: 12px var(--space-4); border-bottom: 1px solid var(--line); }
   .top i { width: 10px; height: 10px; border-radius: 50%; background: var(--line-strong); }
   .nav { display: flex; justify-content: space-between; align-items: center; padding: var(--space-4) var(--space-5); }
-  .wm { font: 700 18px/1 var(--font-display); letter-spacing: -0.02em; }
+  .wm { --lg-h: 28px; }
+  .lg img { display: none; height: var(--lg-h, 24px); width: auto; }
+  .lg img.lg-fix { display: block; }
+  .gl .lg-light, .gk .lg-dark { display: block; }
+  :root[data-theme=dark] .gl .lg-light, :root[data-theme=dark] .gk .lg-dark { display: none; }
+  :root[data-theme=dark] .gl .lg-dark, :root[data-theme=dark] .gk .lg-light { display: block; }
   .nav a { font: 700 13px/1 var(--font-sans); color: var(--brand-text); letter-spacing: .06em; text-transform: uppercase; }
   .hero { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: var(--space-5); align-items: center; padding: var(--space-4) var(--space-5) var(--space-6); }
   @media (max-width: 560px) { .hero { grid-template-columns: 1fr; } }
@@ -31,17 +36,17 @@ addEventListener('message',function(e){if(e.data&&e.data.theme)set(e.data.theme)
 <body>
   <div class="browser">
     <div class="top"><i></i><i></i><i></i></div>
-    <div class="nav"><span class="wm">Alterego</span><a>Come funziona</a></div>
+    <div class="nav"><span class="wm lg gl"><img class="lg-light" src="../logos/alterego-5a-orizzontale.png" alt="Alterego"><img class="lg-dark" src="../logos/alterego-5a-orizzontale-fondo-scuro.png" alt="" aria-hidden="true"></span><a>Come funziona</a></div>
     <div class="hero">
       <div>
         <h1>Meno lavori ripetitivi. Più <mark>tempo</mark> per te.</h1>
-        <p>Un agente IA su misura legge, ordina e prepara le risposte. Tu decidi.</p>
+        <p>Un agente IA su misura fa per te il lavoro ripetitivo. Tu decidi.</p>
         <button class="btn">Prenota una call conoscitiva</button>
       </div>
       <div class="chat">
-        <div class="b cust">Siete aperti domenica?</div>
-        <div class="b agt"><small>Agente IA</small>Sì, dalle 18. Vuoi prenotare un tavolo?</div>
-        <div class="ex">esempio</div>
+        <div class="b cust">Messaggio del cliente.</div>
+        <div class="b agt"><small>Agente IA</small>Risposta dell'agente, pronta per te.</div>
+        <div class="ex">testo segnaposto</div>
       </div>
     </div>
     <p class="sec">I dati sensibili sono una priorità: decidiamo insieme come proteggerli.</p>
