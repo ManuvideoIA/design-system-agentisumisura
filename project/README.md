@@ -7,7 +7,7 @@ Alterego è il nome di lavoro, provvisorio. Dominio, marchio e nomi social non s
 - La salvia (`accent`) è l'enfasi: una parola del titolo, un numero, il bollino "Decidi tu". Sopra va sempre `on-accent`.
 - La salvia come testo è `accent-text`.
 - L'inchiostro (`ink`) dà peso. Usa blocchi scuri per i contenuti di impatto.
-- Titoli grandi in Baskervville (serif). Altri titoli in Space Grotesk. Testo in Figtree. Dati nel monospazio di sistema. Sono gli stessi font di Shegöne.
+- Titoli grandi in Baskervville (serif). Altri titoli in Space Grotesk. Testo in Figtree. Dati in Space Mono (pesi 400 e 700). Gli altri tre sono gli stessi font di Shegöne. I font sono file locali in `fonts/`, non caricati da Google Fonts.
 - Un'idea per contenuto. Un invito per contenuto.
 - Mai testimonianze o volti inventati. Solo risposte registrate con consenso.
 - Immagini, voci e video generati con IA vanno dichiarati.
@@ -34,4 +34,4 @@ Le regole sono disegnate nei componenti. Guarda Palette, TypeSpecimen, Light, Fo
 
 ## Icone e marchio
 
-Le icone sono lineari, con tratto di 2 px. Vedi Icons. Non c'è ancora un logo. Il marchio è il nome in Space Grotesk 700.
+Le icone sono lineari, con tratto di 2 px. Vedi Icons. Il logo c'è: vedi la sezione Loghi e i file in `assets/Logos/`.

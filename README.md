@@ -6,24 +6,27 @@ Design system di Alterego (nome di lavoro, provvisorio). Il servizio crea agenti
 
 - `project/tokens.json`: colori (chiaro e scuro), font, spaziature, raggi, ombre.
 - `project/README.md`: regole di marchio e di scrittura.
-- `project/01-…06-*.md`: nome e voce, luce, immagini IA, video IA, contenuti social, pagine e slide.
+- `project/01-…08-*.md`: nome e voce, luce, immagini IA, video IA, contenuti social, pagine e slide, template landing, loghi.
 - `project/components/*/`: un `README.md` e un `preview.html` per ogni componente.
 - `project/components/Lp01…Lp09*/`: nove template wireframe per la landing page, da personalizzare. Vedi `project/07-template-landing-page.md`.
+- `project/assets/Logos/`: i loghi 5a e 5b (SVG e PNG), vedi `project/08-loghi.md`.
+- `project/fonts/`: i font in locale (nove file `.ttf`), dichiarati in `tokens.json`.
 - `project/design-system.json`: indice del design system.
 
 ## Scelte attuali
 
 - Colore principale: petrolio `#497A84`. Accento: salvia `#8CC5AE`.
-- Font: Baskervville (titoli grandi), Space Grotesk (altri titoli), Figtree (testo), monospazio di sistema (dati). Sono gli stessi di Shegöne.
+- Font: Baskervville (titoli grandi), Space Grotesk (altri titoli), Figtree (testo), Space Mono (dati, pesi 400 e 700). I primi tre sono gli stessi di Shegöne. Tutti sono file locali in `project/fonts/`.
 - Stile di scrittura: frasi brevi, punto finale, italiano, "tu".
 - Offerta in una frase: due versioni, entrambe tenute (vedi `project/01-nome-e-voce.md`).
 - Riga sulla sicurezza dei dati: in salvia (`accent-text`), piccola, centrata, sotto la frase, solo su fondo chiaro.
-- Logo: non c'è ancora. Il concetto è una persona vista da dietro che appoggia la mano sulla testa a monitor di un bambino, per rappresentare l'agente IA.
+- Logo: creato in Claude Design, due versioni del logotipo (5a e 5b), entrambe tenute. Concetto: una persona vista da dietro con accanto l'agente. Per scritta, orizzontale e verticale usa i PNG (negli SVG il nome è testo).
 
 ## Da verificare
 
 - Disponibilità di dominio, marchio e profili social del nome. Esiste già un'azienda IA con lo stesso nome (interfaccia neurale, San Francisco).
-- Disponibilità dei font su Google Fonts con questi nomi.
+- Licenze dei file dei font: non verificate. Controlla che la licenza permetta l'uso commerciale e la ridistribuzione.
+- Mancano gli SVG dei loghi con il testo convertito in tracciati e gli SVG su fondo petrolio.
 - Anteprime mai visualizzate in un browser.
 - Contrasti calcolati a mano.
 

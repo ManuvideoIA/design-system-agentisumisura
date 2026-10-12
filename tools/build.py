@@ -29,8 +29,28 @@ for t in tokens["shadow"]["tokens"]:
 VARS = (":root{" + ";".join(light) + "}\n"
         ":root[data-theme=dark]{color-scheme:dark;" + ";".join(dark) + "}")
 
-FONTS = ("https://fonts.googleapis.com/css2?family=Baskervville&family=Figtree:wght@400;500;600;700"
-         "&family=Space+Grotesk:wght@500;600;700&display=swap")
+# font locali: dichiarati in tokens.json (type.fonts), copiati in docs/fonts
+def font_face(prefix):
+    css = ""
+    for f in tokens["type"].get("fonts", []):
+        css += ("@font-face{font-family:\"%s\";src:url(\"%s%s\") format(\"truetype\");font-weight:%s;"
+                "font-style:%s;font-display:swap}" % (f["family"], prefix, f["file"], f.get("weight", "400"), f.get("style", "normal")))
+    return css
+
+(OUT / "fonts").mkdir(parents=True, exist_ok=True)
+for old in (OUT / "fonts").glob("*"):
+    old.unlink()
+for f in (SRC / "fonts").glob("*.ttf"):
+    shutil.copy(f, OUT / "fonts" / f.name)
+
+# loghi: copia i PNG nella pagina (esclude le misure 512 e 2048)
+(OUT / "logos").mkdir(parents=True, exist_ok=True)
+for old in (OUT / "logos").glob("*"):
+    old.unlink()
+logo_files = sorted(p for p in (SRC / "assets" / "Logos").glob("*.png")
+                    if not re.search(r"-(512|2048)\.png$", p.name))
+for p in logo_files:
+    shutil.copy(p, OUT / "logos" / p.name)
 
 THEME_JS = """<script>(function(){var d=document.documentElement;
 function set(t){d.setAttribute('data-theme',t)}
@@ -51,7 +71,8 @@ for d in sorted((SRC / "components").iterdir()):
     m = re.match(r"<!--\s*@dsCard\s*(.*?)-->", text)
     meta = dict(re.findall(r'(\w+)=(?:"([^"]*)"|(\d+))', m.group(1)) and
                 [(a, b or c) for a, b, c in re.findall(r'(\w+)=(?:"([^"]*)"|(\d+))', m.group(1))]) if m else {}
-    inject = f"<style id=\"ds-vars\">{VARS}</style>{THEME_JS}"
+    inject = f"<style id=\"ds-vars\">{font_face('../fonts/')}{VARS}</style>{THEME_JS}"
+    text = re.sub(r'<link rel="stylesheet" href="https://fonts\.googleapis\.com[^>]*>\n?', "", text)
     out = text.replace("</head>", inject + "</head>", 1)
     (OUT / "previews" / f"{d.name}.html").write_text(out, encoding="utf-8")
     readme = (d / "README.md").read_text(encoding="utf-8") if (d / "README.md").exists() else ""
@@ -90,7 +111,7 @@ type_html = '<div class="fams">'
 for k, v in fams.items():
     nm = fam_label[k]
     type_html += (f'<div class="fam" style="font-family:var(--font-{k})"><small>{esc(fam_role.get(k,k))} · --font-{k}</small>'
-                  f'<span class="big">{esc(nm if k!="mono" else "Monospazio di sistema")}</span>'
+                  f'<span class="big">{esc(nm)}</span>'
                   f'<span>Aa Bb Cc 0123 — Le email non aspettano.</span></div>')
 type_html += "</div>"
 for g in tokens["type"]["groups"]:
@@ -138,14 +159,20 @@ for g in group_names:
 doc_html = "".join(f'<section id="d-{i}"><h2>{esc(t)}</h2><div class="md" data-md="{esc(md)}"></div></section>' for i, t, md in docs)
 nav_docs = "".join(f'<a href="#d-{i}">{esc(t)}</a>' for i, t, _ in docs)
 
+def logo_block(p):
+    n = p.name
+    bg = "var(--ink)" if "fondo-scuro" in n else "var(--brand)" if "fondo-petrolio" in n else "var(--surface-raised)"
+    return (f'<figure class="lg"><div style="background:{bg}"><img src="logos/{esc(n)}" alt="{esc(n)}" loading="lazy"></div>'
+            f'<figcaption><code>{esc(n)}</code></figcaption></figure>')
+logos_html = "".join(logo_block(p) for p in logo_files)
+
 title = esc(index.get("title", tokens["name"]))
 note = esc(index.get("lastChange", {}).get("note", ""))
 PAGE = f"""<!doctype html>
 <html lang="it" data-theme="light"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{title} — Design System</title>
-<link rel="stylesheet" href="{FONTS}">
-<style>{VARS}
+<style>{font_face('fonts/')}{VARS}
 *{{box-sizing:border-box}}
 body{{margin:0;background:var(--surface);color:var(--ink);font:400 16px/24px var(--font-sans)}}
 code{{font:400 12px/18px var(--font-mono);color:var(--ink-muted)}}
@@ -181,11 +208,14 @@ details{{margin-top:8px}} summary{{cursor:pointer;color:var(--brand-text);font-w
 .md blockquote{{margin:12px 0;padding-left:16px;border-left:3px solid var(--brand)}} .md pre{{white-space:pre-wrap}}
 .md code{{background:var(--brand-soft);padding:1px 5px;border-radius:4px;color:var(--ink)}}
 .note{{color:var(--ink-muted)}}
+.logos{{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}}
+.lg{{margin:0}} .lg div{{display:flex;align-items:center;justify-content:center;height:160px;border:1px solid var(--line);border-radius:12px;padding:12px}}
+.lg img{{max-width:100%;max-height:100%;object-fit:contain}} .lg figcaption{{margin-top:6px;word-break:break-all}}
 @media(max-width:800px){{.wrap{{grid-template-columns:1fr}}nav{{display:none}}main{{padding:16px}}.ts{{grid-template-columns:1fr}}.row{{grid-template-columns:70px 1fr 50px}}.row p{{grid-column:1/-1}}}}
 </style></head><body>
 <div class="top"><h1>{title}</h1><small>Design system · {note}</small><button class="tg" id="tg" type="button">Chiaro / Scuro</button></div>
 <div class="wrap"><nav>
-<h4>Fondamenta</h4><a href="#colori">Colori</a><a href="#tipografia">Tipografia</a><a href="#spazi">Spaziature</a><a href="#forme">Raggi e ombre</a>
+<h4>Fondamenta</h4><a href="#colori">Colori</a><a href="#tipografia">Tipografia</a><a href="#spazi">Spaziature</a><a href="#forme">Raggi e ombre</a><a href="#loghi">Loghi</a>
 <h4>Componenti</h4>{nav_comp}
 <h4>Sezioni</h4>{nav_docs}
 </nav><main>
@@ -193,6 +223,7 @@ details{{margin-top:8px}} summary{{cursor:pointer;color:var(--brand-text);font-w
 <h2 id="tipografia">Tipografia</h2>{type_html}
 <h2 id="spazi">Spaziature</h2>{space_html}
 <h2 id="forme">Raggi e ombre</h2><div class="shapes">{radius_html}</div><h3>Ombre</h3><div class="shapes">{shadow_html}</div>
+<h2 id="loghi">Loghi</h2><p class="note">Sono mostrati i PNG a 1024 px. Gli SVG e le misure 512 e 2048 sono in project/assets/Logos/. Regole d'uso nella sezione Loghi più in basso.</p><div class="logos">{logos_html}</div>
 <h2 id="componenti">Componenti</h2>{comp_html}
 {doc_html}
 </main></div>

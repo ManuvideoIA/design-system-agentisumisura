@@ -9,16 +9,321 @@
   "namespace": "Alterego",
   "libraries": [],
   "sections": {},
-  "groups": [],
-  "assetGroups": {},
+  "groups": [
+    "Logos"
+  ],
+  "assetGroups": {
+    "Logos": {
+      "name": "Logos",
+      "tile": "l",
+      "order": [
+        "alterego-marchio-1024.png",
+        "alterego-marchio-2048.png",
+        "alterego-marchio-512.png",
+        "alterego-marchio.svg",
+        "alterego-marchio-fondo-scuro-1024.png",
+        "alterego-marchio-fondo-scuro-2048.png",
+        "alterego-marchio-fondo-scuro-512.png",
+        "alterego-marchio-fondo-scuro.svg",
+        "alterego-marchio-fondo-petrolio-1024.png",
+        "alterego-marchio-fondo-petrolio-512.png",
+        "alterego-icona-carta-1024.png",
+        "alterego-icona-inchiostro-1024.png",
+        "alterego-5a-orizzontale.png",
+        "alterego-5a-orizzontale.svg",
+        "alterego-5a-orizzontale-fondo-scuro.png",
+        "alterego-5a-orizzontale-fondo-scuro.svg",
+        "alterego-5a-orizzontale-fondo-petrolio.png",
+        "alterego-5a-verticale.png",
+        "alterego-5a-verticale.svg",
+        "alterego-5a-verticale-fondo-scuro.png",
+        "alterego-5a-verticale-fondo-scuro.svg",
+        "alterego-5a-verticale-fondo-petrolio.png",
+        "alterego-5a-scritta.png",
+        "alterego-5a-scritta.svg",
+        "alterego-5a-scritta-fondo-scuro.png",
+        "alterego-5a-scritta-fondo-scuro.svg",
+        "alterego-5a-scritta-fondo-petrolio.png",
+        "alterego-5b-orizzontale.png",
+        "alterego-5b-orizzontale.svg",
+        "alterego-5b-orizzontale-fondo-scuro.png",
+        "alterego-5b-orizzontale-fondo-scuro.svg",
+        "alterego-5b-orizzontale-fondo-petrolio.png",
+        "alterego-5b-verticale.png",
+        "alterego-5b-verticale.svg",
+        "alterego-5b-verticale-fondo-scuro.png",
+        "alterego-5b-verticale-fondo-scuro.svg",
+        "alterego-5b-verticale-fondo-petrolio.png",
+        "alterego-5b-scritta.png",
+        "alterego-5b-scritta.svg",
+        "alterego-5b-scritta-fondo-scuro.png",
+        "alterego-5b-scritta-fondo-scuro.svg",
+        "alterego-5b-scritta-fondo-petrolio.png"
+      ],
+      "files": {
+        "alterego-5a-orizzontale-fondo-petrolio.png": {
+          "name": "alterego-5a-orizzontale-fondo-petrolio.png",
+          "blob": "8e02505dd2d0d6409c64da14ad762d4f",
+          "size": 95652,
+          "type": "image/png"
+        },
+        "alterego-5a-orizzontale-fondo-scuro.png": {
+          "name": "alterego-5a-orizzontale-fondo-scuro.png",
+          "blob": "de654881f5eff50cc2c35ac486e68d88",
+          "size": 96726,
+          "type": "image/png"
+        },
+        "alterego-5a-orizzontale-fondo-scuro.svg": {
+          "name": "alterego-5a-orizzontale-fondo-scuro.svg",
+          "blob": "7a3bce14b4f98d7f582ec77af9e175db",
+          "size": 9422,
+          "type": "image/svg+xml"
+        },
+        "alterego-5a-orizzontale.png": {
+          "name": "alterego-5a-orizzontale.png",
+          "blob": "dfc8be1a99282914fb7e9080ce2989fc",
+          "size": 95569,
+          "type": "image/png"
+        },
+        "alterego-5a-orizzontale.svg": {
+          "name": "alterego-5a-orizzontale.svg",
+          "blob": "8d4e5dc9b9b65c6e2b5f89d0fddd6687",
+          "size": 9422,
+          "type": "image/svg+xml"
+        },
+        "alterego-5a-scritta-fondo-petrolio.png": {
+          "name": "alterego-5a-scritta-fondo-petrolio.png",
+          "blob": "9f2cb07d8ac2c414eddd1fbad7bb4eb6",
+          "size": 91284,
+          "type": "image/png"
+        },
+        "alterego-5a-scritta-fondo-scuro.png": {
+          "name": "alterego-5a-scritta-fondo-scuro.png",
+          "blob": "af6f445f6d874a63f21cb246ce4371e6",
+          "size": 92182,
+          "type": "image/png"
+        },
+        "alterego-5a-scritta-fondo-scuro.svg": {
+          "name": "alterego-5a-scritta-fondo-scuro.svg",
+          "blob": "33afa3a0cbfb9373c540802bff3bfda0",
+          "size": 8437,
+          "type": "image/svg+xml"
+        },
+        "alterego-5a-scritta.png": {
+          "name": "alterego-5a-scritta.png",
+          "blob": "318b1cfca15d1290e6f8e4782269cef7",
+          "size": 91001,
+          "type": "image/png"
+        },
+        "alterego-5a-scritta.svg": {
+          "name": "alterego-5a-scritta.svg",
+          "blob": "90ad482c099c5dd68e9ef67c0e18b843",
+          "size": 8437,
+          "type": "image/svg+xml"
+        },
+        "alterego-5a-verticale-fondo-petrolio.png": {
+          "name": "alterego-5a-verticale-fondo-petrolio.png",
+          "blob": "e131c5d9c880a37fa375282f2e4ac726",
+          "size": 215789,
+          "type": "image/png"
+        },
+        "alterego-5a-verticale-fondo-scuro.png": {
+          "name": "alterego-5a-verticale-fondo-scuro.png",
+          "blob": "ee420a66087cddbdad9100461440129a",
+          "size": 216691,
+          "type": "image/png"
+        },
+        "alterego-5a-verticale-fondo-scuro.svg": {
+          "name": "alterego-5a-verticale-fondo-scuro.svg",
+          "blob": "a807a995c42fb6d93c8cd8a9d22b45dd",
+          "size": 9424,
+          "type": "image/svg+xml"
+        },
+        "alterego-5a-verticale.png": {
+          "name": "alterego-5a-verticale.png",
+          "blob": "81a14d2dd927acf82cc4477b95e23767",
+          "size": 215565,
+          "type": "image/png"
+        },
+        "alterego-5a-verticale.svg": {
+          "name": "alterego-5a-verticale.svg",
+          "blob": "d1a18c012c3bf80f62ed2720b4c0204c",
+          "size": 9424,
+          "type": "image/svg+xml"
+        },
+        "alterego-5b-orizzontale-fondo-petrolio.png": {
+          "name": "alterego-5b-orizzontale-fondo-petrolio.png",
+          "blob": "83d5e450cca1a4ab535004da18d8c06d",
+          "size": 93763,
+          "type": "image/png"
+        },
+        "alterego-5b-orizzontale-fondo-scuro.png": {
+          "name": "alterego-5b-orizzontale-fondo-scuro.png",
+          "blob": "546c326d5495c051425abd820d60beaa",
+          "size": 95172,
+          "type": "image/png"
+        },
+        "alterego-5b-orizzontale-fondo-scuro.svg": {
+          "name": "alterego-5b-orizzontale-fondo-scuro.svg",
+          "blob": "ab31e31af57da7db8b2b4d72d0ff01d2",
+          "size": 9720,
+          "type": "image/svg+xml"
+        },
+        "alterego-5b-orizzontale.png": {
+          "name": "alterego-5b-orizzontale.png",
+          "blob": "24696cbd0707474758698ed2217f3a0a",
+          "size": 94117,
+          "type": "image/png"
+        },
+        "alterego-5b-orizzontale.svg": {
+          "name": "alterego-5b-orizzontale.svg",
+          "blob": "39acc3f584a6e9d5580cc914f47d1d29",
+          "size": 9720,
+          "type": "image/svg+xml"
+        },
+        "alterego-5b-scritta-fondo-petrolio.png": {
+          "name": "alterego-5b-scritta-fondo-petrolio.png",
+          "blob": "78d5de2d6b7ad66c7a0742dd25792957",
+          "size": 92040,
+          "type": "image/png"
+        },
+        "alterego-5b-scritta-fondo-scuro.png": {
+          "name": "alterego-5b-scritta-fondo-scuro.png",
+          "blob": "dc4198a5e2c431ed5d49d7f96bdabbcd",
+          "size": 92978,
+          "type": "image/png"
+        },
+        "alterego-5b-scritta-fondo-scuro.svg": {
+          "name": "alterego-5b-scritta-fondo-scuro.svg",
+          "blob": "33af9ec1b2b803c3661e9d00a3a33f88",
+          "size": 8735,
+          "type": "image/svg+xml"
+        },
+        "alterego-5b-scritta.png": {
+          "name": "alterego-5b-scritta.png",
+          "blob": "bfa39a82a6a0d577c42b7ae0a52680c3",
+          "size": 92243,
+          "type": "image/png"
+        },
+        "alterego-5b-scritta.svg": {
+          "name": "alterego-5b-scritta.svg",
+          "blob": "d08b4bc07e3375f3226c41c1a8820643",
+          "size": 8735,
+          "type": "image/svg+xml"
+        },
+        "alterego-5b-verticale-fondo-petrolio.png": {
+          "name": "alterego-5b-verticale-fondo-petrolio.png",
+          "blob": "b8ddaa836d88f81cc6d1dc4e7e463364",
+          "size": 201939,
+          "type": "image/png"
+        },
+        "alterego-5b-verticale-fondo-scuro.png": {
+          "name": "alterego-5b-verticale-fondo-scuro.png",
+          "blob": "ebf0c2a33b2528e756f9328cafada983",
+          "size": 202727,
+          "type": "image/png"
+        },
+        "alterego-5b-verticale-fondo-scuro.svg": {
+          "name": "alterego-5b-verticale-fondo-scuro.svg",
+          "blob": "376a1fa94d2ba2f7c6e8c1dc3b831f17",
+          "size": 9723,
+          "type": "image/svg+xml"
+        },
+        "alterego-5b-verticale.png": {
+          "name": "alterego-5b-verticale.png",
+          "blob": "2516c6a585a3e87045779dbfca70d8b9",
+          "size": 201983,
+          "type": "image/png"
+        },
+        "alterego-5b-verticale.svg": {
+          "name": "alterego-5b-verticale.svg",
+          "blob": "e0ef35889eb6dc08210c5eae5c1ec84b",
+          "size": 9723,
+          "type": "image/svg+xml"
+        },
+        "alterego-icona-carta-1024.png": {
+          "name": "alterego-icona-carta-1024.png",
+          "blob": "8a0999687a3c42bbadd0052b7d527fc6",
+          "size": 57827,
+          "type": "image/png"
+        },
+        "alterego-icona-inchiostro-1024.png": {
+          "name": "alterego-icona-inchiostro-1024.png",
+          "blob": "c0bed3147bc1f9b2d72eed514c1bf718",
+          "size": 58220,
+          "type": "image/png"
+        },
+        "alterego-marchio-1024.png": {
+          "name": "alterego-marchio-1024.png",
+          "blob": "f2ad7445f6cbcf1a91f03e7aaa201119",
+          "size": 65178,
+          "type": "image/png"
+        },
+        "alterego-marchio-2048.png": {
+          "name": "alterego-marchio-2048.png",
+          "blob": "e0acc9490acb57d970cad87274ce2658",
+          "size": 153672,
+          "type": "image/png"
+        },
+        "alterego-marchio-512.png": {
+          "name": "alterego-marchio-512.png",
+          "blob": "380854c8647f26aa988017d8c51205f1",
+          "size": 29832,
+          "type": "image/png"
+        },
+        "alterego-marchio-fondo-petrolio-1024.png": {
+          "name": "alterego-marchio-fondo-petrolio-1024.png",
+          "blob": "1c68393dfcc8b159b5f39cb533b51f0e",
+          "size": 64747,
+          "type": "image/png"
+        },
+        "alterego-marchio-fondo-petrolio-512.png": {
+          "name": "alterego-marchio-fondo-petrolio-512.png",
+          "blob": "a15e11468e3c7ce369af91ff66e487f5",
+          "size": 29776,
+          "type": "image/png"
+        },
+        "alterego-marchio-fondo-scuro-1024.png": {
+          "name": "alterego-marchio-fondo-scuro-1024.png",
+          "blob": "b9db5bddaef58d5f01942b88a8a83982",
+          "size": 64795,
+          "type": "image/png"
+        },
+        "alterego-marchio-fondo-scuro-2048.png": {
+          "name": "alterego-marchio-fondo-scuro-2048.png",
+          "blob": "6a9a2c169f5c220ff9391adec536df0b",
+          "size": 153723,
+          "type": "image/png"
+        },
+        "alterego-marchio-fondo-scuro-512.png": {
+          "name": "alterego-marchio-fondo-scuro-512.png",
+          "blob": "8ad4abb5f1e186df645a4be56fe60c37",
+          "size": 29744,
+          "type": "image/png"
+        },
+        "alterego-marchio-fondo-scuro.svg": {
+          "name": "alterego-marchio-fondo-scuro.svg",
+          "blob": "5b8afee580b3a4b679e8c7efd727f566",
+          "size": 8754,
+          "type": "image/svg+xml"
+        },
+        "alterego-marchio.svg": {
+          "name": "alterego-marchio.svg",
+          "blob": "56712b76bc377a027970708c83c8b3fb",
+          "size": 8754,
+          "type": "image/svg+xml"
+        }
+      }
+    }
+  },
   "blobs": {},
   "docs": {
     "sections": []
   },
   "lastChange": {
     "by": "Claude",
-    "at": "2026-10-12T09:39:02Z",
+    "at": "2026-10-12T16:19:31Z",
     "via": "Claude (chat)",
-    "note": "Aggiunti nove template wireframe per la landing page (Lp01-Lp09) e la sezione di promemoria"
+    "note": "Aggiunti i loghi 5a e 5b da Claude Design, la sezione Loghi, Space Mono come monospazio e i font in locale"
   }
 }
