@@ -1,3 +1,3 @@
-Cinque proposte di nome. Dicono cosa fai: agenti IA su misura, con o senza pagine web.
+Il nome di lavoro è Alterego. Tuum è l'alternativa tenuta da parte. Agentia è escluso perché esiste già (fonte: verifica dell'utente).
 
-Il nome di lavoro è evidenziato. Dominio, marchio e nomi social non sono verificati. Controllali prima di scegliere. Se cambi nome, si aggiornano titolo, README e copertina.
+Dominio, marchio e nomi social non sono verificati. Controllali prima di scegliere. Se cambi nome, si aggiornano titolo, README e copertina.

@@ -1,4 +1,4 @@
-Agenti su Misura è il nome di lavoro, provvisorio. Il servizio crea agenti IA e automazioni su misura per piccole attività. Il petrolio è il colore guida. La salvia è il colore dell'enfasi.
+Alterego è il nome di lavoro, provvisorio. Dominio, marchio e nomi social non sono ancora verificati. Il servizio crea agenti IA e automazioni su misura per piccole attività. L'agente è un'estensione della mente di chi lo usa. Il petrolio è il colore guida. La salvia è il colore dell'enfasi.
 
 ## Regole in breve
 
@@ -12,6 +12,14 @@ Agenti su Misura è il nome di lavoro, provvisorio. Il servizio crea agenti IA e
 - Mai testimonianze o volti inventati. Solo risposte registrate con consenso.
 - Immagini, voci e video generati con IA vanno dichiarati.
 
+## La riga sulla sicurezza dei dati
+
+- Accompagna l'offerta nei contenuti promozionali e nei post.
+- Testo: «I dati sensibili sono una priorità: decidiamo insieme come proteggerli.»
+- Va in salvia (`accent-text`), piccola, centrata, sotto la frase.
+- Va su fondo `surface`, `surface-raised` o `accent-soft`, dove `accent-text` si legge.
+- Sui blocchi petrolio e inchiostro non si usa: lì la salvia non si legge in tutti e due i temi.
+
 ## Scrittura
 
 - Frasi brevi. Una idea per frase.
@@ -22,7 +30,7 @@ Agenti su Misura è il nome di lavoro, provvisorio. Il servizio crea agenti IA e
 
 ## Dove guardare
 
-Le regole sono disegnate nei componenti. Guarda Palette, TypeSpecimen, Light, Formats, NameOptions, Icons, AgentFlow e LandingHero. Poi i formati pronti per post, video e slide. Le sezioni di testo sono liste brevi.
+Le regole sono disegnate nei componenti. Guarda Palette, TypeSpecimen, Light, Formats, NameOptions, Icons, AgentFlow e LandingHero. Poi i formati pronti per post, video e slide. Nome, voce e le due versioni dell'offerta sono in "Nome e voce". Le sezioni di testo sono liste brevi.
 
 ## Icone e marchio
 

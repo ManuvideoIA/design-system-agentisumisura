@@ -1,6 +1,6 @@
-# Agenti su Misura — Design System
+# Alterego — Design System
 
-Design system di Agenti su Misura (nome di lavoro, provvisorio). Il servizio crea agenti IA e automazioni per piccole attività.
+Design system di Alterego (nome di lavoro, provvisorio). Il servizio crea agenti IA e automazioni su misura per piccole attività. Il nome del repository è ancora quello precedente, `design-system-agentisumisura`.
 
 ## Contenuto
 
@@ -15,10 +15,13 @@ Design system di Agenti su Misura (nome di lavoro, provvisorio). Il servizio cre
 - Colore principale: petrolio `#497A84`. Accento: salvia `#8CC5AE`.
 - Font: Baskervville (titoli grandi), Space Grotesk (altri titoli), Figtree (testo), monospazio di sistema (dati). Sono gli stessi di Shegöne.
 - Stile di scrittura: frasi brevi, punto finale, italiano, "tu".
+- Offerta in una frase: due versioni, entrambe tenute (vedi `project/01-nome-e-voce.md`).
+- Riga sulla sicurezza dei dati: in salvia (`accent-text`), piccola, centrata, sotto la frase, solo su fondo chiaro.
+- Logo: non c'è ancora. Il concetto è una persona vista da dietro che appoggia la mano sulla testa a monitor di un bambino, per rappresentare l'agente IA.
 
 ## Da verificare
 
-- Disponibilità di dominio, marchio e profili social del nome.
+- Disponibilità di dominio, marchio e profili social del nome. Esiste già un'azienda IA con lo stesso nome (interfaccia neurale, San Francisco).
 - Disponibilità dei font su Google Fonts con questi nomi.
 - Anteprime mai visualizzate in un browser.
 - Contrasti calcolati a mano.

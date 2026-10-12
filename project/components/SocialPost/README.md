@@ -9,5 +9,6 @@ Post 4:5 per il feed, in tre varianti. Chiara. Petrolio. Notte.
 - La parola evidenziata è sempre su `accent` con testo `on-accent`.
 - Angoli `radius-lg`. Ombra `shadow-soft`.
 - Il testo va sopra l'immagine, in montaggio. Mai dentro l'immagine generata.
+- La riga sulla sicurezza dei dati va sotto il titolo, centrata, in `accent-text`, solo nella variante chiara. Sulle varianti petrolio e notte non si usa: la salvia lì non si legge in tutti e due i temi.
 
 Da evitare: più di otto parole nel titolo. Emoji decorative.

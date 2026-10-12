@@ -18,6 +18,7 @@
   .light .pill { background: var(--brand); color: var(--on-brand); }
   .teal .pill { background: var(--surface-raised); color: var(--ink); }
   .night .pill { background: var(--accent); color: var(--on-accent); }
+  .sec { margin: var(--space-3) 0 0; font: 400 11px/16px var(--font-sans); text-align: center; color: var(--accent-text); }
 </style><style id="ds-vars">:root{--surface:#f6f2ea;--surface-raised:#fffdf8;--ink:#0f1f23;--ink-muted:#4a5b60;--line:#dcd6c8;--line-strong:#8a8a80;--brand:#497a84;--on-brand:#fffdf8;--brand-text:#3d6a73;--brand-soft:#dfeaec;--accent:#8cc5ae;--on-accent:#0f1f23;--accent-text:#2e6b4f;--accent-soft:#e3f1ea;--focus:var(--brand-text);--font-display:"Space Grotesk", "Helvetica Neue", Arial, sans-serif;--font-editorial:"Baskervville", Georgia, "Times New Roman", serif;--font-sans:"Figtree", "Helvetica Neue", Arial, sans-serif;--font-mono:ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:24px;--space-6:32px;--space-7:48px;--space-8:64px;--radius-sm:6px;--radius-md:12px;--radius-lg:20px;--radius-pill:999px;--shadow-soft:0 1px 2px rgba(15, 31, 35, 0.08), 0 8px 24px rgba(15, 31, 35, 0.10);--shadow-lifted:0 2px 4px rgba(15, 31, 35, 0.12), 0 16px 40px rgba(15, 31, 35, 0.18)}
 :root[data-theme=dark]{color-scheme:dark;--surface:#0c171a;--surface-raised:#142328;--ink:#f4efe6;--ink-muted:#a9bcc1;--line:#203338;--line-strong:#6b858c;--brand:#6aa3af;--on-brand:#0c171a;--brand-text:#6aa3af;--brand-soft:#17323a;--accent:#9ad2bb;--on-accent:#0c171a;--accent-text:#9ad2bb;--accent-soft:#17332a;--focus:var(--brand-text);--shadow-soft:0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.4);--shadow-lifted:0 2px 4px rgba(0, 0, 0, 0.5), 0 16px 40px rgba(0, 0, 0, 0.55)}</style><script>(function(){var d=document.documentElement;
 function set(t){d.setAttribute('data-theme',t)}
@@ -27,17 +28,20 @@ addEventListener('message',function(e){if(e.data&&e.data.theme)set(e.data.theme)
 <body>
   <article class="post light">
     <div class="kicker">Il problema</div>
-    <h2>Le email non aspettano che tu <mark>finisca</mark> il turno.</h2>
-    <div class="foot"><span class="mark">Agenti su Misura</span><span class="pill">Scrivimi</span></div>
+    <div>
+      <h2>Le email non aspettano che tu <mark>finisca</mark> il turno.</h2>
+      <p class="sec">I dati sensibili sono una priorità: decidiamo insieme come proteggerli.</p>
+    </div>
+    <div class="foot"><span class="mark">Alterego</span><span class="pill">Scrivimi</span></div>
   </article>
   <article class="post teal">
     <div class="kicker">Come funziona</div>
     <h2>L'agente ordina le richieste. Tu decidi la <mark>risposta</mark>.</h2>
-    <div class="foot"><span class="mark">Agenti su Misura</span><span class="pill">Scopri come</span></div>
+    <div class="foot"><span class="mark">Alterego</span><span class="pill">Scopri come</span></div>
   </article>
   <article class="post night">
     <div class="kicker">La prova</div>
     <h2>Una prova su un solo <mark>compito</mark>.</h2>
-    <div class="foot"><span class="mark">Agenti su Misura</span><span class="pill">Prenota</span></div>
+    <div class="foot"><span class="mark">Alterego</span><span class="pill">Prenota</span></div>
   </article>
 </body></html>
