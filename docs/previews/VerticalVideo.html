@@ -18,6 +18,9 @@
   .gl .lg-light, .gk .lg-dark { display: block; }
   :root[data-theme=dark] .gl .lg-light, :root[data-theme=dark] .gk .lg-dark { display: none; }
   :root[data-theme=dark] .gl .lg-dark, :root[data-theme=dark] .gk .lg-light { display: block; }
+  .lg.gl, .lg.gk, .lg.lgb { display: inline-flex; align-items: center; gap: calc(var(--lg-h, 24px) * .3); }
+  .lg-name { font: 700 calc(var(--lg-h, 24px) * .8)/1 var(--font-display); letter-spacing: -0.02em; white-space: nowrap; }
+  .gl .lg-name { color: var(--ink); } .gk .lg-name { color: var(--surface); } .lgb .lg-name { color: var(--on-brand); }
   .note { width: 216px; margin-top: var(--space-2); font: 400 11px/16px var(--font-mono); color: var(--ink-muted); }
 </style><style id="ds-vars">@font-face{font-family:"Space Grotesk";src:url("../fonts/SpaceGrotesk-VariableFont_wght.ttf") format("truetype");font-weight:300 700;font-style:normal;font-display:swap}@font-face{font-family:"Baskervville";src:url("../fonts/Baskervville-VariableFont_wght.ttf") format("truetype");font-weight:400 700;font-style:normal;font-display:swap}@font-face{font-family:"Baskervville";src:url("../fonts/Baskervville-Italic-VariableFont_wght.ttf") format("truetype");font-weight:400 700;font-style:italic;font-display:swap}@font-face{font-family:"Figtree";src:url("../fonts/Figtree-VariableFont_wght.ttf") format("truetype");font-weight:300 900;font-style:normal;font-display:swap}@font-face{font-family:"Figtree";src:url("../fonts/Figtree-Italic-VariableFont_wght.ttf") format("truetype");font-weight:300 900;font-style:italic;font-display:swap}@font-face{font-family:"Space Mono";src:url("../fonts/SpaceMono-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"Space Mono";src:url("../fonts/SpaceMono-Italic.ttf") format("truetype");font-weight:400;font-style:italic;font-display:swap}@font-face{font-family:"Space Mono";src:url("../fonts/SpaceMono-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"Space Mono";src:url("../fonts/SpaceMono-BoldItalic.ttf") format("truetype");font-weight:700;font-style:italic;font-display:swap}:root{--surface:#f6f2ea;--surface-raised:#fffdf8;--ink:#0f1f23;--ink-muted:#4a5b60;--line:#dcd6c8;--line-strong:#8a8a80;--brand:#497a84;--on-brand:#fffdf8;--brand-text:#3d6a73;--brand-soft:#dfeaec;--accent:#8cc5ae;--on-accent:#0f1f23;--accent-text:#2e6b4f;--accent-soft:#e3f1ea;--focus:var(--brand-text);--font-display:"Space Grotesk", "Helvetica Neue", Arial, sans-serif;--font-editorial:"Baskervville", Georgia, "Times New Roman", serif;--font-sans:"Figtree", "Helvetica Neue", Arial, sans-serif;--font-mono:"Space Mono", ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:24px;--space-6:32px;--space-7:48px;--space-8:64px;--radius-sm:6px;--radius-md:12px;--radius-lg:20px;--radius-pill:999px;--shadow-soft:0 1px 2px rgba(15, 31, 35, 0.08), 0 8px 24px rgba(15, 31, 35, 0.10);--shadow-lifted:0 2px 4px rgba(15, 31, 35, 0.12), 0 16px 40px rgba(15, 31, 35, 0.18)}
 :root[data-theme=dark]{color-scheme:dark;--surface:#0c171a;--surface-raised:#142328;--ink:#f4efe6;--ink-muted:#a9bcc1;--line:#203338;--line-strong:#6b858c;--brand:#6aa3af;--on-brand:#0c171a;--brand-text:#6aa3af;--brand-soft:#17323a;--accent:#9ad2bb;--on-accent:#0c171a;--accent-text:#9ad2bb;--accent-soft:#17332a;--focus:var(--brand-text);--shadow-soft:0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.4);--shadow-lifted:0 2px 4px rgba(0, 0, 0, 0.5), 0 16px 40px rgba(0, 0, 0, 0.55)}</style><script>(function(){var d=document.documentElement;
@@ -30,7 +33,7 @@ addEventListener('message',function(e){if(e.data&&e.data.theme)set(e.data.theme)
     <div class="frame open">
       <div class="safe"></div>
       <div class="hook">Meno lavori <mark>ripetitivi</mark>.</div>
-      <div class="bug lg"><img class="lg-fix" src="../logos/alterego-5b-orizzontale-fondo-petrolio.png" alt="Sosia"></div>
+      <div class="bug lg lgb"><img class="lg-fix" src="../logos/sosia-marchio-fondo-petrolio-1024.png" alt=""><span class="lg-name">Sosia</span></div>
     </div>
     <div class="note">Apertura</div>
   </div>
@@ -39,7 +42,7 @@ addEventListener('message',function(e){if(e.data&&e.data.theme)set(e.data.theme)
       <div class="safe"></div>
       <div class="label">Inquadratura del titolare</div>
       <div class="cap">Rispondo la sera, quando chiudo.</div>
-      <div class="bug lg gl"><img class="lg-light" src="../logos/alterego-5b-orizzontale.png" alt="Sosia"><img class="lg-dark" src="../logos/alterego-5b-orizzontale-fondo-scuro.png" alt="" aria-hidden="true"></div>
+      <div class="bug lg gl"><img class="lg-light" src="../logos/sosia-marchio-1024.png" alt="Sosia"><img class="lg-dark" src="../logos/sosia-marchio-fondo-scuro-1024.png" alt="" aria-hidden="true"><span class="lg-name">Sosia</span></div>
     </div>
     <div class="note">Fotogramma con sottotitolo</div>
   </div>

@@ -13,6 +13,9 @@
   .gl .lg-light, .gk .lg-dark { display: block; }
   :root[data-theme=dark] .gl .lg-light, :root[data-theme=dark] .gk .lg-dark { display: none; }
   :root[data-theme=dark] .gl .lg-dark, :root[data-theme=dark] .gk .lg-light { display: block; }
+  .lg.gl, .lg.gk, .lg.lgb { display: inline-flex; align-items: center; gap: calc(var(--lg-h, 24px) * .3); }
+  .lg-name { font: 700 calc(var(--lg-h, 24px) * .8)/1 var(--font-display); letter-spacing: -0.02em; white-space: nowrap; }
+  .gl .lg-name { color: var(--ink); } .gk .lg-name { color: var(--surface); } .lgb .lg-name { color: var(--on-brand); }
   .nav a { font: 700 13px/1 var(--font-sans); color: var(--brand-text); letter-spacing: .06em; text-transform: uppercase; }
   .hero { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: var(--space-5); align-items: center; padding: var(--space-4) var(--space-5) var(--space-6); }
   @media (max-width: 560px) { .hero { grid-template-columns: 1fr; } }
@@ -36,7 +39,7 @@ addEventListener('message',function(e){if(e.data&&e.data.theme)set(e.data.theme)
 <body>
   <div class="browser">
     <div class="top"><i></i><i></i><i></i></div>
-    <div class="nav"><span class="wm lg gl"><img class="lg-light" src="../logos/alterego-5b-orizzontale.png" alt="Sosia"><img class="lg-dark" src="../logos/alterego-5b-orizzontale-fondo-scuro.png" alt="" aria-hidden="true"></span><a>Come funziona</a></div>
+    <div class="nav"><span class="wm lg gl"><img class="lg-light" src="../logos/sosia-marchio-1024.png" alt="Sosia"><img class="lg-dark" src="../logos/sosia-marchio-fondo-scuro-1024.png" alt="" aria-hidden="true"><span class="lg-name">Sosia</span></span><a>Come funziona</a></div>
     <div class="hero">
       <div>
         <h1>Meno lavori ripetitivi. Più <mark>tempo</mark> per te.</h1>

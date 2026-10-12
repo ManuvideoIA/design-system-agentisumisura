@@ -18,6 +18,9 @@
   .gl .lg-light, .gk .lg-dark { display: block; }
   :root[data-theme=dark] .gl .lg-light, :root[data-theme=dark] .gk .lg-dark { display: none; }
   :root[data-theme=dark] .gl .lg-dark, :root[data-theme=dark] .gk .lg-light { display: block; }
+  .lg.gl, .lg.gk, .lg.lgb { display: inline-flex; align-items: center; gap: calc(var(--lg-h, 24px) * .3); }
+  .lg-name { font: 700 calc(var(--lg-h, 24px) * .8)/1 var(--font-display); letter-spacing: -0.02em; white-space: nowrap; }
+  .gl .lg-name { color: var(--ink); } .gk .lg-name { color: var(--surface); } .lgb .lg-name { color: var(--on-brand); }
   .pill { font: 700 12px/1 var(--font-sans); letter-spacing: 0.06em; text-transform: uppercase; padding: 10px var(--space-4); border-radius: var(--radius-pill); }
   .light .pill { background: var(--brand); color: var(--on-brand); }
   .teal .pill { background: var(--surface-raised); color: var(--ink); }
@@ -36,16 +39,16 @@ addEventListener('message',function(e){if(e.data&&e.data.theme)set(e.data.theme)
       <h2>Il lavoro che si ripete ti ruba il <mark>tempo</mark>.</h2>
       <p class="sec">I dati sensibili sono una priorità: decidiamo insieme come proteggerli.</p>
     </div>
-    <div class="foot"><span class="mark lg gl"><img class="lg-light" src="../logos/alterego-5b-orizzontale.png" alt="Sosia"><img class="lg-dark" src="../logos/alterego-5b-orizzontale-fondo-scuro.png" alt="" aria-hidden="true"></span><span class="pill">Scrivimi</span></div>
+    <div class="foot"><span class="mark lg gl"><img class="lg-light" src="../logos/sosia-marchio-1024.png" alt="Sosia"><img class="lg-dark" src="../logos/sosia-marchio-fondo-scuro-1024.png" alt="" aria-hidden="true"><span class="lg-name">Sosia</span></span><span class="pill">Scrivimi</span></div>
   </article>
   <article class="post teal">
     <div class="kicker">Come funziona</div>
     <h2>L'agente fa il lavoro ripetitivo. Tu <mark>decidi</mark>.</h2>
-    <div class="foot"><span class="mark lg"><img class="lg-fix" src="../logos/alterego-5b-orizzontale-fondo-petrolio.png" alt="Sosia"></span><span class="pill">Scopri come</span></div>
+    <div class="foot"><span class="mark lg lgb"><img class="lg-fix" src="../logos/sosia-marchio-fondo-petrolio-1024.png" alt=""><span class="lg-name">Sosia</span></span><span class="pill">Scopri come</span></div>
   </article>
   <article class="post night">
     <div class="kicker">La prova</div>
     <h2>Una prova su un solo <mark>compito</mark>.</h2>
-    <div class="foot"><span class="mark lg gk"><img class="lg-light" src="../logos/alterego-5b-orizzontale.png" alt="Sosia"><img class="lg-dark" src="../logos/alterego-5b-orizzontale-fondo-scuro.png" alt="" aria-hidden="true"></span><span class="pill">Prenota</span></div>
+    <div class="foot"><span class="mark lg gk"><img class="lg-light" src="../logos/sosia-marchio-1024.png" alt="Sosia"><img class="lg-dark" src="../logos/sosia-marchio-fondo-scuro-1024.png" alt="" aria-hidden="true"><span class="lg-name">Sosia</span></span><span class="pill">Prenota</span></div>
   </article>
 </body></html>

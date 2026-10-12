@@ -7,6 +7,6 @@ Slide 16:9 in due layout. Titolo su fondo scuro. Tre passi numerati su `surface-
 - Slide di titolo e di chiusura: fondo `ink`, testo `surface`, parola evidenziata su `accent`.
 - Slide di contenuto: fondo `surface` o `surface-raised`, testo `ink`, numeri su `brand`.
 - L'invito compare una sola volta, nell'ultima slide, con il pulsante `brand`.
-- Logo (orizzontale 5b) in basso a sinistra: versione `-fondo-scuro` sulle slide su `ink`, quella senza suffisso su fondo chiaro.
+- Logo (simbolo con il nome Sosia accanto) in basso a sinistra: versione `-fondo-scuro` sulle slide su `ink`, quella senza suffisso su fondo chiaro.
 
 Da evitare: elenchi lunghi su più livelli. Cifre senza fonte.

@@ -9,7 +9,7 @@ Design system di Sosia (nome di lavoro, provvisorio). Il servizio crea agenti IA
 - `project/01-…08-*.md`: nome e voce, luce, immagini IA, video IA, contenuti social, pagine e slide, template landing, loghi.
 - `project/components/*/`: un `README.md` e un `preview.html` per ogni componente.
 - `project/components/Lp01…Lp09*/`: nove template wireframe per la landing page, da personalizzare. Vedi `project/07-template-landing-page.md`.
-- `project/assets/Logos/`: i loghi (SVG e PNG): versione scelta 5b, la 5a resta in archivio, vedi `project/08-loghi.md`.
+- `project/assets/Logos/`: il logo figurativo (SVG e PNG), vedi `project/08-loghi.md`.
 - `project/fonts/`: i font in locale (nove file `.ttf`), dichiarati in `tokens.json`.
 - `project/design-system.json`: indice del design system.
 
@@ -20,14 +20,14 @@ Design system di Sosia (nome di lavoro, provvisorio). Il servizio crea agenti IA
 - Stile di scrittura: frasi brevi, punto finale, italiano, "tu".
 - Offerta in una frase: due versioni, entrambe tenute (vedi `project/01-nome-e-voce.md`).
 - Riga sulla sicurezza dei dati: in salvia (`accent-text`), piccola, centrata, sotto la frase, solo su fondo chiaro.
-- Logo: creato in Claude Design, versione del logotipo scelta: 5b (la 5a resta in archivio). Concetto: una persona vista da dietro con accanto l'agente. Per scritta, orizzontale e verticale usa i PNG (negli SVG il nome è testo).
+- Logo: solo il simbolo figurativo, creato in Claude Design: una persona vista da dietro con accanto l'agente. Il nome «Sosia» si scrive come testo accanto al simbolo, in Space Grotesk 700.
 
 ## Da verificare
 
-- Disponibilità di dominio, marchio e profili social di Sosia. Nella ricerca web non ho trovato aziende di IA con questo nome, ma su sosia.com c'è un sito attivo che non ho potuto leggere. Alterego è stato scartato (esiste già un'agenzia con servizi di IA).
-- La scritta del logo dice ancora «Alterego»: va rifatta con il nome Sosia. Il simbolo resta.
+- Disponibilità di dominio, marchio e profili social di Sosia. Nella ricerca web non ho trovato aziende di IA con questo nome, ma su sosia.com c'è un sito attivo che non ho potuto leggere.
+- Manca una scritta «Sosia» disegnata da abbinare al simbolo: va fatta in Claude Design.
 - Licenze dei file dei font: non verificate. Controlla che la licenza permetta l'uso commerciale e la ridistribuzione.
-- Mancano gli SVG dei loghi con il testo convertito in tracciati e gli SVG su fondo petrolio.
+- Manca l'SVG del simbolo su fondo petrolio (c'è solo il PNG).
 - Anteprime mai visualizzate in un browser.
 - Contrasti calcolati a mano.
 
