@@ -1,0 +1,26 @@
+<!-- @dsCard group="Fondamenta" height=330 subtitle="Formati in scala: dove usare ciascuno" -->
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baskervville&family=Figtree:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+<style>
+  body { margin: 0; padding: var(--space-5); background: var(--surface); color: var(--ink); }
+  .row { display: flex; gap: var(--space-5); align-items: flex-end; flex-wrap: wrap; }
+  .f { background: var(--brand-soft); border: 2px solid var(--line-strong); border-radius: var(--radius-md); height: 200px; display: flex; flex-direction: column; justify-content: space-between; padding: var(--space-3); box-sizing: border-box; }
+  .ratio { font: 700 28px/1 var(--font-display); letter-spacing: -0.02em; color: var(--brand-text); }
+  .bars i { display: block; height: 8px; border-radius: 4px; background: var(--line-strong); margin-top: 6px; }
+  .name { margin-top: var(--space-2); font: 700 14px/20px var(--font-sans); }
+  .use { font: 400 11px/16px var(--font-mono); color: var(--ink-muted); }
+</style><style id="ds-vars">:root{--surface:#f6f2ea;--surface-raised:#fffdf8;--ink:#0f1f23;--ink-muted:#4a5b60;--line:#dcd6c8;--line-strong:#8a8a80;--brand:#497a84;--on-brand:#fffdf8;--brand-text:#3d6a73;--brand-soft:#dfeaec;--accent:#8cc5ae;--on-accent:#0f1f23;--accent-text:#2e6b4f;--accent-soft:#e3f1ea;--focus:var(--brand-text);--font-display:"Space Grotesk", "Helvetica Neue", Arial, sans-serif;--font-editorial:"Baskervville", Georgia, "Times New Roman", serif;--font-sans:"Figtree", "Helvetica Neue", Arial, sans-serif;--font-mono:ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:24px;--space-6:32px;--space-7:48px;--space-8:64px;--radius-sm:6px;--radius-md:12px;--radius-lg:20px;--radius-pill:999px;--shadow-soft:0 1px 2px rgba(15, 31, 35, 0.08), 0 8px 24px rgba(15, 31, 35, 0.10);--shadow-lifted:0 2px 4px rgba(15, 31, 35, 0.12), 0 16px 40px rgba(15, 31, 35, 0.18)}
+:root[data-theme=dark]{color-scheme:dark;--surface:#0c171a;--surface-raised:#142328;--ink:#f4efe6;--ink-muted:#a9bcc1;--line:#203338;--line-strong:#6b858c;--brand:#6aa3af;--on-brand:#0c171a;--brand-text:#6aa3af;--brand-soft:#17323a;--accent:#9ad2bb;--on-accent:#0c171a;--accent-text:#9ad2bb;--accent-soft:#17332a;--focus:var(--brand-text);--shadow-soft:0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.4);--shadow-lifted:0 2px 4px rgba(0, 0, 0, 0.5), 0 16px 40px rgba(0, 0, 0, 0.55)}</style><script>(function(){var d=document.documentElement;
+function set(t){d.setAttribute('data-theme',t)}
+var s=null;try{s=localStorage.getItem('ds-theme')}catch(e){}
+set(s||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));
+addEventListener('message',function(e){if(e.data&&e.data.theme)set(e.data.theme)});})();</script></head>
+<body>
+  <div class="row">
+    <div><div class="f" style="width:112px"><div class="ratio">9:16</div><div class="bars"><i style="width:80%"></i><i style="width:55%"></i></div></div><div class="name">Verticale</div><div class="use">video · storie</div></div>
+    <div><div class="f" style="width:160px"><div class="ratio">4:5</div><div class="bars"><i style="width:85%"></i><i style="width:60%"></i></div></div><div class="name">Post</div><div class="use">immagine · testo</div></div>
+    <div><div class="f" style="width:200px"><div class="ratio">1:1</div><div class="bars"><i style="width:85%"></i><i style="width:60%"></i></div></div><div class="name">Quadrato</div><div class="use">citazioni</div></div>
+    <div><div class="f" style="width:356px"><div class="ratio">16:9</div><div class="bars"><i style="width:60%"></i><i style="width:40%"></i></div></div><div class="name">Orizzontale</div><div class="use">slide · video</div></div>
+  </div>
+</body></html>

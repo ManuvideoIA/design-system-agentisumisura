@@ -1,0 +1,48 @@
+<!-- @dsCard group="Fondamenta" height=470 subtitle="Quattro luci: dove usarle" -->
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baskervville&family=Figtree:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+<style>
+  body { margin: 0; padding: var(--space-5); background: var(--surface); color: var(--ink); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: var(--space-5); }
+  .scene { position: relative; height: 170px; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-soft); }
+  .name { margin-top: var(--space-3); font: 700 15px/20px var(--font-sans); color: var(--ink); }
+  .use { font: 400 11px/16px var(--font-mono); color: var(--ink-muted); }
+  .abs { position: absolute; }
+  .m { background: #fffdf8; }
+  .m .beam { left: -10%; top: -10%; width: 70%; height: 130%; background: rgba(229,138,74,0.26); clip-path: polygon(20% 0, 100% 0, 60% 100%, 0 100%); }
+  .m .counter { left: 0; right: 0; bottom: 0; height: 44px; background: #dfeaec; }
+  .m .cup { left: 62%; bottom: 44px; width: 34px; height: 30px; background: #497a84; border-radius: 6px 6px 12px 12px; }
+  .s { background: #0f1f23; }
+  .s .glow { left: 40%; top: -40%; width: 90%; height: 130%; background: radial-gradient(circle at 50% 50%, rgba(240,151,90,0.78), rgba(240,151,90,0) 62%); }
+  .s .lamp { left: 66%; top: 0; width: 4px; height: 38px; background: #497a84; }
+  .s .bulb { left: calc(66% - 10px); top: 34px; width: 24px; height: 14px; border-radius: 0 0 14px 14px; background: #9ad2bb; }
+  .s .counter { left: 0; right: 0; bottom: 0; height: 52px; background: #497a84; }
+  .s .loaf { left: 18%; bottom: 52px; width: 54px; height: 26px; background: #8cc5ae; border-radius: 26px 26px 6px 6px; }
+  .p { background: #f6f2ea; }
+  .p .shadow { left: 28%; bottom: 34px; width: 44%; height: 22px; border-radius: 50%; background: rgba(15,31,35,0.16); filter: blur(5px); }
+  .p .obj { left: 32%; bottom: 46px; width: 36%; height: 70px; border-radius: 14px; background: #497a84; }
+  .p .dotp { left: 41%; bottom: 66px; width: 22px; height: 22px; border-radius: 50%; background: #8cc5ae; }
+  .v { background: #0c171a; }
+  .v .win { left: 14%; top: 22px; width: 72%; height: 110px; background: rgba(240,151,90,0.9); border-radius: 10px; box-shadow: 0 0 0 4px #497a84; }
+  .v .bar1 { left: 50%; top: 22px; width: 4px; height: 110px; background: #497a84; }
+  .v .tag { left: 22%; top: 46px; width: 52px; height: 16px; border-radius: 8px; background: #497a84; }
+  .v .refl { left: 14%; top: 138px; width: 72%; height: 18px; background: rgba(240,151,90,0.22); border-radius: 0 0 10px 10px; }
+</style><style id="ds-vars">:root{--surface:#f6f2ea;--surface-raised:#fffdf8;--ink:#0f1f23;--ink-muted:#4a5b60;--line:#dcd6c8;--line-strong:#8a8a80;--brand:#497a84;--on-brand:#fffdf8;--brand-text:#3d6a73;--brand-soft:#dfeaec;--accent:#8cc5ae;--on-accent:#0f1f23;--accent-text:#2e6b4f;--accent-soft:#e3f1ea;--focus:var(--brand-text);--font-display:"Space Grotesk", "Helvetica Neue", Arial, sans-serif;--font-editorial:"Baskervville", Georgia, "Times New Roman", serif;--font-sans:"Figtree", "Helvetica Neue", Arial, sans-serif;--font-mono:ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:24px;--space-6:32px;--space-7:48px;--space-8:64px;--radius-sm:6px;--radius-md:12px;--radius-lg:20px;--radius-pill:999px;--shadow-soft:0 1px 2px rgba(15, 31, 35, 0.08), 0 8px 24px rgba(15, 31, 35, 0.10);--shadow-lifted:0 2px 4px rgba(15, 31, 35, 0.12), 0 16px 40px rgba(15, 31, 35, 0.18)}
+:root[data-theme=dark]{color-scheme:dark;--surface:#0c171a;--surface-raised:#142328;--ink:#f4efe6;--ink-muted:#a9bcc1;--line:#203338;--line-strong:#6b858c;--brand:#6aa3af;--on-brand:#0c171a;--brand-text:#6aa3af;--brand-soft:#17323a;--accent:#9ad2bb;--on-accent:#0c171a;--accent-text:#9ad2bb;--accent-soft:#17332a;--focus:var(--brand-text);--shadow-soft:0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.4);--shadow-lifted:0 2px 4px rgba(0, 0, 0, 0.5), 0 16px 40px rgba(0, 0, 0, 0.55)}</style><script>(function(){var d=document.documentElement;
+function set(t){d.setAttribute('data-theme',t)}
+var s=null;try{s=localStorage.getItem('ds-theme')}catch(e){}
+set(s||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));
+addEventListener('message',function(e){if(e.data&&e.data.theme)set(e.data.theme)});})();</script></head>
+<body>
+  <div class="grid">
+    <div><div class="scene m"><div class="abs beam"></div><div class="abs counter"></div><div class="abs cup"></div></div>
+      <div class="name">Finestra del mattino</div><div class="use">problema · apertura</div></div>
+    <div><div class="scene s"><div class="abs glow"></div><div class="abs lamp"></div><div class="abs bulb"></div><div class="abs counter"></div><div class="abs loaf"></div></div>
+      <div class="name">Bancone di sera</div><div class="use">pizzerie · negozi · servizio</div></div>
+    <div><div class="scene p"><div class="abs shadow"></div><div class="abs obj"></div><div class="abs dotp"></div></div>
+      <div class="name">Studio pulito</div><div class="use">slide · copertine · schermate</div></div>
+    <div><div class="scene v"><div class="abs win"></div><div class="abs bar1"></div><div class="abs tag"></div><div class="abs refl"></div></div>
+      <div class="name">Vetrina di notte</div><div class="use">chiusura · invito all'azione</div></div>
+  </div>
+</body></html>

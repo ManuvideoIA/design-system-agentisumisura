@@ -1,0 +1,45 @@
+<!-- @dsCard group="Marchio" height=350 subtitle="Cosa entra, cosa fa l'agente, cosa esce" -->
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baskervville&family=Figtree:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+<style>
+  body { margin: 0; padding: var(--space-5); background: var(--surface); color: var(--ink); }
+  svg { display: block; width: 100%; max-width: 720px; height: auto; }
+  .node { fill: var(--surface-raised); stroke: var(--line-strong); stroke-width: 2; }
+  .agent { fill: var(--brand); }
+  .t { font: 700 15px var(--font-sans); fill: var(--ink); }
+  .ts { font: 400 11px var(--font-mono); fill: var(--ink-muted); }
+  .ta { font: 700 22px var(--font-display); fill: var(--on-brand); }
+  .tsa { font: 400 11px var(--font-mono); fill: var(--on-brand); }
+  .link { fill: none; stroke: var(--line-strong); stroke-width: 2; }
+  .dot { fill: var(--accent); }
+  .pill { fill: var(--accent); }
+  .tp { font: 700 11px var(--font-sans); fill: var(--on-accent); letter-spacing: .06em; }
+</style><style id="ds-vars">:root{--surface:#f6f2ea;--surface-raised:#fffdf8;--ink:#0f1f23;--ink-muted:#4a5b60;--line:#dcd6c8;--line-strong:#8a8a80;--brand:#497a84;--on-brand:#fffdf8;--brand-text:#3d6a73;--brand-soft:#dfeaec;--accent:#8cc5ae;--on-accent:#0f1f23;--accent-text:#2e6b4f;--accent-soft:#e3f1ea;--focus:var(--brand-text);--font-display:"Space Grotesk", "Helvetica Neue", Arial, sans-serif;--font-editorial:"Baskervville", Georgia, "Times New Roman", serif;--font-sans:"Figtree", "Helvetica Neue", Arial, sans-serif;--font-mono:ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:24px;--space-6:32px;--space-7:48px;--space-8:64px;--radius-sm:6px;--radius-md:12px;--radius-lg:20px;--radius-pill:999px;--shadow-soft:0 1px 2px rgba(15, 31, 35, 0.08), 0 8px 24px rgba(15, 31, 35, 0.10);--shadow-lifted:0 2px 4px rgba(15, 31, 35, 0.12), 0 16px 40px rgba(15, 31, 35, 0.18)}
+:root[data-theme=dark]{color-scheme:dark;--surface:#0c171a;--surface-raised:#142328;--ink:#f4efe6;--ink-muted:#a9bcc1;--line:#203338;--line-strong:#6b858c;--brand:#6aa3af;--on-brand:#0c171a;--brand-text:#6aa3af;--brand-soft:#17323a;--accent:#9ad2bb;--on-accent:#0c171a;--accent-text:#9ad2bb;--accent-soft:#17332a;--focus:var(--brand-text);--shadow-soft:0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.4);--shadow-lifted:0 2px 4px rgba(0, 0, 0, 0.5), 0 16px 40px rgba(0, 0, 0, 0.55)}</style><script>(function(){var d=document.documentElement;
+function set(t){d.setAttribute('data-theme',t)}
+var s=null;try{s=localStorage.getItem('ds-theme')}catch(e){}
+set(s||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));
+addEventListener('message',function(e){if(e.data&&e.data.theme)set(e.data.theme)});})();</script></head>
+<body>
+  <svg viewBox="0 0 720 300" role="img" aria-label="Email, chat e ordini entrano in un agente IA. Escono una risposta pronta, una scheda cliente e un avviso.">
+    <path class="link" d="M192 60C232 60 232 150 272 150"/><path class="link" d="M192 150H272"/><path class="link" d="M192 240C232 240 232 150 272 150"/>
+    <path class="link" d="M448 150C488 150 488 60 528 60"/><path class="link" d="M448 150H528"/><path class="link" d="M448 150C488 150 488 240 528 240"/>
+    <circle class="dot" cx="192" cy="60" r="5"/><circle class="dot" cx="192" cy="150" r="5"/><circle class="dot" cx="192" cy="240" r="5"/>
+    <circle class="dot" cx="528" cy="60" r="5"/><circle class="dot" cx="528" cy="150" r="5"/><circle class="dot" cx="528" cy="240" r="5"/>
+
+    <rect class="node" x="16" y="32" width="176" height="56" rx="12"/><text class="t" x="32" y="56">Email</text><text class="ts" x="32" y="75">dei clienti</text>
+    <rect class="node" x="16" y="122" width="176" height="56" rx="12"/><text class="t" x="32" y="146">Chat</text><text class="ts" x="32" y="165">del negozio</text>
+    <rect class="node" x="16" y="212" width="176" height="56" rx="12"/><text class="t" x="32" y="236">Ordini</text><text class="ts" x="32" y="255">e-commerce</text>
+
+    <rect class="agent" x="272" y="92" width="176" height="116" rx="20"/>
+    <text class="ta" x="360" y="146" text-anchor="middle">Agente IA</text>
+    <text class="tsa" x="360" y="170" text-anchor="middle">lavora al posto tuo</text>
+
+    <rect class="node" x="528" y="32" width="176" height="56" rx="12"/><text class="t" x="544" y="56">Risposta pronta</text><text class="ts" x="544" y="75">bozza da approvare</text>
+    <rect class="node" x="528" y="122" width="176" height="56" rx="12"/><text class="t" x="544" y="146">Scheda cliente</text><text class="ts" x="544" y="165">richiesta salvata</text>
+    <rect class="node" x="528" y="212" width="176" height="56" rx="12"/><text class="t" x="544" y="236">Avviso a te</text><text class="ts" x="544" y="255">se serve decidere</text>
+
+    <rect class="pill" x="584" y="4" width="120" height="22" rx="11"/><text class="tp" x="644" y="19" text-anchor="middle">DECIDI TU</text>
+  </svg>
+</body></html>

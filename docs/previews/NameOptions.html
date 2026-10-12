@@ -1,0 +1,32 @@
+<!-- @dsCard group="Marchio" height=400 subtitle="Cinque nomi come potrebbero apparire (da verificare)" -->
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baskervville&family=Figtree:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+<style>
+  body { margin: 0; padding: var(--space-5); background: var(--surface); color: var(--ink); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--space-4); }
+  .t { position: relative; background: var(--surface-raised); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: var(--space-5); min-height: 120px; box-shadow: var(--shadow-soft); }
+  .t.main { background: var(--brand-soft); border-color: var(--brand); }
+  .wm { font: 700 30px/1.05 var(--font-display); letter-spacing: -0.02em; color: var(--ink); }
+  .main .wm { font-size: 40px; }
+  .wm em { font-style: normal; color: var(--brand-text); }
+    .why { margin-top: var(--space-3); font: 400 11px/16px var(--font-mono); color: var(--ink-muted); }
+  .main .why { color: var(--ink); }
+  .badge { position: absolute; top: var(--space-3); right: var(--space-3); background: var(--accent); color: var(--on-accent); font: 700 11px/1 var(--font-sans); letter-spacing: .06em; text-transform: uppercase; padding: 6px var(--space-3); border-radius: var(--radius-pill); }
+  .foot { margin-top: var(--space-4); font: 400 11px/16px var(--font-mono); color: var(--ink-muted); }
+</style><style id="ds-vars">:root{--surface:#f6f2ea;--surface-raised:#fffdf8;--ink:#0f1f23;--ink-muted:#4a5b60;--line:#dcd6c8;--line-strong:#8a8a80;--brand:#497a84;--on-brand:#fffdf8;--brand-text:#3d6a73;--brand-soft:#dfeaec;--accent:#8cc5ae;--on-accent:#0f1f23;--accent-text:#2e6b4f;--accent-soft:#e3f1ea;--focus:var(--brand-text);--font-display:"Space Grotesk", "Helvetica Neue", Arial, sans-serif;--font-editorial:"Baskervville", Georgia, "Times New Roman", serif;--font-sans:"Figtree", "Helvetica Neue", Arial, sans-serif;--font-mono:ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:24px;--space-6:32px;--space-7:48px;--space-8:64px;--radius-sm:6px;--radius-md:12px;--radius-lg:20px;--radius-pill:999px;--shadow-soft:0 1px 2px rgba(15, 31, 35, 0.08), 0 8px 24px rgba(15, 31, 35, 0.10);--shadow-lifted:0 2px 4px rgba(15, 31, 35, 0.12), 0 16px 40px rgba(15, 31, 35, 0.18)}
+:root[data-theme=dark]{color-scheme:dark;--surface:#0c171a;--surface-raised:#142328;--ink:#f4efe6;--ink-muted:#a9bcc1;--line:#203338;--line-strong:#6b858c;--brand:#6aa3af;--on-brand:#0c171a;--brand-text:#6aa3af;--brand-soft:#17323a;--accent:#9ad2bb;--on-accent:#0c171a;--accent-text:#9ad2bb;--accent-soft:#17332a;--focus:var(--brand-text);--shadow-soft:0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.4);--shadow-lifted:0 2px 4px rgba(0, 0, 0, 0.5), 0 16px 40px rgba(0, 0, 0, 0.55)}</style><script>(function(){var d=document.documentElement;
+function set(t){d.setAttribute('data-theme',t)}
+var s=null;try{s=localStorage.getItem('ds-theme')}catch(e){}
+set(s||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));
+addEventListener('message',function(e){if(e.data&&e.data.theme)set(e.data.theme)});})();</script></head>
+<body>
+  <div class="grid">
+    <div class="t main"><span class="badge">Nome di lavoro</span><div class="wm">Agenti su <em>Misura</em></div><div class="why">dice cosa fai, con le tue parole</div></div>
+    <div class="t"><div class="wm">Officina <em>Agenti IA</em></div><div class="why">lavoro artigianale; «IA» chiarisce</div></div>
+    <div class="t"><div class="wm">Agenti <em>&amp;</em> Pagine</div><div class="why">copre agenti e pagine web</div></div>
+    <div class="t"><div class="wm">Bottega degli <em>Agenti</em></div><div class="why">parla a chi ha una piccola attività</div></div>
+    <div class="t"><div class="wm"><em>Filo</em> Agenti</div><div class="why">il filo che collega email, chat e clienti</div></div>
+  </div>
+  <div class="foot">Dominio, marchio e nomi social: da verificare.</div>
+</body></html>

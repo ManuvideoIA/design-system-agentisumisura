@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="it" data-theme="light"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Agenti su Misura — Design System</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baskervville&family=Figtree:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+<style>:root{--surface:#f6f2ea;--surface-raised:#fffdf8;--ink:#0f1f23;--ink-muted:#4a5b60;--line:#dcd6c8;--line-strong:#8a8a80;--brand:#497a84;--on-brand:#fffdf8;--brand-text:#3d6a73;--brand-soft:#dfeaec;--accent:#8cc5ae;--on-accent:#0f1f23;--accent-text:#2e6b4f;--accent-soft:#e3f1ea;--focus:var(--brand-text);--font-display:"Space Grotesk", "Helvetica Neue", Arial, sans-serif;--font-editorial:"Baskervville", Georgia, "Times New Roman", serif;--font-sans:"Figtree", "Helvetica Neue", Arial, sans-serif;--font-mono:ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:24px;--space-6:32px;--space-7:48px;--space-8:64px;--radius-sm:6px;--radius-md:12px;--radius-lg:20px;--radius-pill:999px;--shadow-soft:0 1px 2px rgba(15, 31, 35, 0.08), 0 8px 24px rgba(15, 31, 35, 0.10);--shadow-lifted:0 2px 4px rgba(15, 31, 35, 0.12), 0 16px 40px rgba(15, 31, 35, 0.18)}
+:root[data-theme=dark]{color-scheme:dark;--surface:#0c171a;--surface-raised:#142328;--ink:#f4efe6;--ink-muted:#a9bcc1;--line:#203338;--line-strong:#6b858c;--brand:#6aa3af;--on-brand:#0c171a;--brand-text:#6aa3af;--brand-soft:#17323a;--accent:#9ad2bb;--on-accent:#0c171a;--accent-text:#9ad2bb;--accent-soft:#17332a;--focus:var(--brand-text);--shadow-soft:0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.4);--shadow-lifted:0 2px 4px rgba(0, 0, 0, 0.5), 0 16px 40px rgba(0, 0, 0, 0.55)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--surface);color:var(--ink);font:400 16px/24px var(--font-sans)}
+code{font:400 12px/18px var(--font-mono);color:var(--ink-muted)}
+a{color:var(--brand-text)}
+.top{position:sticky;top:0;z-index:5;display:flex;gap:16px;align-items:center;padding:12px 24px;background:var(--surface-raised);border-bottom:1px solid var(--line)}
+.top h1{margin:0;font:700 18px/24px var(--font-display)}
+.top small{color:var(--ink-muted);flex:1}
+.tg{border:1px solid var(--line-strong);background:transparent;color:var(--ink);border-radius:999px;padding:6px 14px;font:600 12px var(--font-sans);cursor:pointer}
+.wrap{display:grid;grid-template-columns:220px 1fr}
+nav{position:sticky;top:49px;align-self:start;height:calc(100vh - 49px);overflow:auto;padding:16px;border-right:1px solid var(--line);font-size:14px}
+nav a{display:block;padding:4px 0;text-decoration:none;color:var(--ink)} nav a:hover{color:var(--brand-text)}
+nav h4{margin:16px 0 4px;font:700 11px/16px var(--font-sans);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-muted)}
+main{padding:24px 32px 96px;max-width:1100px}
+h2{font:700 32px/36px var(--font-display);margin:64px 0 16px;letter-spacing:-.01em} h2:first-child{margin-top:0}
+h3{font:600 20px/28px var(--font-display);margin:32px 0 8px} h3.grp{margin-top:40px;color:var(--brand-text)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
+.sw{background:var(--surface-raised);border:1px solid var(--line);border-radius:12px;padding:12px}
+.sw .chips{display:flex;height:56px;border-radius:8px;overflow:hidden;border:1px solid var(--line)} .sw .chips i{flex:1}
+.sw b{display:block;margin-top:8px} .sw code{display:inline-block;margin-right:8px} .sw p,.ts p,.row p,.rd p,.sh p{margin:4px 0 0;font-size:13px;line-height:18px;color:var(--ink-muted)}
+.fams{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.fam{display:flex;flex-direction:column;gap:6px;background:var(--surface-raised);border:1px solid var(--line);border-radius:12px;padding:16px}
+.fam small{font:400 11px/16px var(--font-mono);color:var(--ink-muted)} .fam .big{font-size:32px;line-height:36px;color:var(--brand-text)}
+.ts{display:grid;grid-template-columns:240px 1fr;gap:24px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
+.sample{overflow-wrap:anywhere}
+.row{display:grid;grid-template-columns:90px 160px 50px 1fr;gap:12px;align-items:center;padding:6px 0} .row .bar{height:16px;background:var(--brand);border-radius:4px;display:block} .row p{margin:0}
+.shapes{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px}
+.rd span{display:block;width:96px;height:64px;background:var(--brand-soft);border:2px solid var(--brand)}
+.sh span{display:block;width:140px;height:80px;background:var(--surface-raised);border-radius:12px;margin:8px 0 16px}
+.comp{margin:16px 0 32px} .comp header{display:flex;gap:12px;align-items:baseline} .comp header h3{margin:0} .comp header span{color:var(--ink-muted);font-size:14px}
+.pv{width:100%;border:1px solid var(--line);border-radius:12px;background:var(--surface);margin-top:8px;display:block}
+details{margin-top:8px} summary{cursor:pointer;color:var(--brand-text);font-weight:600;font-size:14px}
+.md table{border-collapse:collapse;margin:12px 0} .md td,.md th{border:1px solid var(--line);padding:6px 10px;text-align:left;vertical-align:top}
+.md blockquote{margin:12px 0;padding-left:16px;border-left:3px solid var(--brand)} .md pre{white-space:pre-wrap}
+.md code{background:var(--brand-soft);padding:1px 5px;border-radius:4px;color:var(--ink)}
+.note{color:var(--ink-muted)}
+@media(max-width:800px){.wrap{grid-template-columns:1fr}nav{display:none}main{padding:16px}.ts{grid-template-columns:1fr}.row{grid-template-columns:70px 1fr 50px}.row p{grid-column:1/-1}}
+</style></head><body>
+<div class="top"><h1>Agenti su Misura</h1><small>Design system · Font di Shegöne: Baskervville, Space Grotesk, Figtree</small><button class="tg" id="tg" type="button">Chiaro / Scuro</button></div>
+<div class="wrap"><nav>
+<h4>Fondamenta</h4><a href="#colori">Colori</a><a href="#tipografia">Tipografia</a><a href="#spazi">Spaziature</a><a href="#forme">Raggi e ombre</a>
+<h4>Componenti</h4><a href="#c-Cover">Cover</a><a href="#c-Formats">Formats</a><a href="#c-Light">Light</a><a href="#c-Palette">Palette</a><a href="#c-TypeSpecimen">TypeSpecimen</a><a href="#c-AgentFlow">AgentFlow</a><a href="#c-NameOptions">NameOptions</a><a href="#c-Button">Button</a><a href="#c-Icons">Icons</a><a href="#c-Tag">Tag</a><a href="#c-QuoteCard">QuoteCard</a><a href="#c-SocialPost">SocialPost</a><a href="#c-LowerThird">LowerThird</a><a href="#c-VerticalVideo">VerticalVideo</a><a href="#c-LandingHero">LandingHero</a><a href="#c-SlideCard">SlideCard</a>
+<h4>Sezioni</h4><a href="#d-README">Panoramica</a><a href="#d-01-nome-e-voce">Nome e voce</a><a href="#d-02-luce">Luce</a><a href="#d-03-immagini-ia">Immagini IA</a><a href="#d-04-video-ia">Video IA</a><a href="#d-05-contenuti-social">Contenuti social</a><a href="#d-06-pagine-e-slide">Pagine e slide</a>
+</nav><main>
+<h2 id="colori">Colori</h2><p class="note">Ogni campione mostra il tema chiaro (sinistra) e scuro (destra).</p><div class="grid"><div class="sw"><div class="chips"><i style="background:#f6f2ea"></i><i class="d" style="background:#0c171a"></i></div><b>surface</b><code>#f6f2ea</code><code>#0c171a</code><p>Sfondo di pagine, slide e post. Su questo fondo si leggono ink, ink-muted, brand-text e accent-text.</p></div><div class="sw"><div class="chips"><i style="background:#fffdf8"></i><i class="d" style="background:#142328"></i></div><b>surface-raised</b><code>#fffdf8</code><code>#142328</code><p>Card, pannelli e campi sopra surface. Su questo fondo si leggono ink, ink-muted, brand-text e accent-text.</p></div><div class="sw"><div class="chips"><i style="background:#0f1f23"></i><i class="d" style="background:#f4efe6"></i></div><b>ink</b><code>#0f1f23</code><code>#f4efe6</code><p>Testo principale su surface, surface-raised, brand-soft, accent-soft e accent. Come fondo dà peso ai contenuti di impatto, con testo surface.</p></div><div class="sw"><div class="chips"><i style="background:#4a5b60"></i><i class="d" style="background:#a9bcc1"></i></div><b>ink-muted</b><code>#4a5b60</code><code>#a9bcc1</code><p>Testo secondario e didascalie su surface e surface-raised.</p></div><div class="sw"><div class="chips"><i style="background:#dcd6c8"></i><i class="d" style="background:#203338"></i></div><b>line</b><code>#dcd6c8</code><code>#203338</code><p>Filetti e divisori decorativi. Non usarlo come bordo di campi o controlli.</p></div><div class="sw"><div class="chips"><i style="background:#8a8a80"></i><i class="d" style="background:#6b858c"></i></div><b>line-strong</b><code>#8a8a80</code><code>#6b858c</code><p>Bordi di campi, controlli e schemi, e icone semplici su surface e surface-raised (contrasto almeno 3:1).</p></div><div class="sw"><div class="chips"><i style="background:#497a84"></i><i class="d" style="background:#6aa3af"></i></div><b>brand</b><code>#497a84</code><code>#6aa3af</code><p>Petrolio, colore principale del marchio e dell&#x27;agente: pulsante principale, nodi degli schemi, blocchi di colore. Nel tema chiaro è #497A84. Il testo sopra è on-brand.</p></div><div class="sw"><div class="chips"><i style="background:#fffdf8"></i><i class="d" style="background:#0c171a"></i></div><b>on-brand</b><code>#fffdf8</code><code>#0c171a</code><p>Testo e icone sopra un riempimento brand.</p></div><div class="sw"><div class="chips"><i style="background:#3d6a73"></i><i class="d" style="background:#6aa3af"></i></div><b>brand-text</b><code>#3d6a73</code><code>#6aa3af</code><p>Petrolio leggibile come testo, link, titoli colorati e icone su surface, surface-raised e brand-soft. Anche anello di focus.</p></div><div class="sw"><div class="chips"><i style="background:#dfeaec"></i><i class="d" style="background:#17323a"></i></div><b>brand-soft</b><code>#dfeaec</code><code>#17323a</code><p>Fondo dei messaggi dell&#x27;agente e delle aree di automazione. Sopra vanno brand-text o ink.</p></div><div class="sw"><div class="chips"><i style="background:#8cc5ae"></i><i class="d" style="background:#9ad2bb"></i></div><b>accent</b><code>#8cc5ae</code><code>#9ad2bb</code><p>Salvia chiara, colore di enfasi: una parola del titolo, un numero chiave, il bollino &quot;Decidi tu&quot;. Il testo sopra è on-accent. Non usarlo come testo su fondo chiaro.</p></div><div class="sw"><div class="chips"><i style="background:#0f1f23"></i><i class="d" style="background:#0c171a"></i></div><b>on-accent</b><code>#0f1f23</code><code>#0c171a</code><p>Testo e icone sopra un riempimento accent.</p></div><div class="sw"><div class="chips"><i style="background:#2e6b4f"></i><i class="d" style="background:#9ad2bb"></i></div><b>accent-text</b><code>#2e6b4f</code><code>#9ad2bb</code><p>Salvia leggibile come testo e icone su surface, surface-raised e accent-soft.</p></div><div class="sw"><div class="chips"><i style="background:#e3f1ea"></i><i class="d" style="background:#17332a"></i></div><b>accent-soft</b><code>#e3f1ea</code><code>#17332a</code><p>Fondo dei messaggi del cliente e dei tag di settore. Sopra vanno accent-text o ink.</p></div><div class="sw"><div class="chips"><i style="background:var(--brand-text)"></i><i class="d" style="background:var(--brand-text)"></i></div><b>focus</b><code>{brand-text}</code><code>{brand-text}</code><p>Anello di focus pieno su tutte le superfici (contrasto almeno 3:1 su surface e surface-raised).</p></div></div>
+<h2 id="tipografia">Tipografia</h2><div class="fams"><div class="fam" style="font-family:var(--font-display)"><small>Titoli · --font-display</small><span class="big">Space Grotesk</span><span>Aa Bb Cc 0123 — Le email non aspettano.</span></div><div class="fam" style="font-family:var(--font-editorial)"><small>Titoli grandi · --font-editorial</small><span class="big">Baskervville</span><span>Aa Bb Cc 0123 — Le email non aspettano.</span></div><div class="fam" style="font-family:var(--font-sans)"><small>Testo · --font-sans</small><span class="big">Figtree</span><span>Aa Bb Cc 0123 — Le email non aspettano.</span></div><div class="fam" style="font-family:var(--font-mono)"><small>Dati · --font-mono</small><span class="big">Monospazio di sistema</span><span>Aa Bb Cc 0123 — Le email non aspettano.</span></div></div><h3>Titoli</h3><div class="ts"><div class="meta"><b>display-xl</b><code>Baskervville 400 · 56px/58px</code><p>Titolo principale di landing page e copertine.</p></div><div class="sample" style="font-family:var(--font-editorial);font-size:56px;line-height:58px;font-weight:400;letter-spacing:-0.01em;font-size:56px;line-height:62px">Meno lavori ripetitivi.</div></div><div class="ts"><div class="meta"><b>display-lg</b><code>Space Grotesk 700 · 40px/44px</code><p>Titoli di sezione di una pagina.</p></div><div class="sample" style="font-family:var(--font-display);font-size:40px;line-height:44px;font-weight:700;letter-spacing:-0.02em;font-size:40px;line-height:44px">Come lavora il tuo agente.</div></div><div class="ts"><div class="meta"><b>display-md</b><code>Space Grotesk 700 · 28px/32px</code><p>Titoli di card e sottosezioni.</p></div><div class="sample" style="font-family:var(--font-display);font-size:28px;line-height:32px;font-weight:700;letter-spacing:-0.01em;font-size:28px;line-height:31px">Tre domande sul tuo lavoro.</div></div><h3>Testo</h3><div class="ts"><div class="meta"><b>body-lg</b><code>Figtree 400 · 18px/28px</code><p>Paragrafo introduttivo.</p></div><div class="sample" style="font-family:var(--font-sans);font-size:18px;line-height:28px;font-weight:400;letter-spacing:0;font-size:18px;line-height:20px">L&#x27;agente legge le email. Le ordina per te.</div></div><div class="ts"><div class="meta"><b>body</b><code>Figtree 400 · 16px/24px</code><p>Testo corrente.</p></div><div class="sample" style="font-family:var(--font-sans);font-size:16px;line-height:24px;font-weight:400;letter-spacing:0;font-size:16px;line-height:18px">Tu decidi. L&#x27;agente prepara il resto.</div></div><div class="ts"><div class="meta"><b>body-sm</b><code>Figtree 400 · 14px/20px</code><p>Didascalie e note.</p></div><div class="sample" style="font-family:var(--font-sans);font-size:14px;line-height:20px;font-weight:400;letter-spacing:0;font-size:14px;line-height:15px">Una nota a margine.</div></div><div class="ts"><div class="meta"><b>label</b><code>Figtree 700 · 13px/16px</code><p>Pulsanti, etichette e kicker dei post (in maiuscolo, senza punto).</p></div><div class="sample" style="font-family:var(--font-sans);font-size:13px;line-height:16px;font-weight:700;letter-spacing:0.06em;font-size:13px;line-height:14px">PIZZERIA</div></div><h3>Dati</h3><div class="ts"><div class="meta"><b>data</b><code>ui-monospace 400 · 12px/18px</code><p>Etichette tecniche, ruoli nei sottopancia, metadati.</p></div><div class="sample" style="font-family:var(--font-mono);font-size:12px;line-height:18px;font-weight:400;letter-spacing:0;font-size:12px;line-height:13px">Settore · Pizzeria</div></div><div class="ts"><div class="meta"><b>data-lg</b><code>ui-monospace 500 · 22px/28px</code><p>Numeri dei passaggi.</p></div><div class="sample" style="font-family:var(--font-mono);font-size:22px;line-height:28px;font-weight:500;letter-spacing:0;font-size:22px;line-height:24px">01 — 02 — 03</div></div><h3>Contenuti</h3><div class="ts"><div class="meta"><b>hook-reel</b><code>Baskervville 400 · 88px/90px</code><p>Frase d&#x27;apertura di un video verticale, su tela larga 1080 px.</p></div><div class="sample" style="font-family:var(--font-editorial);font-size:88px;line-height:90px;font-weight:400;letter-spacing:-0.01em;font-size:56px;line-height:62px">Le email non aspettano.</div></div><div class="ts"><div class="meta"><b>reel-caption</b><code>Figtree 700 · 52px/60px</code><p>Sottotitoli dei video verticali, su tela larga 1080 px.</p></div><div class="sample" style="font-family:var(--font-sans);font-size:52px;line-height:60px;font-weight:700;letter-spacing:0;font-size:52px;line-height:57px">Sottotitolo del parlato.</div></div><div class="ts"><div class="meta"><b>slide-title</b><code>Baskervville 400 · 54px/58px</code><p>Titolo di slide, su tela 1920 × 1080.</p></div><div class="sample" style="font-family:var(--font-editorial);font-size:54px;line-height:58px;font-weight:400;letter-spacing:-0.01em;font-size:54px;line-height:59px">Come si parte.</div></div><div class="ts"><div class="meta"><b>slide-body</b><code>Figtree 400 · 28px/40px</code><p>Testo di slide, su tela 1920 × 1080.</p></div><div class="sample" style="font-family:var(--font-sans);font-size:28px;line-height:40px;font-weight:400;letter-spacing:0;font-size:28px;line-height:31px">Una call per capire le tue esigenze.</div></div>
+<h2 id="spazi">Spaziature</h2><div class="row"><code>space-1</code><span class="bar" style="width:4px"></span><em>4px</em><p>Distanza minima tra icona e testo.</p></div><div class="row"><code>space-2</code><span class="bar" style="width:8px"></span><em>8px</em><p>Spazio interno di tag e righe compatte.</p></div><div class="row"><code>space-3</code><span class="bar" style="width:12px"></span><em>12px</em><p>Distanza tra elementi collegati.</p></div><div class="row"><code>space-4</code><span class="bar" style="width:16px"></span><em>16px</em><p>Padding standard e distanza tra blocchi di testo.</p></div><div class="row"><code>space-5</code><span class="bar" style="width:24px"></span><em>24px</em><p>Padding delle card e dei post.</p></div><div class="row"><code>space-6</code><span class="bar" style="width:32px"></span><em>32px</em><p>Distanza tra gruppi di contenuto.</p></div><div class="row"><code>space-7</code><span class="bar" style="width:48px"></span><em>48px</em><p>Margini di pagina e di copertina.</p></div><div class="row"><code>space-8</code><span class="bar" style="width:64px"></span><em>64px</em><p>Distanza tra sezioni di una pagina.</p></div>
+<h2 id="forme">Raggi e ombre</h2><div class="shapes"><div class="rd"><span style="border-radius:6px"></span><code>radius-sm</code><em>6px</em><p>Evidenziatore sulle parole del titolo.</p></div><div class="rd"><span style="border-radius:12px"></span><code>radius-md</code><em>12px</em><p>Campi, sottopancia, nodi degli schemi.</p></div><div class="rd"><span style="border-radius:20px"></span><code>radius-lg</code><em>20px</em><p>Card, post e slide.</p></div><div class="rd"><span style="border-radius:999px"></span><code>radius-pill</code><em>999px</em><p>Pulsanti e tag.</p></div></div><h3>Ombre</h3><div class="shapes"><div class="sh"><span style="box-shadow:var(--shadow-soft)"></span><code>shadow-soft</code><p>Card e post a riposo sopra surface.</p></div><div class="sh"><span style="box-shadow:var(--shadow-lifted)"></span><code>shadow-lifted</code><p>Elemento sollevato: sottopancia dei video, card al passaggio del mouse.</p></div><p class="note">Ombre morbide, tinte del blu-verde scuro. Cadono sempre verso il basso.</p></div>
+<h2 id="componenti">Componenti</h2><h3 class="grp">Copertina</h3><article class="comp" id="c-Cover"><header><h3>Cover</h3><span></span></header><iframe class="pv" src="previews/Cover.html" title="Cover" style="height:320px" loading="lazy"></iframe><details><summary>Regole d'uso</summary><div class="md" data-md=""></div></details></article><h3 class="grp">Fondamenta</h3><article class="comp" id="c-Formats"><header><h3>Formats</h3><span>Formati in scala: dove usare ciascuno</span></header><iframe class="pv" src="previews/Formats.html" title="Formats" style="height:330px" loading="lazy"></iframe><details><summary>Regole d'uso</summary><div class="md" data-md="I quattro formati dei contenuti, in scala: 9:16, 4:5, 1:1, 16:9.
+
+Le proporzioni sono scelte di progetto. Le misure ufficiali delle piattaforme non sono verificate. Controllale prima di esportare.
+"></div></details></article><article class="comp" id="c-Light"><header><h3>Light</h3><span>Quattro luci: dove usarle</span></header><iframe class="pv" src="previews/Light.html" title="Light" style="height:470px" loading="lazy"></iframe><details><summary>Regole d'uso</summary><div class="md" data-md="Le quattro luci del marchio, disegnate. Finestra del mattino. Bancone di sera. Studio pulito. Vetrina di notte.
+
+Ogni tile dice per quali contenuti usarla. Le frasi per i prompt sono nella sezione Luce. Le illustrazioni hanno colori fissi, uguali nei due temi.
+"></div></details></article><article class="comp" id="c-Palette"><header><h3>Palette</h3><span>Proporzioni e coppie testo/fondo (cambia tema per vedere l&#x27;altra versione)</span></header><iframe class="pv" src="previews/Palette.html" title="Palette" style="height:420px" loading="lazy"></iframe><details><summary>Regole d'uso</summary><div class="md" data-md="Proporzioni del colore e coppie testo/fondo ammesse.
+
+Carta e inchiostro dominano. Il petrolio guida. La salvia è un dettaglio d&#x27;enfasi. Le proporzioni sono un punto di partenza, non una misura. Il petrolio #497A84 su carta chiara ha un contrasto circa 4,3:1: va bene per pulsanti e blocchi. Come testo si usa `brand-text`, più scuro.
+"></div></details></article><article class="comp" id="c-TypeSpecimen"><header><h3>TypeSpecimen</h3><span>Baskervville, Space Grotesk, Figtree (come Shegöne)</span></header><iframe class="pv" src="previews/TypeSpecimen.html" title="TypeSpecimen" style="height:450px" loading="lazy"></iframe><details><summary>Regole d'uso</summary><div class="md" data-md="Campione dei font, gli stessi di Shegöne. Baskervville per i titoli grandi. Space Grotesk per gli altri titoli. Figtree per il testo. Monospazio di sistema per etichette e dati.
+
+Sono font di Google Fonts, caricati per nome. Non sono file del sistema. Se un font non carica, si usa il font di sistema. Sono scelte creative non verificate rispetto al tuo pubblico.
+"></div></details></article><h3 class="grp">Marchio</h3><article class="comp" id="c-AgentFlow"><header><h3>AgentFlow</h3><span>Cosa entra, cosa fa l&#x27;agente, cosa esce</span></header><iframe class="pv" src="previews/AgentFlow.html" title="AgentFlow" style="height:350px" loading="lazy"></iframe><details><summary>Regole d'uso</summary><div class="md" data-md="Lo schema del servizio. Email, chat e ordini entrano nell&#x27;agente. Escono una risposta pronta, una scheda cliente e un avviso. La decisione resta a te.
+
+Riusalo in landing page, slide e video. I nodi sono su `surface-raised`, con bordo `line-strong`. L&#x27;agente è `brand`. Il bollino &quot;Decidi tu&quot; e i punti di collegamento sono `accent`. Gli esempi dei nodi si adattano al settore.
+"></div></details></article><article class="comp" id="c-NameOptions"><header><h3>NameOptions</h3><span>Cinque nomi come potrebbero apparire (da verificare)</span></header><iframe class="pv" src="previews/NameOptions.html" title="NameOptions" style="height:400px" loading="lazy"></iframe><details><summary>Regole d'uso</summary><div class="md" data-md="Cinque proposte di nome. Dicono cosa fai: agenti IA su misura, con o senza pagine web.
+
+Il nome di lavoro è evidenziato. Dominio, marchio e nomi social non sono verificati. Controllali prima di scegliere. Se cambi nome, si aggiornano titolo, README e copertina.
+"></div></details></article><h3 class="grp">Base</h3><article class="comp" id="c-Button"><header><h3>Button</h3><span>Petrolio, salvia, contorno, con focus, disattivato</span></header><iframe class="pv" src="previews/Button.html" title="Button" style="height:150px" loading="lazy"></iframe><details><summary>Regole d'uso</summary><div class="md" data-md="Pulsante a pillola. Il principale è petrolio con testo chiaro. La salvia segna la conferma. Il terziario ha solo il contorno.
+
+**Chi lo usa fornisce** un&#x27;etichetta che inizia con un verbo e la variante.
+
+- Petrolio: l&#x27;invito principale. Uno per schermata, pagina o slide.
+- Salvia: la decisione umana, per esempio &quot;Approva la risposta&quot;.
+- Contorno: azioni di supporto.
+- Altezza minima 48 px. Anello di focus pieno.
+- Le etichette non hanno il punto.
+
+Da evitare: due pulsanti petrolio nella stessa vista. Etichette come &quot;Clicca qui&quot;.
+"></div></details></article><article class="comp" id="c-Icons"><header><h3>Icons</h3><span>Icone lineari a tratto di 2 px</span></header><iframe class="pv" src="previews/Icons.html" title="Icons" style="height:210px" loading="lazy"></iframe><details><summary>Regole d'uso</summary><div class="md" data-md="Sei icone lineari di base: email, chat, agente, pagina, calendario, ordine.
+
+Tratto di 2 px, estremità arrotondate, nessun riempimento. Colore `ink`, `brand-text` o `accent-text`. Un solo colore per icona. Se scegli una libreria di icone, sostituiscile tutte insieme.
+"></div></details></article><article class="comp" id="c-Tag"><header><h3>Tag</h3><span>Settore, agente, novità, dato tecnico</span></header><iframe class="pv" src="previews/Tag.html" title="Tag" style="height:110px" loading="lazy"></iframe><details><summary>Regole d'uso</summary><div class="md" data-md="Etichetta a pillola per un settore, un ruolo o una novità.
+
+- Settore o tema: fondo `accent-soft`, testo `accent-text`.
+- Agente: fondo `brand-soft`, testo `brand-text`.
+- Novità: fondo `accent`, testo `on-accent`.
+- Dato tecnico: contorno `line-strong`, monospazio di sistema.
+
+Al massimo due tag per contenuto. Non sono cliccabili. Non hanno il punto.
+"></div></details></article><h3 class="grp">Social</h3><article class="comp" id="c-QuoteCard"><header><h3>QuoteCard</h3><span>Citazione 1:1 con attribuzione e consenso (testo segnaposto)</span></header><iframe class="pv" src="previews/QuoteCard.html" title="QuoteCard" style="height:380px" loading="lazy"></iframe><details><summary>Regole d'uso</summary><div class="md" data-md="Card quadrata 1:1 per una risposta registrata a un titolare. Nome, attività e segno del consenso.
+
+**Chi la usa fornisce** la frase esatta, il nome o la dicitura concordata e il tipo di attività.
+
+- Solo citazioni reali, registrate con consenso. Mai testimonianze inventate.
+- La frase non si modifica. Si può accorciare solo tagliando all&#x27;inizio o alla fine, senza cambiare il senso.
+- Il segno &quot;Consenso ricevuto&quot; è un tag `brand-soft`. Senza consenso, la card non si pubblica.
+- Citazione in `display-md`. Attribuzione in `data`. Fondo `surface-raised`. Angoli `radius-lg`.
+
+Da evitare: elogi generici. Scegli frasi che descrivono un problema concreto. Mai immagini generate al posto del volto.
+"></div></details></article><article class="comp" id="c-SocialPost"><header><h3>SocialPost</h3><span>Post 4:5: chiaro, petrolio, notte</span></header><iframe class="pv" src="previews/SocialPost.html" title="SocialPost" style="height:430px" loading="lazy"></iframe><details><summary>Regole d'uso</summary><div class="md" data-md="Post 4:5 per il feed, in tre varianti. Chiara. Petrolio. Notte.
+
+**Chi lo usa fornisce** un kicker, un titolo con una parola da evidenziare e un&#x27;azione finale. Il marchio in basso è il nome in Space Grotesk 700.
+
+- Una sola idea per post. Due idee sono due post.
+- Variante chiara: fondo `surface-raised`, testo `ink`, azione in pillola `brand`.
+- Variante petrolio: fondo `brand`, testo `on-brand`, azione in pillola `surface-raised`.
+- Variante notte: fondo `ink`, testo `surface`, azione in pillola `accent`.
+- La parola evidenziata è sempre su `accent` con testo `on-accent`.
+- Angoli `radius-lg`. Ombra `shadow-soft`.
+- Il testo va sopra l&#x27;immagine, in montaggio. Mai dentro l&#x27;immagine generata.
+
+Da evitare: più di otto parole nel titolo. Emoji decorative.
+"></div></details></article><h3 class="grp">Video</h3><article class="comp" id="c-LowerThird"><header><h3>LowerThird</h3><span>Sottopancia su girato segnaposto (testo segnaposto)</span></header><iframe class="pv" src="previews/LowerThird.html" title="LowerThird" style="height:240px" loading="lazy"></iframe><details><summary>Regole d'uso</summary><div class="md" data-md="Sottopancia per i video. Nome di chi parla e ruolo, in una barra sollevata con angoli `radius-md`.
+
+**Chi lo usa fornisce** il nome, o la dicitura concordata, e il ruolo o il tipo di attività.
+
+- Fondo `surface-raised`. Ombra `shadow-lifted`.
+- Nome in Figtree 700. Ruolo nel monospazio di sistema.
+- Appare per pochi secondi all&#x27;inizio della risposta. In basso a sinistra, sopra il margine di sicurezza.
+- Un tag `accent-soft` può indicare il tipo di attività.
+
+Da evitare: nomi o ruoli inventati. Se la persona non vuole essere nominata, scrivi solo il tipo di attività. Mai barre a tutta larghezza.
+"></div></details></article><article class="comp" id="c-VerticalVideo"><header><h3>VerticalVideo</h3><span>Video 9:16: apertura e fotogramma con sottotitoli (margini tratteggiati)</span></header><iframe class="pv" src="previews/VerticalVideo.html" title="VerticalVideo" style="height:470px" loading="lazy"></iframe><details><summary>Regole d'uso</summary><div class="md" data-md="Struttura grafica di un video verticale 9:16. Un&#x27;apertura con frase d&#x27;impatto. Un fotogramma con sottotitoli e marchio.
+
+**Chi lo usa fornisce** la frase d&#x27;apertura (fino a otto parole), il girato e i sottotitoli del parlato.
+
+- Apertura: `hook-reel` in `on-brand` su fondo `brand`, con una parola su `accent`. Oppure su girato, con una velatura `ink` sotto il testo.
+- Sottotitoli sempre presenti, su un&#x27;etichetta `ink` con testo `surface`.
+- Titoli e sottotitoli restano nei margini di sicurezza: circa 8% ai lati, 14% in alto, 22% in basso. Sono una precauzione di progetto. Le zone coperte dalle app non sono verificate. Controlla in anteprima.
+- Marchio piccolo, sempre nello stesso angolo. Invito finale su fondo `brand`.
+
+Da evitare: testo ai bordi o sotto i pulsanti dell&#x27;app. Più di due righe di sottotitolo.
+"></div></details></article><h3 class="grp">Slide e pagine</h3><article class="comp" id="c-LandingHero"><header><h3>LandingHero</h3><span>Hero di una landing page (testo segnaposto)</span></header><iframe class="pv" src="previews/LandingHero.html" title="LandingHero" style="height:470px" loading="lazy"></iframe><details><summary>Regole d'uso</summary><div class="md" data-md="Prima schermata di una landing page. Nome, titolo con una parola evidenziata in salvia, un solo invito in petrolio e un esempio di conversazione.
+
+Il testo è un segnaposto. Il messaggio del cliente è su `accent-soft`. La risposta dell&#x27;agente è su `brand-soft`. Su telefono resta una colonna.
+"></div></details></article><article class="comp" id="c-SlideCard"><header><h3>SlideCard</h3><span>Slide 16:9: titolo e tre passi (testo segnaposto)</span></header><iframe class="pv" src="previews/SlideCard.html" title="SlideCard" style="height:330px" loading="lazy"></iframe><details><summary>Regole d'uso</summary><div class="md" data-md="Slide 16:9 in due layout. Titolo su fondo scuro. Tre passi numerati su `surface-raised`.
+
+**Chi la usa fornisce** un titolo breve e, per i passi, tre frasi di una riga.
+
+- Su tela 1920 × 1080: titolo `slide-title`, testo `slide-body`, numeri `data-lg`.
+- Una sola idea per slide. Al massimo quaranta parole.
+- Slide di titolo e di chiusura: fondo `ink`, testo `surface`, parola evidenziata su `accent`.
+- Slide di contenuto: fondo `surface` o `surface-raised`, testo `ink`, numeri su `brand`.
+- L&#x27;invito compare una sola volta, nell&#x27;ultima slide, con il pulsante `brand`.
+- Marchio in basso a sinistra.
+
+Da evitare: elenchi lunghi su più livelli. Cifre senza fonte.
+"></div></details></article>
+<section id="d-README"><h2>Panoramica</h2><div class="md" data-md="Agenti su Misura è il nome di lavoro, provvisorio. Il servizio crea agenti IA e automazioni su misura per piccole attività. Il petrolio è il colore guida. La salvia è il colore dell&#x27;enfasi.
+
+## Regole in breve
+
+- Il petrolio (`brand`, #497A84) è il marchio e l&#x27;agente. Vale per pulsante principale, nodi degli schemi e blocchi di colore. Sopra va sempre `on-brand`.
+- Il petrolio come testo è `brand-text`. Non usare `brand` per testo piccolo su fondo chiaro.
+- La salvia (`accent`) è l&#x27;enfasi: una parola del titolo, un numero, il bollino &quot;Decidi tu&quot;. Sopra va sempre `on-accent`.
+- La salvia come testo è `accent-text`.
+- L&#x27;inchiostro (`ink`) dà peso. Usa blocchi scuri per i contenuti di impatto.
+- Titoli grandi in Baskervville (serif). Altri titoli in Space Grotesk. Testo in Figtree. Dati nel monospazio di sistema. Sono gli stessi font di Shegöne.
+- Un&#x27;idea per contenuto. Un invito per contenuto.
+- Mai testimonianze o volti inventati. Solo risposte registrate con consenso.
+- Immagini, voci e video generati con IA vanno dichiarati.
+
+## Scrittura
+
+- Frasi brevi. Una idea per frase.
+- Ogni frase finisce con il punto. Anche i titoli.
+- Pulsanti ed etichette non hanno il punto.
+- Italiano, con il tu. Parole semplici.
+- Niente promesse che non puoi dimostrare.
+
+## Dove guardare
+
+Le regole sono disegnate nei componenti. Guarda Palette, TypeSpecimen, Light, Formats, NameOptions, Icons, AgentFlow e LandingHero. Poi i formati pronti per post, video e slide. Le sezioni di testo sono liste brevi.
+
+## Icone e marchio
+
+Le icone sono lineari, con tratto di 2 px. Vedi Icons. Non c&#x27;è ancora un logo. Il marchio è il nome in Space Grotesk 700.
+"></div></section><section id="d-01-nome-e-voce"><h2>Nome e voce</h2><div class="md" data-md="# Nome e voce
+
+Il nome deve dire cosa fai. Fai agenti IA su misura. La formula &quot;su misura&quot; è tua (fonte: indicazioni dell&#x27;utente). Le cinque proposte sono in NameOptions. Non ho dati affidabili su dominio, marchio e nomi social. Vanno verificati prima di scegliere.
+
+## Voce
+
+| Sì | No |
+| --- | --- |
+| Le email dei clienti vengono ordinate per te. Tu decidi. | Rivoluziona il tuo business con l&#x27;IA di nuova generazione. |
+| Ti faccio tre domande. Poi ti mostro una prova. | Soluzioni innovative e scalabili. |
+| Non sostituisce nessuno. Fa i lavori che ripeti ogni giorno. | Zero fatica, risultati garantiti. |
+
+Scrivi in prima persona singolare finché il servizio è portato avanti da una persona sola.
+
+## Quattro temi
+
+- **Il problema.** Una difficoltà quotidiana vista dal titolare.
+- **Come funziona.** Cosa fa l&#x27;agente, con un esempio.
+- **La prova.** Un progetto dimostrativo.
+- **Cosa sto imparando.** Una novità dell&#x27;IA e cosa significa per una piccola attività.
+
+Fonti: servizio e destinatari dalle indicazioni dell&#x27;utente. Il resto è una proposta non verificata.
+"></div></section><section id="d-02-luce"><h2>Luce</h2><div class="md" data-md="# Luce
+
+Calda, morbida, laterale. Una bottega aperta, non un ufficio freddo. Le quattro luci sono disegnate in Light. Ogni strumento reagisce in modo diverso. Provale. Non ho dati affidabili sul loro comportamento.
+
+- **Finestra del mattino.** &quot;luce naturale morbida da una finestra laterale, ombre leggere, atmosfera calma&quot;
+- **Bancone di sera.** &quot;luce calda di lampade basse sul bancone, sfondo leggermente sfocato, toni ambrati&quot;
+- **Studio pulito.** &quot;luce diffusa uniforme su fondo carta chiaro, ombre molto morbide&quot;
+- **Vetrina di notte.** &quot;vetrina illuminata dall&#x27;interno nella penombra, riflessi caldi sul vetro&quot;
+
+## Regole
+
+- Una sola sorgente principale.
+- Le ombre tendono al blu-verde scuro. Non al nero.
+- Niente neon, blu elettrico o viola.
+- Lascia una zona calma per il titolo.
+- Nell&#x27;interfaccia la luce è l&#x27;ombra: `shadow-soft` e `shadow-lifted`.
+
+Fonti: la richiesta di luci e colori è dell&#x27;utente. Frasi e regole sono proposte non verificate.
+"></div></section><section id="d-03-immagini-ia"><h2>Immagini IA</h2><div class="md" data-md="# Immagini IA
+
+**Direzione.** Fotografia realistica e pulita. Ambienti e gesti di una piccola attività. Petrolio e salvia negli oggetti e nella luce. Una zona calma per il titolo.
+
+**Da evitare.** Robot lucenti. Cervelli o circuiti blu. Volti generati presentati come persone vere. Testo scritto dal generatore dentro l&#x27;immagine. Il testo si aggiunge dopo, con i font del sistema.
+
+## Schema del prompt
+
+1. Soggetto e azione.
+2. Ambiente.
+3. Luce, una delle quattro.
+4. Colori: petrolio, salvia, carta.
+5. Inquadratura e formato, con lo spazio vuoto.
+6. Vincoli: niente testo, niente loghi.
+
+&gt; Titolare di una pizzeria che guarda il telefono sul bancone mentre impasta. Ambiente reale e ordinato. Luce calda di lampade basse. Toni blu petrolio, salvia e ambra. Mezzo busto da lato, formato 4:5, spazio vuoto in alto. Nessun testo. Nessun logo.
+
+## Prima di pubblicare
+
+- Mani, oggetti e scritte sul fondo sono credibili?
+- Colori e luce sono coerenti con la serie?
+- Il testo è stato aggiunto dopo?
+- L&#x27;immagine è dichiarata come generata con IA? Non ho dati affidabili sulle regole di ogni piattaforma. Controllale.
+
+Fonti: le attività citate sono dell&#x27;utente. Schema e criteri sono proposte non verificate.
+"></div></section><section id="d-04-video-ia"><h2>Video IA</h2><div class="md" data-md="# Video IA
+
+Il piano è visitare piccole attività: pizzerie, ferramenta, negozi. Fai tre o quattro domande ai titolari. Registri le risposte per i video (fonte: indicazioni dell&#x27;utente).
+
+## Quattro tempi
+
+1. **Problema.** La frase del titolare, in apertura, con `hook-reel`.
+2. **Cosa fa l&#x27;agente.** Una frase e un gesto mostrato.
+3. **Risultato.** Cosa cambia nella giornata. Senza cifre non dimostrabili.
+4. **Invito.** Una sola azione, con il pulsante petrolio.
+
+## Elementi
+
+- Sottotitoli sempre presenti.
+- Sottopancia con nome e ruolo.
+- Marchio sempre nello stesso angolo.
+- Musica senza voce.
+- Margini di sicurezza: le zone coperte dalle app non sono verificate. Controlla in anteprima su ogni piattaforma.
+- Non ho dati affidabili sulla durata migliore. Prova e guarda i risultati.
+
+## Registrare i titolari
+
+- Chiedi il consenso prima di registrare e pubblicare. Conserva una traccia scritta.
+- Puoi tagliare. Non puoi cambiare il senso.
+- Se la persona cambia idea, il video si toglie.
+- Non sono un legale. Per immagine e dati personali serve un professionista.
+- Voce o volti generati con IA vanno dichiarati.
+
+## Domande
+
+1. Qual è il lavoro che ripeti più volte al giorno?
+2. Cosa succede se non rispondi subito a un cliente?
+3. Dove annoti oggi le richieste?
+4. Se potessi delegare una cosa da domani, quale?
+
+Fonti: piano e luoghi sono dell&#x27;utente. Struttura e domande sono proposte non verificate.
+"></div></section><section id="d-05-contenuti-social"><h2>Contenuti social</h2><div class="md" data-md="# Contenuti social
+
+Le piattaforme previste sono Instagram, TikTok, Facebook e LinkedIn (fonte: indicazioni dell&#x27;utente). Non ho dati verificati sulle loro misure ufficiali. I formati sono per proporzione. Li assegni tu, dopo aver controllato.
+
+| Proporzione | Uso | Componente |
+| --- | --- | --- |
+| 9:16 | Video con risposta del titolare, storie. | VerticalVideo |
+| 4:5 | Post. | SocialPost |
+| 1:1 | Citazioni. | QuoteCard |
+| 16:9 | Slide e video orizzontali. | SlideCard |
+
+## Anatomia di un post
+
+1. Kicker in `label`: il tema.
+2. Titolo con una sola parola evidenziata.
+3. Una sola idea.
+4. Una sola azione, con il pulsante petrolio.
+5. Marchio in basso.
+
+La caption ha tre righe: la situazione, cosa cambia, cosa fare ora.
+
+Non ho dati affidabili su frequenze e orari migliori. Parti da un ritmo che puoi mantenere. Correggi guardando i risultati.
+
+Fonti: le piattaforme sono dell&#x27;utente. Il resto è una proposta non verificata.
+"></div></section><section id="d-06-pagine-e-slide"><h2>Pagine e slide</h2><div class="md" data-md="# Pagine e slide
+
+## Landing page
+
+Una colonna. Una sola azione: prenotare una call conoscitiva. L&#x27;ordine è questo.
+
+1. Promessa.
+2. Problema.
+3. Come funziona, con lo schema AgentFlow.
+4. Esempi per attività: pizzeria, ferramenta, e-commerce.
+5. Rassicurazioni.
+6. Domande e contatto.
+
+Un esempio è LandingHero. Non ho dati affidabili su quante sezioni convertano meglio. Parti semplice. Poi correggi.
+
+## Prima presentazione
+
+La presentazione spiega cosa può fare il servizio, la call conoscitiva, i vantaggi e le rassicurazioni (fonte: indicazioni dell&#x27;utente).
+
+| Slide | Contenuto |
+| --- | --- |
+| 1 | Titolo su fondo scuro. |
+| 2 | Cosa può fare, con un esempio. |
+| 3 | Come si parte: la call conoscitiva. |
+| 4 | I vantaggi, senza cifre non dimostrabili. |
+| 5 | Le rassicurazioni. |
+| 6 | Il prossimo passo, un solo invito. |
+
+Una idea per slide. Massimo quaranta parole. Tela 1920 × 1080.
+
+Fonti: contenuti e settori sono dell&#x27;utente. La struttura è una proposta non verificata.
+"></div></section>
+</main></div>
+<script>(function(){var d=document.documentElement;
+function set(t){d.setAttribute('data-theme',t)}
+var s=null;try{s=localStorage.getItem('ds-theme')}catch(e){}
+set(s||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));
+addEventListener('message',function(e){if(e.data&&e.data.theme)set(e.data.theme)});})();</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script>
+document.querySelectorAll('.md').forEach(function(el){var t=el.getAttribute('data-md')||'';
+ if(window.marked){el.innerHTML=marked.parse(t)}else{var p=document.createElement('pre');p.textContent=t;el.appendChild(p)}});
+function push(){var t=document.documentElement.getAttribute('data-theme');
+ document.querySelectorAll('iframe.pv').forEach(function(f){try{f.contentWindow.postMessage({theme:t},'*')}catch(e){}})}
+document.querySelectorAll('iframe.pv').forEach(function(f){f.addEventListener('load',push)});
+document.getElementById('tg').onclick=function(){var d=document.documentElement;var t=d.getAttribute('data-theme')==='dark'?'light':'dark';
+ d.setAttribute('data-theme',t);try{localStorage.setItem('ds-theme',t)}catch(e){}push()};
+</script></body></html>

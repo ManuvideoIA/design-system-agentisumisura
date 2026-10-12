@@ -23,9 +23,17 @@ Design system di Agenti su Misura (nome di lavoro, provvisorio). Il servizio cre
 - Anteprime mai visualizzate in un browser.
 - Contrasti calcolati a mano.
 
+## Pagina web (GitHub Pages)
+
+La cartella `docs/` contiene la pagina che mostra il design system: colori, nomi dei font con prove di testo, spaziature, componenti con anteprima e sezioni di testo. Si genera da `project/`.
+
+- Per rigenerarla: `python3 tools/build.py`
+- Per attivarla: Settings → Pages → ramo `main`, cartella `/docs`. Serve un repository pubblico.
+
 ## Come aggiornare
 
 1. Modifica i file in `project/`.
 2. Mantieni `design-system.json` coerente (campo `lastChange`).
-3. Ripubblica la cartella `project/` sul design system su Claude.
-4. Fai commit con un messaggio che dice cosa cambia.
+3. Rigenera la pagina con `python3 tools/build.py`.
+4. Ripubblica la cartella `project/` sul design system su Claude.
+5. Fai commit con un messaggio che dice cosa cambia.
