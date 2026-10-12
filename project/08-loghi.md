@@ -1,6 +1,6 @@
 # Loghi
 
-Il logo di Alterego è stato creato in Claude Design e importato qui dall'esportazione zip del progetto. Le due versioni del logotipo, 5a e 5b, sono tenute entrambe. I file sono in `assets/Logos/`.
+Il logo di Alterego è stato creato in Claude Design e importato qui dall'esportazione zip del progetto. Le versioni del logotipo erano due, 5a e 5b. **La versione scelta è la 5b** (fonte: scelta dell'utente del 12 ottobre 2026). I file della 5a restano in `assets/Logos/` come archivio, non si usano. I file sono in `assets/Logos/`.
 
 ## Il simbolo
 
@@ -13,7 +13,8 @@ Una persona vista da dietro, in inchiostro o in carta, con accanto l'agente in p
 - **scritta**: solo il nome.
 - **orizzontale**: simbolo a sinistra e scritta. È l'uso principale: intestazioni e firma dei video.
 - **verticale**: simbolo sopra e scritta. Per copertine e formati quadrati.
-- **5a e 5b**: due versioni del logotipo. La 5a ha la A classica. La 5b ha la A ad arco, attraversata dalla barra salvia, e una linea salvia sotto il nome.
+- **5b** (scelta): la A ad arco, attraversata dalla barra salvia, e una linea salvia sotto il nome.
+- **5a** (non scelta, archivio): la A classica.
 
 ## Su quale fondo
 
@@ -25,7 +26,7 @@ Una persona vista da dietro, in inchiostro o in carta, con accanto l'agente in p
 
 ## Dove è usato nel design system
 
-Nelle anteprime Cover, LandingHero, SlideCard, SocialPost e VerticalVideo il nome scritto è stato sostituito dal logo orizzontale 5a. La versione cambia con il fondo e con il tema chiaro o scuro. Per passare alla 5b basta cambiare il file nelle anteprime.
+Nelle anteprime Cover, LandingHero, SlideCard, SocialPost e VerticalVideo il nome scritto è stato sostituito dal logo orizzontale 5b. La versione cambia con il fondo e con il tema chiaro o scuro.
 
 ## Regole
 
@@ -38,6 +39,5 @@ Nelle anteprime Cover, LandingHero, SlideCard, SocialPost e VerticalVideo il nom
 
 - Chiedere gli SVG con il testo convertito in tracciati, e gli SVG `-fondo-petrolio`.
 - Verificare dominio, marchio e profili social del nome Alterego. Non è ancora stato fatto.
-- Scegliere tra 5a e 5b quando si decide l'uso definitivo. Per ora restano entrambe.
 
 Fonte: file `README.md` dell'esportazione zip di Claude Design (sezione LOGHI). I contrasti citati sono quelli indicati lì, non ricalcolati.
