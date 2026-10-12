@@ -5,15 +5,12 @@
   html, body { margin: 0; background: var(--surface); }
   .cover { position: relative; width: 960px; height: 320px; overflow: hidden; background: var(--surface); }
   .text { position: absolute; left: var(--space-7); bottom: var(--space-6); width: 400px; }
-  h1 { margin: 0; --lg-h: 106px; }
+  h1 { margin: 0; --lg-h: 84px; }
   .lg img { display: none; height: var(--lg-h, 24px); width: auto; }
   .lg img.lg-fix { display: block; }
   .gl .lg-light, .gk .lg-dark { display: block; }
   :root[data-theme=dark] .gl .lg-light, :root[data-theme=dark] .gk .lg-dark { display: none; }
   :root[data-theme=dark] .gl .lg-dark, :root[data-theme=dark] .gk .lg-light { display: block; }
-  .lg.gl, .lg.gk, .lg.lgb { display: inline-flex; align-items: center; gap: calc(var(--lg-h, 24px) * .3); }
-  .lg-name { font: 700 calc(var(--lg-h, 24px) * .8)/1 var(--font-display); letter-spacing: -0.02em; white-space: nowrap; }
-  .gl .lg-name { color: var(--ink); } .gk .lg-name { color: var(--surface); } .lgb .lg-name { color: var(--on-brand); }
   p { margin: var(--space-4) 0 0; font: 400 14px/20px var(--font-sans); color: var(--ink-muted); }
   svg { position: absolute; left: 480px; top: 0; }
   .brand { fill: var(--brand); }
@@ -30,7 +27,7 @@ addEventListener('message',function(e){if(e.data&&e.data.theme)set(e.data.theme)
 <body>
   <div class="cover">
     <div class="text">
-      <h1 class="lg gl"><img class="lg-light" src="../logos/sosia-marchio-1024.png" alt="Sosia"><img class="lg-dark" src="../logos/sosia-marchio-fondo-scuro-1024.png" alt="" aria-hidden="true"><span class="lg-name">Sosia</span></h1>
+      <h1 class="lg gl"><img class="lg-light" src="../logos/sosia-scritta-1200.png" alt="Sosia"><img class="lg-dark" src="../logos/sosia-scritta-fondo-scuro-1200.png" alt="" aria-hidden="true"></h1>
       <p>Agenti IA che lavorano al posto tuo.</p>
     </div>
     <svg width="480" height="320" viewBox="0 0 480 320" role="img" aria-label="Blocchi petrolio, inchiostro e salvia con righe di chat e punti di scrittura">

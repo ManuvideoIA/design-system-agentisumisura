@@ -43,12 +43,12 @@ for old in (OUT / "fonts").glob("*"):
 for f in (SRC / "fonts").glob("*.ttf"):
     shutil.copy(f, OUT / "fonts" / f.name)
 
-# loghi: copia i PNG nella pagina (esclude le misure 512 e 2048)
+# loghi: copia i PNG nella pagina (esclude le misure 512, 2048 e 2400)
 (OUT / "logos").mkdir(parents=True, exist_ok=True)
 for old in (OUT / "logos").glob("*"):
     old.unlink()
 logo_files = sorted(p for p in (SRC / "assets" / "Logos").glob("*.png")
-                    if not re.search(r"-(512|2048)\.png$", p.name))
+                    if not re.search(r"-(512|2048|2400)\.png$", p.name))
 for p in logo_files:
     shutil.copy(p, OUT / "logos" / p.name)
 

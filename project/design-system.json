@@ -74,10 +74,73 @@
           "name": "sosia-marchio.svg",
           "size": 8754,
           "type": "image/svg+xml"
+        },
+        "sosia-scritta-1200.png": {
+          "blob": "02e91cf696eb118eb1710de4a520ff88",
+          "name": "sosia-scritta-1200.png",
+          "size": 54822,
+          "type": "image/png"
+        },
+        "sosia-scritta-2400.png": {
+          "blob": "38c7581086ad62a26cb1ff4c9507ba59",
+          "name": "sosia-scritta-2400.png",
+          "size": 123029,
+          "type": "image/png"
+        },
+        "sosia-scritta-fondo-petrolio-1200.png": {
+          "blob": "ed0e3286c5b200369dd1a69540df4d34",
+          "name": "sosia-scritta-fondo-petrolio-1200.png",
+          "size": 52894,
+          "type": "image/png"
+        },
+        "sosia-scritta-fondo-petrolio-2400.png": {
+          "blob": "92c79bf5247f16099c2b48e7928dbc27",
+          "name": "sosia-scritta-fondo-petrolio-2400.png",
+          "size": 118660,
+          "type": "image/png"
+        },
+        "sosia-scritta-fondo-petrolio.svg": {
+          "blob": "780ccbe080a8cb5922dd2a9ec7940a6f",
+          "name": "sosia-scritta-fondo-petrolio.svg",
+          "size": 11480,
+          "type": "image/svg+xml"
+        },
+        "sosia-scritta-fondo-scuro-1200.png": {
+          "blob": "cf58fea56f560fe3ffd77557d11d8baf",
+          "name": "sosia-scritta-fondo-scuro-1200.png",
+          "size": 55891,
+          "type": "image/png"
+        },
+        "sosia-scritta-fondo-scuro-2400.png": {
+          "blob": "ff659d82b1c6beb08504a316393b8fb2",
+          "name": "sosia-scritta-fondo-scuro-2400.png",
+          "size": 124898,
+          "type": "image/png"
+        },
+        "sosia-scritta-fondo-scuro.svg": {
+          "blob": "f5cc9218e7438ca658316927d27c3d58",
+          "name": "sosia-scritta-fondo-scuro.svg",
+          "size": 11480,
+          "type": "image/svg+xml"
+        },
+        "sosia-scritta.svg": {
+          "blob": "52fa64970531ae479f9157ef39665a98",
+          "name": "sosia-scritta.svg",
+          "size": 11480,
+          "type": "image/svg+xml"
         }
       },
       "name": "Logos",
       "order": [
+        "sosia-scritta-1200.png",
+        "sosia-scritta-2400.png",
+        "sosia-scritta.svg",
+        "sosia-scritta-fondo-scuro-1200.png",
+        "sosia-scritta-fondo-scuro-2400.png",
+        "sosia-scritta-fondo-scuro.svg",
+        "sosia-scritta-fondo-petrolio-1200.png",
+        "sosia-scritta-fondo-petrolio-2400.png",
+        "sosia-scritta-fondo-petrolio.svg",
         "sosia-marchio-1024.png",
         "sosia-marchio-2048.png",
         "sosia-marchio-512.png",
@@ -119,7 +182,7 @@
     "by": "Claude",
     "at": "2026-10-12T19:07:05Z",
     "via": "Claude (chat)",
-    "note": "Tolti i nomi scartati e i loghi con scritta; resta il simbolo (12 file sosia-*), nome come testo"
+    "note": "Aggiunto il logo-scritta Sosia (SVG e PNG); anteprime e testi aggiornati"
   },
   "layout": "files",
   "libraries": [],
